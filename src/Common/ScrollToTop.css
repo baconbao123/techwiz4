@@ -1,0 +1,13 @@
+.btn-srcoll-on-top{
+    position: fixed;
+    bottom: 30px;
+    right: 0.5%;
+    color:#96e99e ;
+    z-index: 999;
+    font-size: 4rem;
+    cursor: pointer;
+    behavior: 'smooth'
+}
+.btn-srcoll-on-top:hover{
+    color: #52C452;
+}

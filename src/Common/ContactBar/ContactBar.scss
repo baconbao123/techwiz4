@@ -1,0 +1,44 @@
+@import "../../setting";
+.contact-bar {
+    font-family: $font_primary;
+  max-width: 172px;
+  height: 250px;
+  border-radius: 10px 0px 0px 10px;
+  background: $bg_btn_2;
+  box-shadow: 0px -7px 26px 12px rgba(74, 134, 70, 0.15);
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: calc($h_topbar + 150px);
+  width: 100%;
+  padding: 25px 20px 15px 15px;
+  transform: translateX(115px) !important;
+  &:hover{
+    transform: translateX(0px) !important;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    color: #fff;
+    .link {
+      display: block;
+      li {
+        min-width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &:hover{
+            color: #3EBD4C;
+            font-weight: 600;
+        }
+        .icon {
+          width: 32px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}

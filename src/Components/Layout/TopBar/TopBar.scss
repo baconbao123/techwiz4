@@ -1,15 +1,179 @@
 @import '../../../setting';
 
+.top-bar-sm {
+    display: none;
+}
+
 .top-bar {
     background-color: $bg_topbar;
     font-family: $font_primary;
     position: fixed;
     top: 0;
-    
+
     .logo-header {
-        width: 160px;
+        width: 229px;
         position: relative;
         top: 0;
         right: 0;
+    }
+
+    .item-icon {
+        cursor: pointer;
+    }
+
+    .item {
+
+        .item-nav {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #9FDEA5;
+            }
+
+
+            .child1 {
+
+                font-weight: 500;
+                display: none;
+                position: absolute;
+                background-color: #E7F7EA;
+                border-radius: 10px;
+                // left: 50px;
+                top: 35px;
+                color: black;
+                border-radius: 0;
+
+                .container-child {
+
+                    .item-child {
+                        &:hover {
+                            background-color: #D3DAD3;
+                        }
+
+                        padding: 20px;
+                        cursor: pointer;
+
+                    }
+
+                    .item-child2 {
+                        display: none;
+                        position: absolute;
+                        background-color: #D3DAD3;
+                        left: 83px;
+                        top: 0;
+
+
+                    }
+
+                    .item-child3 {
+                        font-weight: 400;
+                        padding: 20px;
+
+                        &:hover {
+                            background-color: #ccc;
+                        }
+                    }
+
+                    &:hover .item-child2 {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &:hover .item-nav .child1 {
+
+            display: block !important;
+        }
+
+    }
+
+    .item-search {
+        position: relative;
+
+        .search-input {
+            position: absolute;
+            width: 200px;
+            right: -90px;
+        }
+    }
+
+
+}
+
+@media (max-width:1000px) {
+    .top-bar-md {
+        display: none;
+    }
+
+    .top-bar-sm {
+        display: flex;
+        background-color: $bg_topbar;
+        font-family: $font_primary;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+
+        .logo-header {
+            width: 230px;
+        }
+    }
+
+    .container-header {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        .show-menu {
+            cursor: pointer;
+        }
+    }
+
+    .container-wrapper {
+        width: 100vw;
+    }
+
+    .menu-top {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+
+        .menu-content {
+            background-color: #fff;
+            left: 0;
+            padding-left: 10px;
+        }
+
+        .layout {
+            background-color: hsla(0, 0%, 71%, .4);
+        }
+
+        .logo-menu {
+            width: 100%;
+        }
+        .item-menu {
+           position: relative;
+          padding-left: 30px;
+           margin-top: 10px;
+           padding: 10px;
+           &:hover {
+            color: #9FDEA5;
+            background-color:#eef2ff;
+           }
+        }
+        .container-child1 {
+            background-color: #dadeda;
+           
+            .item-menu-child {
+                margin: 0;
+                padding-top: 10px;
+                padding-left: 50px;
+                
+            }
+        }
     }
 }
