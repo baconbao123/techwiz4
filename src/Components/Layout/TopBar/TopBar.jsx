@@ -4,6 +4,7 @@ import './TopBar.scss'
 import logo from '../../../assets/Layout_img/Logo_header.png'
 import { TopNav } from '../../../Data/TopNav';
 import { BsChevronDown } from "react-icons/bs";
+import logoMb from '../../../assets/Layout_img/logo-mb.png'
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 import ItemTopBar from './ItemTopBar';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -14,10 +15,13 @@ import AOS from "aos";
 export default function TopBar() {
   const nav = TopNav;
   const [showSearch, setShowSearch] = useState(false);
+  const [showSearchMb, setShowSearchMb] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenu1, setShowMenu1] = useState(false);
   const [listShow, setListShow] = useState([])
   const InputRef = useRef();
+  const InputRefMb = useRef();
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -27,9 +31,25 @@ export default function TopBar() {
         setShowSearch(false)
       }
     }
+   
     document.addEventListener('click', handleClickOutSide);
+   
     return () => {
       document.removeEventListener('click', handleClickOutSide)
+    
+    }
+
+  }, [])
+  useEffect(() => {
+     const handleClickOutSideMb = (e) => {
+      if (InputRefMb.current && !InputRefMb.current.contains(e.target)) {
+        setShowSearchMb(false)
+      }
+    }
+    
+    document.addEventListener('click', handleClickOutSideMb);
+    return () => {
+      document.removeEventListener('click', handleClickOutSideMb)
     }
 
   }, [])
@@ -112,7 +132,7 @@ export default function TopBar() {
             <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
               <Col className='menu-content p-0 ' xs={7} sm={5} md={5}>
                 <img src={logo} alt="" className='logo-menu' />
-
+            
                 <section>
                   {nav.map((item) => (
                     <ItemTopBar item={item} />
@@ -133,12 +153,22 @@ export default function TopBar() {
 
                 </section>
                 
+             
                 <InputGroup className={`${showMenu?'d-none':'input-search'}`}>
                 <InputGroup.Text><AiOutlineSearch/></InputGroup.Text>
                 <Form.Control placeholder='Search'></Form.Control>
                 </InputGroup>
-                <img  src={logo} alt="" className='logo-header' />
-               
+               <div className='d-flex fs-2 function'>
+                <div  ref={InputRefMb} className='d-flex'>
+                  
+              <AiOutlineSearch onClick={()=>setShowSearchMb(true)} className='icon-search'/>
+               <Form.Control  placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`}/>
+           
+                </div>
+               <AiOutlineHeart/>
+               <AiOutlineShoppingCart/>
+               <AiOutlineUser />
+               </div>
               </Col>
               
             </Row>
