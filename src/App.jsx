@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.scss';
 import Main from './Components/Layout/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';

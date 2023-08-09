@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
+// import './index.scss';
 import './_reset.scss';
 import App from './App';
-import Button from 'react-bootstrap/Button';
 
 
 
