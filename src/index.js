@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
+import './_reset.scss';
 import App from './App';
 import Button from 'react-bootstrap/Button';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";     
