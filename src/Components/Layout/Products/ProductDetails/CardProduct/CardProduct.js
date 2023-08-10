@@ -17,7 +17,7 @@ export const CardProduct = ({props}) => {
                     <FaRegHeart />
                 </span>
             </Card.Title>
-            <Card.Img src={props.img} />
+            <Card.Img src={props.img1} />
             <Card.Body>
                 <div className="card-price-shopping-product">
                     <span className="card-price-product">${props.price}</span>
