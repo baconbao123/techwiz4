@@ -1,18 +1,18 @@
 import React from "react";
-import "./NewProducts.scss";
+import "./SellerProducts.scss";
 import { Col } from "react-bootstrap";
 import AliceCarousel from "react-alice-carousel";
 import { SlideCardImg } from "../../Layout/Products/ProductDetails/SlideImg/SlideCardImg";
 import {FaAngleDoubleRight} from 'react-icons/fa'
 import { Link } from "react-router-dom";
-function NewProduct() {
+function SellerProduct() {
   return (
-    <section className="new-product">
+    <section className="seller-product">
       <div className="container">
-        <div className="title-product row">
-          <div className="title-name col-lg-6 col-md-6 col-sm-12">New Products</div>
-          <div className="btn-category col-lg-6 col-md-6 col-sm-12">
-            <button className="btn-choose">Choose:</button>
+        <div className="title-product">
+          <div className="title-name">Seller Products</div>
+          <div className="btn-category">
+            <button className="btn-choose" style={{backgroundColor:'transparent'}}>Choose:</button>
             <Link to="/d">
               <button className="btn btn-c btn-color-1">Plants</button>
             </Link>
@@ -48,4 +48,4 @@ function NewProduct() {
   );
 }
 
-export default NewProduct;
+export default SellerProduct;

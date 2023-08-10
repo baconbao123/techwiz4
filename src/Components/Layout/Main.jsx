@@ -22,7 +22,7 @@ export default function Main() {
         <Route path="*" element={<NotFound />}/>
       </Routes>
       <ContactBar/>
-      {/* <Footer /> */}
+      <Footer />
     </Container>
      
      </>

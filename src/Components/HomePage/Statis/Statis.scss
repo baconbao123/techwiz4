@@ -1,0 +1,19 @@
+@import '../../../setting';
+.content-statis{
+    display: flex;
+    font-family: $font_primary;
+    .statis-item{
+        display: flex;
+        flex-direction: column;
+        margin-right:30px ;
+        .number{
+            font-size: 30px;
+            font-weight: bold;
+            color: $color_text;
+        }
+        span{
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
