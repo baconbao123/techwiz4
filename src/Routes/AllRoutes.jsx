@@ -1,9 +1,9 @@
-
+import HomePage from "../Components/HomePage/HomePage";
 
 
 
 export const AllRoutes=[
-{name:'home',link:'',component:''},
+{name:'home',link:'',component:<HomePage />},
 {name:'shop',link:'/shop/all',component:''},
 {name:'shop',link:'/shop/all',component:''},
 {name:'bonsai',link:'/shop/bonsai',component:''},
