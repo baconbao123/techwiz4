@@ -1,6 +1,10 @@
 import HomePage from "../Components/HomePage/HomePage";
+import Blog from "../Components/BlogPage/Blog";
+import BlogItem from "../Components/BlogPage/BlogItem";
 import ProductDetail from "../Components/Layout/Products/ProductDetails/ProductDetails";
 import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
+
+
 
 
 
@@ -18,6 +22,8 @@ export const AllRoutes=[
 {name:'Services',link:'/service',component:''},
 {name:'FeedBack',link:'/feedback',component:''},
 
+{name:'BLog',link:'/blog',component:<Blog />},
+// {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 
 
 

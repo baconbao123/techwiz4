@@ -1,0 +1,28 @@
+.blog {
+    // overflow: hidden;
+    margin-top: 76px;
+    // position: relative;
+
+    // .title {
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 50%;
+    //     width: 0px;
+    //     padding-right: 100px;
+    //     padding-left: 100px;
+
+    //     background-color: black;
+    //     // padding: 10px;
+    // }
+
+    .logo-baner {
+        width: 100%;
+        height: 400px !important;
+        z-index: -1!important;
+        object-fit: cover;
+    }
+    .search-input {
+        width: 500px!important;
+    }
+    
+}
