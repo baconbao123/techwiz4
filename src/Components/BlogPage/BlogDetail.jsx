@@ -88,6 +88,5 @@ export default function BlogDetail({ item }) {
         </Row>
       </Container>
     </Container>
-  )
+  );
 }
-

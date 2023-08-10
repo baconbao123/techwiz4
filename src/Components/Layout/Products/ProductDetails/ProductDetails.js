@@ -20,6 +20,7 @@ import avatar from '../../../../assets/image/avtar5.jpg'
 
 
 const ProductDetail = ({items}) => {
+    console.log("log items",items);
     const [countProduct, setCountProduct] = useState(0)
     const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
     const [ratingUser, setRatingUser] = useState(null);

@@ -5,23 +5,21 @@ import BlogImg from '../../assets/Layout_img/blogBaner.png';
 import { blog } from '../../Data/Blog';
 import BlogItem from './BlogItem';
 import { AiOutlineHome,AiOutlineSearch } from "react-icons/ai";
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { Link } from 'react-router-dom';
 import Pagination from 'react-bootstrap/Pagination';
 export default function Blog() {
-
- const items=[{label:'Blog',url:'/blog'}];
- const home = { icon: <AiOutlineHome/>, url: '/' }
+  const items = [{ label: "Blog", url: "/blog" }];
+  const home = { icon: <AiOutlineHome />, url: "/" };
   const data = blog;
   const [currentPage, setCurrentPage] = useState(1);
-  const indexOfLastItem = currentPage *12;
+  const indexOfLastItem = currentPage * 12;
   const indexOfFirstItem = indexOfLastItem - 12;
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-  
+
   return (
     <section fluid className='blog p-0 '  >
       
@@ -33,14 +31,15 @@ export default function Blog() {
        
      
       <Container>
-      <BreadCrumb model={items} home={home} className='mt-3' />
-     
-    
-      <InputGroup className='search-input mt-3'>
-                <InputGroup.Text><AiOutlineSearch/></InputGroup.Text>
-                <Form.Control className='' placeholder='Search'></Form.Control>
+        <BreadCrumb model={items} home={home} className="mt-3" />
+
+        <InputGroup className="search-input mt-3">
+          <InputGroup.Text>
+            <AiOutlineSearch />
+          </InputGroup.Text>
+          <Form.Control className="" placeholder="Search"></Form.Control>
         </InputGroup>
-        <Row className=' d-flex justify-content-evenly mt-5 mb-5'>
+        <Row className=" d-flex justify-content-evenly mt-5 mb-5">
           {currentItems.map((item) => (
         <>
         <Col lg={3} md={6} sm={9} xs={12} className='contain' >
@@ -53,7 +52,7 @@ export default function Blog() {
           ))}
         </Row>
       </Container>
-      <Pagination className='d-flex justify-content-center'>
+      <Pagination className="d-flex justify-content-center">
         <Pagination.First
           onClick={() => handlePageChange(1)}
           disabled={currentPage === 1}

@@ -1,21 +1,15 @@
 .allproduct-master {
-    .banner-allproduct {
-        .img-banner {
-            width: 100%;
-            height: 522px;
-            position: relative;
-            object-fit: cover;
-            display: block;
-        }
-    }
+    
 
     .filter-div {
+        margin-top: 100px;
         background-color: #ECF1ED;
         border-radius: 10px;
         padding: 10px 0;
 
         .form-select-catalog {
-            border-radius: 40px;
+            border-radius:10px;
+            border: none;
         }
 
         .input-filter {
@@ -38,4 +32,19 @@
         }
 
     }
+}
+.input-group-text{
+    background-color: #fff !important;
+    border: none !important;
+    border-radius:  10px 0 0 10px !important;
+}
+.form-control-input{
+    border: none !important;
+    border-radius:  0px 10px 10px 0px !important;
+    &::placeholder{
+        color:#a3a3a3 !important ;
+    }
+}
+.allproduct-master .filter-div .form-select-catalog {
+    margin-bottom: 6px;
 }
