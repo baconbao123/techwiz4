@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Statis from "./Statis/Statis";
 import CategoryItem from "./CategoryItem/CategoryItem";
 import NewProduct from "./NewProduct/NewProduct";
-
+import BlogItemHome from "./BlogItemHome/BlogItemHome";
 import SellerProduct from "./NewProduct copy/SellerProduct";
 import Review from "./Review/Review";
 import "./HomePage.scss";
@@ -22,6 +22,7 @@ function HomePage() {
       <SellerProduct/>
       <Service />
       <Review/>
+      <BlogItemHome/>
     </div>
   );
 }

@@ -1,59 +1,61 @@
-import React,{useState} from 'react'
-import "./Blog.scss"
-import { Container, Row, Col, InputGroup,Form } from "react-bootstrap"
-import BlogImg from '../../assets/Layout_img/blogBaner.png';
-import { blog } from '../../Data/Blog';
-import BlogItem from './BlogItem';
-import { AiOutlineHome,AiOutlineSearch } from "react-icons/ai";
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import { BreadCrumb } from 'primereact/breadcrumb';
-import { Link } from 'react-router-dom';
-import Pagination from 'react-bootstrap/Pagination';
+import React, { useState } from "react";
+import "./Blog.scss";
+import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
+import BlogImg from "../../assets/Layout_img/blogBaner.png";
+import { blog } from "../../Data/Blog";
+import BlogItem from "./BlogItem";
+import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
+import { BreadCrumb } from "primereact/breadcrumb";
+import { Link } from "react-router-dom";
+import Pagination from "react-bootstrap/Pagination";
 export default function Blog() {
-
- const items=[{label:'Blog',url:'/blog'}];
- const home = { icon: <AiOutlineHome/>, url: '/' }
+  const items = [{ label: "Blog", url: "/blog" }];
+  const home = { icon: <AiOutlineHome />, url: "/" };
   const data = blog;
   const [currentPage, setCurrentPage] = useState(1);
-  const indexOfLastItem = currentPage *12;
+  const indexOfLastItem = currentPage * 12;
   const indexOfFirstItem = indexOfLastItem - 12;
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-  
+
   return (
-    <Container fluid className='blog p-0 '  >
-      <Row className=''>
+    <Container fluid className="blog p-0 ">
+      <Row className="">
         {/* <div className='title'>
               BLOG
         </div> */}
-        <Col xs={12} lg={12} className='p-0 m-0'>
-          <img src={BlogImg} alt="" className='logo-baner' />
+        <Col xs={12} lg={12} className="p-0 m-0">
+          <img src={BlogImg} alt="" className="logo-baner" />
         </Col>
       </Row>
       <Container>
-      <BreadCrumb model={items} home={home} className='mt-3' />
-     
-    
-      <InputGroup className='search-input mt-3'>
-                <InputGroup.Text><AiOutlineSearch/></InputGroup.Text>
-                <Form.Control className='' placeholder='Search'></Form.Control>
+        <BreadCrumb model={items} home={home} className="mt-3" />
+
+        <InputGroup className="search-input mt-3">
+          <InputGroup.Text>
+            <AiOutlineSearch />
+          </InputGroup.Text>
+          <Form.Control className="" placeholder="Search"></Form.Control>
         </InputGroup>
-        <Row className=' d-flex justify-content-evenly mt-5 mb-5'>
+        <Row className=" d-flex justify-content-evenly mt-5 mb-5">
           {currentItems.map((item) => (
-        <>
-        <Col lg={3} md={6} sm={12} className='contain' >
-            <Link to={`/blog/${item.id}`} className='link-direct d-inline-block'>
-              
-            <BlogItem key={item.id} item={item} />
-            </Link>
-            </Col>
-        </>
+            <>
+              <Col lg={3} md={6} sm={12} className="contain">
+                <Link
+                  to={`/blog/${item.id}`}
+                  className="link-direct d-inline-block"
+                >
+                  <BlogItem key={item.id} item={item} />
+                </Link>
+              </Col>
+            </>
           ))}
         </Row>
       </Container>
-      <Pagination className='d-flex justify-content-center'>
+      <Pagination className="d-flex justify-content-center">
         <Pagination.First
           onClick={() => handlePageChange(1)}
           disabled={currentPage === 1}
@@ -75,5 +77,5 @@ export default function Blog() {
         />
       </Pagination>
     </Container>
-  )
+  );
 }

@@ -5,6 +5,8 @@ import './AllProducts.scss'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
+import InputGroup from 'react-bootstrap/InputGroup';
+import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 
 
 const productList = AllProduct
@@ -28,7 +30,7 @@ const AllProducts = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <Row className="filter-div">
-                        <Col lg={2}>
+                        <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog" aria-label="Category">
                                 <option checked>Category</option>
                                 <option>Bonsai</option>
@@ -38,16 +40,23 @@ const AllProducts = () => {
                                 <option>Succulents</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={2}>
+                        <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog">
                                 <option checked>Price</option>
                                 <option>20</option>
                                 <option>30</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={6}></Col>
-                        <Col lg={2}>
-                            <InputText value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="input-filter" />
+                        <Col lg={4} md={2}></Col>
+                        <Col lg={4} md={4} >
+                            <InputGroup className="">
+                                <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch/></InputGroup.Text>
+                                <Form.Control className="form-control-input"
+                                    placeholder="Search by name..."
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1"
+                                />
+                            </InputGroup>
                         </Col>
                     </Row>
                     <div className="plant-div">

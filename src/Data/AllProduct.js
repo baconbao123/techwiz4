@@ -183,7 +183,7 @@ import Graptopetalum3 from "../assets/image/succulents/30.Graptopetalum.png";
 
 export const AllProduct = [
    {
-      id: 1, name: 'Snake Plant', category: 'indoor', price: 20,
+      id: 1, name: 'Snake Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: snakePlant1 },
          { img2: snakePlant2 },
@@ -204,7 +204,7 @@ export const AllProduct = [
       ]
    },
    {
-      id: 2, name: 'Spider Plant', category: 'indoor', price: 20,
+      id: 2, name: 'Spider Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: spiderplant1 },
          { img2: spiderplant2 },
@@ -225,7 +225,7 @@ export const AllProduct = [
       ]
    },
    {
-      id: 3, name: 'Pothos Plant', category: 'indoor', price: 20,
+      id: 3, name: 'Pothos Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: pothos1 },
          { img2: pothos2 },
@@ -246,7 +246,7 @@ export const AllProduct = [
       ],
    },
    {
-      id: 4, name: 'Peace_Lily Plant', category: 'indoor', price: 20,
+      id: 4, name: 'Peace_Lily Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: Peace_Lily1 },
          { img2: Peace_Lily2 },

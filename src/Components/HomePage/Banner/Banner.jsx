@@ -28,7 +28,7 @@ function Banner() {
       <div className="row">
         <Carousel data-bs-theme="dark">
           {items.map((item, index) => (
-            <Carousel.Item>
+            <Carousel.Item key={index}>
               <div className="row banner-warrper">
                 <div className="col-lg-6 row content-left">
                   <div className="col-lg-10 banner-text">
