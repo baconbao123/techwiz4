@@ -7,7 +7,7 @@ export const TopNav=[
     {id:'2',name:'Shop',icon:<BiShoppingBag/>,child:[
         {id:'child1',nameChild1:'All',linkChild:'/shop/all',child:[]},
         { id:'child2',nameChild1: 'Plants',child:[
-            { id:'plant0',nameChild2:'All plants',link:'/shop/plant'},
+          
             { id:'plant1',nameChild2:'Bonsai',link:'/shop/bonsai'},
             { id:'plant2',nameChild2:'Flowering Shrubs',link:'/shop/floweringshrubs'},
             { id:'plant3',nameChild2:'Indoor',link:'/shop/indoor'},
@@ -21,6 +21,7 @@ export const TopNav=[
     {id:'3',name:'Services',link:'/service',icon:<BiDollarCircle/>,child:[
        
     ]},
+    {id:'5',name:"Blog",link:'/blog',icon:<VscFeedback/>},
     {id:'4',name:"FeedBack",link:'/feedback',icon:<VscFeedback/>},
     // {id:'5',name:"Contact Us",link:'/contactUs',icon:<FiPhoneCall/>}
 ]
