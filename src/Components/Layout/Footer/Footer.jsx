@@ -7,12 +7,13 @@ function Footer() {
 
     <footer className="footer container">
         <section className='ft-content row'>
-            <div className="col-lg-3 ft-content-child-1" >
-                <img src={require(`../../../assets/Layout_img/Logo_header.png`)} alt="logo"/>
-                <p className="sub-logo">Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and tranquility.</p>
+            <div className="col-lg-3 col-md-4 ft-content-child-1" >
+                <img src={require(`../../../assets/Layout_img/Logo_header.png`)} alt="logo" className="d-none d-lg-block d-md-block img-md"/>
+                
+                <p className="sub-logo d-none d-lg-block d-md-block img-md">Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and tranquility.</p>
             </div>
-            <div className="col-lg-9 row ft-content-child-2">
-                <div className="col-lg-3 ft-content-child-3">
+            <div className="col-lg-9 col-md-8 row ft-content-child-2">
+                <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
                         <li className="tilte-content">Shop</li>
                         <li><Link>Plants</Link></li>
@@ -20,7 +21,7 @@ function Footer() {
                         <li><Link>Fertilize</Link></li>         
                     </ul>
                 </div>
-                <div className="col-lg-3 ft-content-child-3">
+                <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
                         <li className="tilte-content">Servive</li>
                         <li><Link>Terrarium workshop</Link></li>
@@ -28,13 +29,13 @@ function Footer() {
                         <li><Link>Green dercoration</Link></li>         
                     </ul>
                 </div>
-                <div className="col-lg-3 ft-content-child-3">
+                <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
                         <li className="tilte-content">Resources</li>
                         <li><Link>Blog</Link></li>        
                     </ul>
                 </div>
-                <div className="col-lg-3 ft-content-child-3">
+                <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
                         <li className="tilte-content">Customer support policy</li>
                         <li><Link>Terms</Link></li>        

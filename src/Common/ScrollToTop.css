@@ -11,3 +11,11 @@
 .btn-srcoll-on-top:hover{
     color: #52C452;
 }
+@media (max-width: 740px) {
+    .btn-srcoll-on-top{
+        position: fixed;
+        bottom: 150px;
+        right: 0.5%;
+        color:#52C452;
+    }
+}

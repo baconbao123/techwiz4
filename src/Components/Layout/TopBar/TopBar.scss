@@ -5,6 +5,7 @@
 }
 
 .top-bar {
+    z-index: 5;
     background-color: $bg_topbar;
     font-family: $font_primary;
     position: fixed;
