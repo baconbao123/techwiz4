@@ -456,7 +456,7 @@ const AllProducts = () => {
                         <div className="card-of-cate">
                             <Row>
                                 { currentItems.length>0?currentItems.map((item, index) => (
-                                    <Col lg={3} key={index} className="mt-4">
+                                    <Col lg={3} md={4} sm={6} xs={12} key={index} className="mt-4">
                                         <CardProduct item={item} />
                                     </Col>
                                 )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)}
