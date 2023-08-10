@@ -62,20 +62,23 @@
 .banner-warrper {
   font-family: $font_primary;
 }
-.banner-right-img {
-  width: 347px;
-  display: block;
-  &::after {
+.img-banner {
+    position: relative; /* Để có context cho pseudo-element */
+  }
+  
+  .img-banner::before {
     content: "";
-    width: 486px;
-    height: 300px;
-    border-radius: 50px 50px 0px 0px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    transform: translate(50%,0);
     background: linear-gradient(
       180deg,
       #dfdad6 0%,
       rgba(217, 217, 217, 0) 44.99%
     );
-    display: block;
-    z-index: 1;
+    z-index: -1; /* Đặt z-index thấp hơn để nằm dưới hình ảnh */
+    border-radius: 50px 50px 0px 0px;
   }
-}
