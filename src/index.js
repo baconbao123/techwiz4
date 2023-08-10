@@ -10,7 +10,8 @@ import App from './App';
 import "primereact/resources/themes/lara-light-indigo/theme.css";     
     
 //core
-import "primereact/resources/primereact.min.css";                                       
+import "primereact/resources/primereact.min.css";                          
+
          
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
