@@ -10,7 +10,7 @@ export default function Main() {
   return (
     <>
     <Container fluid>
-      <TopBar></TopBar>
+      <TopBar />
       <Home/>
       <ScrollToTop/>
       <ContactBar/>
