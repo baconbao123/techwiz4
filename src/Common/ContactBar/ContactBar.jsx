@@ -34,7 +34,7 @@ function ContactBar() {
           ))}
         </ul>
       </div>
-        <ul className="contact-bar-mb d-flex d-lg-none d-md-none">
+        <ul className="contact-bar-mb d-flex d-lg-none d-md-none"  style={{listStyle:'none'}}>
           {soccial.map((item, index) => (
             <Link to={item.content} key={index} className="link ">
               {" "}

@@ -3,7 +3,7 @@ import { BiHomeAlt,BiShoppingBag ,BiDollarCircle} from "react-icons/bi";
 import { VscFeedback } from 'react-icons/vsc';
 import { FiPhoneCall } from 'react-icons/fi'
 export const TopNav=[
-    {id:'1',name:'Home',link:'/home',icon:< BiHomeAlt />},
+    {id:'1',name:'Home',link:'/',icon:< BiHomeAlt />},
     {id:'2',name:'Shop',icon:<BiShoppingBag/>,child:[
         {id:'child1',nameChild1:'All',linkChild:'/shop/all',child:[]},
         { id:'child2',nameChild1: 'Plants',child:[
