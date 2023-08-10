@@ -9,6 +9,9 @@
     }
     .care-img {
         width: 331px;
+        @media (max-width:400px) {
+            display: none;
+        }
     }
     .group-button {
        justify-self: flex-end;

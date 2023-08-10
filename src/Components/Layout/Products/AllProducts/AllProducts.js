@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Row, Col, Button, Form, Dropdown } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import bannerallpro from '../../../../assets/Layout_img/banner-allpro.png'
 import './AllProducts.scss'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
-
+import ProductDetail from "../ProductDetails/ProductDetails";
 
 const productList = AllProduct
 console.log(productList);
@@ -55,9 +56,11 @@ const AllProducts = () => {
 
                         <div className="card-of-cate">
                             <Row>
-                                {productList.map((item, index) => (
+                                {productList.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
-                                        <CardProduct item={item} />
+                                        <Link to='/shop/all/:id'>
+                                            <CardProduct items={items}/>
+                                        </Link>
                                     </Col>
                                 ))}
                             </Row>
