@@ -7,6 +7,7 @@ import Home from "../HomePage/HomePage";
 import { Container } from "react-bootstrap";
 import {Routes,Route} from 'react-router-dom'
 import {AllRoutes} from '../../Routes/AllRoutes'
+import NotFound from "./NotFound";
 export default function Main() {
   const allRoutes=AllRoutes;
   return (
@@ -18,6 +19,7 @@ export default function Main() {
         (
           <Route key={index} path={item.link} element={item.component} />
         ))}
+        <Route path="*" element={<NotFound />}/>
       </Routes>
       <ContactBar/>
       {/* <Footer /> */}
