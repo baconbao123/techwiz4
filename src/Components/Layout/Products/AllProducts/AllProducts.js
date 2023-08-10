@@ -6,12 +6,17 @@ import { AllProduct } from "../../../../Data/AllProduct";
 import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
 
+
+const productList = AllProduct
+console.log(productList);
+
+
 const AllProducts = () => {
     const [categoryName, setCategoryName] = useState('All Product')
     const [searchValue, setSearchValue] = useState('')
+    const [currentDisplayProduct, setCurrentDisplayProduct] = useState(8)
 
-    // const {name, category, price, img} = AllProduct
-    console.log(AllProduct);
+
 
     return (
 
@@ -42,7 +47,7 @@ const AllProducts = () => {
                         </Col>
                         <Col lg={6}></Col>
                         <Col lg={2}>
-                            <InputText value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="input-filter"/>
+                            <InputText value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="input-filter" />
                         </Col>
                     </Row>
                     <div className="plant-div">
@@ -50,9 +55,11 @@ const AllProducts = () => {
 
                         <div className="card-of-cate">
                             <Row>
-                                <Col lg={4}>
-                                    <CardProduct AllProduct={AllProduct}/>
-                                </Col>
+                                {productList.map((item, index) => (
+                                    <Col lg={3} key={index} className="mt-4">
+                                        <CardProduct item={item} />
+                                    </Col>
+                                ))}
                             </Row>
                         </div>
                     </div>
