@@ -1,7 +1,7 @@
 @import "../../../setting";
 .banner-slide {
   margin-top: 100px;
-  z-index: 2;
+  z-index: -5;
 }
 .carousel-caption {
   color: #000000 !important;
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1% !important;
+  width: 5% !important;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -40,15 +40,20 @@
 .img-banner {
   display: flex;
   justify-content: center;
-
 }
 .content-left {
-  align-items: center;
+  margin-top: calc($h-topbar + 50px) !important;
 }
 .banner-text {
   h2 {
-    width: 50%;
-    line-height: 50px;
+    width: 70%;
+    color: #204322;
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px; /* 66.667% */
+    letter-spacing: -0.408px;
   }
   p {
     color: #666;
@@ -61,24 +66,96 @@
 }
 .banner-warrper {
   font-family: $font_primary;
+  justify-content: space-between;
+  z-index: -5;
 }
 .img-banner {
-    position: relative; /* Để có context cho pseudo-element */
+  position: relative; /* Để có context cho pseudo-element */
+}
+
+.img-banner::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 97%;
+  height: 100%;
+  // transform: translate(10%, 0);
+  background: linear-gradient(
+    180deg,
+    #dfdad6 0%,
+    rgba(217, 217, 217, 0) 44.99%
+  );
+  z-index: -1; /* Đặt z-index thấp hơn để nằm dưới hình ảnh */
+  border-radius: 50px 50px 0px 0px;
+}
+.banner-img-slide {
+  display: flex;
+  justify-items: end;
+  .img-left {
+    object-fit: contain;
+  }
+}
+.carousel{
+  z-index: -1 !important;
+  display: block;
+}
+
+.carousel-control-prev {
+  left: -60px !important;
+}
+.carousel-control-next {
+  right: -60px !important;
+}
+.carousel {
+  height: 600px !important;
+}
+@media (max-width: 740px) {
+  .carousel-control-prev {
+    display: none !important;
+
+  }
+  .carousel-control-next {
+   display: none !important;
+ 
+  }
+  .content-left {
+    margin-top: 0 !important;
+    
+  }
+  .banner-text {
+    h2 {
+      width: 70%;
+      color: #204322;
+      font-family: Inter;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px; /* 66.667% */
+      letter-spacing: -0.408px;
+    }
+    p {
+      color: #666;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 187.5% */
+      letter-spacing: -0.408px;
+    }
+  }
+  .banner-right-img{
+    width: 200px;
+  }
+}
+@media (min-width: 741px) and (max-width: 1023px) {
+  .carousel-control-prev {
+    left: -10px !important;
+  }
+  .carousel-control-next {
+    right: -10px !important;
+  }
+  .carousel {
+    height: 600px !important;
   }
   
-  .img-banner::before {
-    content: "";
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 80%;
-    height: 80%;
-    transform: translate(50%,0);
-    background: linear-gradient(
-      180deg,
-      #dfdad6 0%,
-      rgba(217, 217, 217, 0) 44.99%
-    );
-    z-index: -1; /* Đặt z-index thấp hơn để nằm dưới hình ảnh */
-    border-radius: 50px 50px 0px 0px;
-  }
+}

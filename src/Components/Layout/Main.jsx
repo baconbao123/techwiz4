@@ -14,7 +14,7 @@ export default function Main() {
       <Home/>
       <ScrollToTop/>
       <ContactBar/>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
      
      </>
