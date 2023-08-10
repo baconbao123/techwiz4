@@ -5,13 +5,14 @@
 }
 
 .top-bar {
-    z-index: 999    ;
+    z-index: 999;
     background-color: $bg_topbar;
     font-family: $font_primary;
     position: fixed;
     height: 76px;
     top: 0;
     left: 0;
+    right: 0;
 
     .logo-header {
         width: 229px;
@@ -119,6 +120,8 @@
     }
 
     .top-bar-sm {
+        padding-top: 10px;
+        z-index: 99;
         display: flex;
         background-color: $bg_topbar;
         font-family: $font_primary;
@@ -136,7 +139,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-
+      
         .show-menu {
             cursor: pointer;
         }

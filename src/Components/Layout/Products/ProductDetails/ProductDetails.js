@@ -15,8 +15,6 @@ import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 
-
-
 const ProductDetail = () => {
     const [countProduct, setCountProduct] = useState(0)
     const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
