@@ -34,7 +34,7 @@ function NewProduct() {
             <Row>
               {AllProduct.map((item, index) =>
                 item.tag === "new" ? (
-                  <Col lg={3} key={index} className="mt-4">
+                  <Col lg={3} md={4} key={index} className="mt-4">
                     <CardProduct item={item} />
                   </Col>
                 ) : null

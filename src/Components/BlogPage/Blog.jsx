@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import "./Blog.scss";
-import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
-import BlogImg from "../../assets/Layout_img/blogBaner.png";
-import { blog } from "../../Data/Blog";
-import BlogItem from "./BlogItem";
-import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { BreadCrumb } from "primereact/breadcrumb";
-import { Link } from "react-router-dom";
-import Pagination from "react-bootstrap/Pagination";
+import React,{useState} from 'react'
+import "./Blog.scss"
+import { Container, Row, Col, InputGroup,Form } from "react-bootstrap"
+import BlogImg from '../../assets/Layout_img/blogBaner.png';
+import { blog } from '../../Data/Blog';
+import BlogItem from './BlogItem';
+import { AiOutlineHome,AiOutlineSearch } from "react-icons/ai";
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { Link } from 'react-router-dom';
+import Pagination from 'react-bootstrap/Pagination';
 export default function Blog() {
   const items = [{ label: "Blog", url: "/blog" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
