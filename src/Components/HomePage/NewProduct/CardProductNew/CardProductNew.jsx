@@ -1,13 +1,14 @@
-import React from "react";
+
+import React from 'react'
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaRegHeart } from 'react-icons/fa'
-import './CardProduct.scss'
-
-export const CardProduct = ({item}) => {
-    return (
-        <Link to='/all'>
-            <Card className="card-product">
+import "./CardProductNew.scss"
+function CardProductNew({item}) {
+  return (
+    <div>
+          <Link to='/all'>
+            <Card className="card-new-product" style={{backgroundColor:'#fff !important'}}>
                 <Card.Title className="card-title-product">
                 {item.tag ? <span className="span-best-seller">{item.tag}</span> : null}
                     <div className="card-name-catergory-product">
@@ -27,5 +28,8 @@ export const CardProduct = ({item}) => {
                 </Card.Body>
             </Card>
         </Link>
-    )
+    </div>
+  )
 }
+
+export default CardProductNew

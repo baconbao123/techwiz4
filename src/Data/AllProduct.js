@@ -266,7 +266,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 5, name: 'Rubber Plant', category: 'indoor', price: 20,
+      id: 5, name: 'Rubber Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: Rubber1 },
          { img2: Rubber2 },
