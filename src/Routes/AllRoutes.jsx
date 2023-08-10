@@ -11,7 +11,7 @@ import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
 export const AllRoutes=[
 {name:'home',link:'',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
-{name:'shop',link:'/shop/all/category/:id',component: <ProductDetail/>},
+{name:'shop',link:'/shop/all/4',component: <ProductDetail/>},
 {name:'bonsai',link:'/shop/bonsai',component:''},
 {name:'Flowering Shrubs',link:'/shop/floweringshrubs',component:''},
 {name:'indoor',link:'/shop/indoor',component:''},
