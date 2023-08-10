@@ -11,8 +11,6 @@ function App() {
  
   <>
       <Main></Main>
-      {/* <ProductDetail/> */}
-      <AllProducts />
   </>
  
   );

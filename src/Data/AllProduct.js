@@ -1,183 +1,183 @@
 // -----------------------------indoor-------------------------------
 // 1
-import snakePlant1 from "../assets/image/indoor/1.SnakePlant.";
-import snakePlant2 from "../assets/image/indoor/2.SnakePlant2";
-import snakePlant3 from "../assets/image/indoor/3.SnakePlant3";
+import snakePlant1 from "../assets/image/indoor/1.SnakePlant.png";
+import snakePlant2 from "../assets/image/indoor/2.SnakePlant.png";
+import snakePlant3 from "../assets/image/indoor/3.SnakePlant.png";
 // 2
-import spiderplant1 from "../assets/image/indoor/4.Spider Plant1";
-import spiderplant2 from "../assets/image/indoor/5.Spider Plant2";
-import spiderplant3 from "../assets/image/indoor/6.Spider Plant3";
+import spiderplant1 from "../assets/image/indoor/4.Spider Plant.png";
+import spiderplant2 from "../assets/image/indoor/5.Spider Plant.png";
+import spiderplant3 from "../assets/image/indoor/6.Spider Plant.png";
 // 3
-import pothos1 from "../assets/image/indoor/7.Pothos1";
-import pothos2 from "../assets/image/indoor/8.Pothos1";
-import pothos3 from "../assets/image/indoor/9.Pothos1";
+import pothos1 from "../assets/image/indoor/7.Pothos.png";
+import pothos2 from "../assets/image/indoor/8.Pothos.png";
+import pothos3 from "../assets/image/indoor/9.Pothos.png";
 // 4
-import Peace_Lily1 from "../assets/image/indoor/10.Peace_Lily1";
-import Peace_Lily2 from "../assets/image/indoor/11.Peace_Lily2";
-import Peace_Lily3 from "../assets/image/indoor/12.Peace_Lily3";
+import Peace_Lily1 from "../assets/image/indoor/10.Peace_Lily.png";
+import Peace_Lily2 from "../assets/image/indoor/11.Peace_Lily.png";
+import Peace_Lily3 from "../assets/image/indoor/12.Peace Lily.png";
 // 5
-import Rubber1 from "../assets/image/indoor/13.Rubber Plant1";
-import Rubber2 from "../assets/image/indoor/14.Rubber Plant2";
-import Rubber3 from "../assets/image/indoor/15.Rubber Plant3";
+import Rubber1 from "../assets/image/indoor/13.Rubber Plant.png";
+import Rubber2 from "../assets/image/indoor/14.Rubber Plant.png";
+import Rubber3 from "../assets/image/indoor/15.Rubber Plant.png";
 // 6
-import ZZ1 from "../assets/image/indoor/16.ZZ Plant1";
-import ZZ2 from "../assets/image/indoor/17.ZZ Plant2";
-import ZZ3 from "../assets/image/indoor/18.ZZ Plant3";
+import ZZ1 from "../assets/image/indoor/16.ZZ Plant.png";
+import ZZ2 from "../assets/image/indoor/17.ZZ Plant.png";
+import ZZ3 from "../assets/image/indoor/18.ZZ Plant.png";
 // 7
-import philodendron1 from "../assets/image/indoor/19.Philodendron1";
-import philodendron2 from "../assets/image/indoor/20.Philodendron2";
-import philodendron3 from "../assets/image/indoor/21.Philodendron3";
+import philodendron1 from "../assets/image/indoor/19.Philodendron.png";
+import philodendron2 from "../assets/image/indoor/20.Philodendron.png";
+import philodendron3 from "../assets/image/indoor/21.Philodendron.png";
 // 8
-import chineseEvergreen1 from "../assets/image/indoor/22.ChineseEvergreen1";
-import chineseEvergreen2 from "../assets/image/indoor/23.ChineseEvergreen2";
-import chineseEvergreen3 from "../assets/image/indoor/24.ChineseEvergreen3";
+import chineseEvergreen1 from "../assets/image/indoor/22.ChineseEvergreen.png";
+import chineseEvergreen2 from "../assets/image/indoor/23.ChineseEvergreen.png";
+import chineseEvergreen3 from "../assets/image/indoor/24.ChineseEvergreen.png";
 // 9
-import botstonFren1 from "../assets/image/indoor/25.BotstonFren1";
-import botstonFren2 from "../assets/image/indoor/26.BotstonFren2";
-import botstonFren3 from "../assets/image/indoor/27.BotstonFren3";
+import botstonFren1 from "../assets/image/indoor/25.BostonFern.png";
+import botstonFren2 from "../assets/image/indoor/26.BostonFern.png";
+import botstonFren3 from "../assets/image/indoor/27.BostonFern.png";
 // 10
-import aloevera1 from "../assets/image/indoor/28.AloeVera1";
-import aloevera2 from "../assets/image/indoor/29.AloeVera2";
-import aloevera3 from "../assets/image/indoor/30.AloeVera3";
+import aloevera1 from "../assets/image/indoor/28.AloeVera.png";
+import aloevera2 from "../assets/image/indoor/29.AloeVera.png";
+import aloevera3 from "../assets/image/indoor/30.AloeVera.png";
 //----------------------------bonsai------------------------------
 // 1
-import JuniperusChinensis1 from "../assets/image/bonsai/1.Juniperus Chinensis 1";
-import JuniperusChinensis2 from "../assets/image/bonsai/2.Juniperus Chinensis 2";
-import JuniperusChinensis3 from "../assets/image/bonsai/3.Juniperus Chinensis 3";
+import JuniperusChinensis1 from "../assets/image/bonsai/1.Juniperus chinensis.jpg";
+import JuniperusChinensis2 from "../assets/image/bonsai/2.Juniperus chinensis.jpg";
+import JuniperusChinensis3 from "../assets/image/bonsai/3.Juniperus chinensis.jpg";
 // 2
-import Ficus_retusa1 from "../assets/image/bonsai/4.Ficus_retusa1";
-import Ficus_retusa2 from "../assets/image/bonsai/5.Ficus_retusa2";
-import Ficus_retusa3 from "../assets/image/bonsai/6.Ficus_retusa3";
+import Ficus_retusa1 from "../assets/image/bonsai/4.Ficus_retusa.png";
+import Ficus_retusa2 from "../assets/image/bonsai/5.Ficus_retusa.png";
+import Ficus_retusa3 from "../assets/image/bonsai/6.Ficus_retusa.png";
 // 3
-import Carmona_microphylla1 from "../assets/image/bonsai/7.Carmona_microphylla1";
-import Carmona_microphylla2 from "../assets/image/bonsai/8.Carmona_microphylla2";
-import Carmona_microphylla3 from "../assets/image/bonsai/9.Carmona_microphylla3";
+import Carmona_microphylla1 from "../assets/image/bonsai/7.Carmona_microphylla.png";
+import Carmona_microphylla2 from "../assets/image/bonsai/8.Carmona_microphylla.png";
+import Carmona_microphylla3 from "../assets/image/bonsai/9.Carmona_microphylla.png";
 // 4
-import Pinus_thunbergii1 from "../assets/image/bonsai/10.Pinus_thunbergii1";
-import Pinus_thunbergii2 from "../assets/image/bonsai/11.Pinus_thunbergii2";
-import Pinus_thunbergii3 from "../assets/image/bonsai/12.Pinus_thunbergii3";
+import Pinus_thunbergii1 from "../assets/image/bonsai/10.Pinus_thunbergii.png";
+import Pinus_thunbergii2 from "../assets/image/bonsai/11.Pinus_thunbergii.png";
+import Pinus_thunbergii3 from "../assets/image/bonsai/12.Pinus_thunbergii.png";
 // 5
-import Ficus_benjamina1 from "../assets/image/bonsai/13.Ficus_benjamina1";
-import Ficus_benjamina2 from "../assets/image/bonsai/14.Ficus_benjamina2";
-import Ficus_benjamina3 from "../assets/image/bonsai/14.Ficus_benjamina3";
+import Ficus_benjamina1 from "../assets/image/bonsai/13.Ficus_benjamina.png";
+import Ficus_benjamina2 from "../assets/image/bonsai/14.Ficus_benjamina.png";
+import Ficus_benjamina3 from "../assets/image/bonsai/14.Ficus_benjamina.png";
 // 6
-import Podocarpus_macrophyllus1 from "../assets/image/bonsai/15.Podocarpus_macrophyllus1";
-import Podocarpus_macrophyllus2 from "../assets/image/bonsai/15.Podocarpus_macrophyllus2";
-import Podocarpus_macrophyllus3 from "../assets/image/bonsai/17.Podocarpus_macrophyllus3";
+import Podocarpus_macrophyllus1 from "../assets/image/bonsai/15.Podocarpus_macrophyllus.png";
+import Podocarpus_macrophyllus2 from "../assets/image/bonsai/15.Podocarpus_macrophyllus.png";
+import Podocarpus_macrophyllus3 from "../assets/image/bonsai/17.Podocarpus_macrophyllus.png";
 // --------------------floweringshrubs-----------------------
 // 1
-import Butterfly_Bush1 from "../assets/image/floweringshrubs/1.Butterfly_Bush1";
-import Butterfly_Bush2 from "../assets/image/floweringshrubs/2.Butterfly_Bush2";
-import Butterfly_Bush3 from "../assets/image/floweringshrubs/3.Butterfly_Bush3";
+import Butterfly_Bush1 from "../assets/image/floweringshrubs/1.Butterfly_Bush.png";
+import Butterfly_Bush2 from "../assets/image/floweringshrubs/2.Butterfly_Bush.png";
+import Butterfly_Bush3 from "../assets/image/floweringshrubs/3.Butterfly_Bush.png";
 // 2
-import Hydrangea1 from "../assets/image/floweringshrubs/4.Hydrangea1";
-import Hydrangea2 from "../assets/image/floweringshrubs/5.Hydrangea2";
-import Hydrangea3 from "../assets/image/floweringshrubs/6.Hydrangea3";
+import Hydrangea1 from "../assets/image/floweringshrubs/4.Hydrangea.png";
+import Hydrangea2 from "../assets/image/floweringshrubs/5.Hydrangea.png";
+import Hydrangea3 from "../assets/image/floweringshrubs/6.Hydrangea.png";
 // 3
-import Tulip1 from "../assets/image/floweringshrubs/7.Tulip1";
-import Tulip2 from "../assets/image/floweringshrubs/8.Tulip2";
-import Tulip3 from "../assets/image/floweringshrubs/9.Tulip3";
+import Tulip1 from "../assets/image/floweringshrubs/7.Tulip.png";
+import Tulip2 from "../assets/image/floweringshrubs/8.Tulip.png";
+import Tulip3 from "../assets/image/floweringshrubs/9.Tulip.png";
 
 // 4
-import Rhododendron1 from "../assets/image/floweringshrubs/10.Rhododendron1";
-import Rhododendron2 from "../assets/image/floweringshrubs/11.Rhododendron2";
-import Rhododendron3 from "../assets/image/floweringshrubs/12.Rhododendron3";
+import Rhododendron1 from "../assets/image/floweringshrubs/10.Rhododendron.png";
+import Rhododendron2 from "../assets/image/floweringshrubs/11.Rhododendron.png";
+import Rhododendron3 from "../assets/image/floweringshrubs/12.Rhododendron.png";
 // 5
-import Azalea1 from "../assets/image/floweringshrubs/13.Azalea1";
-import Azalea2 from "../assets/image/floweringshrubs/14.Azalea2";
-import Azalea3 from "../assets/image/floweringshrubs/15.Azalea3";
+import Azalea1 from "../assets/image/floweringshrubs/13.Azalea.png";
+import Azalea2 from "../assets/image/floweringshrubs/14.Azalea.png";
+import Azalea3 from "../assets/image/floweringshrubs/15.Azalea.png";
 // 6
-import Forsythia1 from "../assets/image/floweringshrubs/16.Forsythia1";
-import Forsythia2 from "../assets/image/floweringshrubs/17.Forsythia2";
-import Forsythia3 from "../assets/image/floweringshrubs/18.Forsythia3";
+import Forsythia1 from "../assets/image/floweringshrubs/16.Forsythia.png";
+import Forsythia2 from "../assets/image/floweringshrubs/17.Forsythia.png";
+import Forsythia3 from "../assets/image/floweringshrubs/18.Forsythia.png";
 
 // 7
-import Hibiscus1 from "../assets/image/floweringshrubs/20.Hibiscus1";
-import Hibiscus2 from "../assets/image/floweringshrubs/21.Hibiscus2";
+import Hibiscus1 from "../assets/image/floweringshrubs/20.Hibiscus.png";
+import Hibiscus2 from "../assets/image/floweringshrubs/21.Hibiscus.png";
 // -------------------------------------outdoor-----------------------------
 // 1
-import WhiteRose1 from "../assets/image/outdoor/1.WhiteRose";
-import WhiteRose2 from "../assets/image/outdoor/2.WhiteRose";
-import WhiteRose3 from "../assets/image/outdoor/3.WhiteRose";
+import WhiteRose1 from "../assets/image/outdoor/1.WhiteRose.png";
+import WhiteRose2 from "../assets/image/outdoor/2.WhiteRose.png";
+import WhiteRose3 from "../assets/image/outdoor/3.WhiteRose.png";
 // 2
-import Sunflower1 from "../assets/image/outdoor/4.Sunflower";
-import Sunflower2 from "../assets/image/outdoor/5.Sunflower";
-import Sunflower3 from "../assets/image/outdoor/6.Sunflower";
+import Sunflower1 from "../assets/image/outdoor/4.Sunflower.png";
+import Sunflower2 from "../assets/image/outdoor/5.Sunflower.png";
+import Sunflower3 from "../assets/image/outdoor/6.Sunflower.png";
 // 3
-import Lavender1 from "../assets/image/outdoor/7.Lavender";
-import Lavender2 from "../assets/image/outdoor/8.Lavender";
-import Lavender3 from "../assets/image/outdoor/9.Lavender";
+import Lavender1 from "../assets/image/outdoor/7.Lavender.png";
+import Lavender2 from "../assets/image/outdoor/8.Lavender.png";
+import Lavender3 from "../assets/image/outdoor/9.Lavender.png";
 // 4
-import Tulip4 from "../assets/image/outdoor/10.Tulip";
-import Tulip5 from "../assets/image/outdoor/11.Tulip";
-import Tulip6 from "../assets/image/outdoor/12.Tulip";
+import Tulip4 from "../assets/image/outdoor/10.Tulip.png";
+import Tulip5 from "../assets/image/outdoor/11.Tulip.png";
+import Tulip6 from "../assets/image/outdoor/12.Tulip.png";
 // 5
-import Daffodil1 from "../assets/image/outdoor/13.Daffodil";
-import Daffodil2 from "../assets/image/outdoor/14.Daffodil";
-import Daffodil3 from "../assets/image/outdoor/15.Daffodil";
+import Daffodil1 from "../assets/image/outdoor/13.Daffodil.png";
+import Daffodil2 from "../assets/image/outdoor/14.Daffodil.png";
+import Daffodil3 from "../assets/image/outdoor/15.Daffodil.png";
 // 6
-import Marigold1 from "../assets/image/outdoor/16.Marigold";
-import Marigold2 from "../assets/image/outdoor/17.Marigold";
-import Marigold3 from "../assets/image/outdoor/18.Marigold";
+import Marigold1 from "../assets/image/outdoor/16.Marigold.png";
+import Marigold2 from "../assets/image/outdoor/17.Marigold.png";
+import Marigold3 from "../assets/image/outdoor/18.Marigold.png";
 // 7
-import Petunia1 from "../assets/image/outdoor/19.Petunia";
-import Petunia2 from "../assets/image/outdoor/20.Petunia";
-import Petunia3 from "../assets/image/outdoor/21.Petunia";
+import Petunia1 from "../assets/image/outdoor/19.Petunia.png";
+import Petunia2 from "../assets/image/outdoor/20.Petunia.png";
+import Petunia3 from "../assets/image/outdoor/21.Petunia.png";
 // 8
-import Geranium1 from "../assets/image/outdoor/22.Geranium";
-import Geranium2 from "../assets/image/outdoor/23.Geranium";
-import Geranium3 from "../assets/image/outdoor/24.Geranium";
+import Geranium1 from "../assets/image/outdoor/22.Geranium.png";
+import Geranium2 from "../assets/image/outdoor/23.Geranium.png";
+import Geranium3 from "../assets/image/outdoor/24.Geranium.png";
 // 9
-import Zinnia1 from "../assets/image/outdoor/28.Zinnia";
-import Zinnia2 from "../assets/image/outdoor/29.Zinnia";
-import Zinnia3 from "../assets/image/outdoor/30.Zinnia";
+import Zinnia1 from "../assets/image/outdoor/28.Zinnia.png";
+import Zinnia2 from "../assets/image/outdoor/29.Zinnia.png";
+import Zinnia3 from "../assets/image/outdoor/30.Zinnia.png";
 // ---------------------------succulents---------------------
 // 1
-import Echeveria1  from "../assets/image/succulents/ 1.Echeveria";
-import Echeveria2  from "../assets/image/succulents/ 2.Echeveria";
-import Echeveria3  from "../assets/image/succulents/ 3.Echeveria";
+import Echeveria1  from "../assets/image/succulents/1.Echeveria.png";
+import Echeveria2  from "../assets/image/succulents/2.Echeveria.png";
+import Echeveria3  from "../assets/image/succulents/3.Echeveria.png";
 
 // 2
-import AloeVera1 from "../assets/image/succulents/4.Aloe Vera ";
-import AloeVera2 from "../assets/image/succulents/5.Aloe Vera ";
-import AloeVera3 from "../assets/image/succulents/6.Aloe Vera ";
+import AloeVera1 from "../assets/image/succulents/4.Aloe Vera.png";
+import AloeVera2 from "../assets/image/succulents/5.Aloe Vera.png";
+import AloeVera3 from "../assets/image/succulents/6.Aloe Vera.png";
 
 // 3
-import Haworthia1 from "../assets/image/succulents/7.Haworthia ";
-import Haworthia2 from "../assets/image/succulents/8.Haworthia ";
-import Haworthia3 from "../assets/image/succulents/9.Haworthia ";
+import Haworthia1 from "../assets/image/succulents/7.Haworthia.png";
+import Haworthia2 from "../assets/image/succulents/8.Haworthia.png";
+import Haworthia3 from "../assets/image/succulents/9.Haworthia.png";
 
 
 // 4
-import Sedum1 from "../assets/image/succulents/10.Sedum ";
-import Sedum2 from "../assets/image/succulents/11.Sedum ";
-import Sedum3 from "../assets/image/succulents/12.Sedum ";
+import Sedum1 from "../assets/image/succulents/10.Sedum.png";
+import Sedum2 from "../assets/image/succulents/11.Sedum.png";
+import Sedum3 from "../assets/image/succulents/12.Sedum.png";
 
 // 5
-import Crassula1 from "../assets/image/succulents/13.Crassula ";
-import Crassula2 from "../assets/image/succulents/14.Crassula ";
-import Crassula3 from "../assets/image/succulents/15.Crassula ";
+import Crassula1 from "../assets/image/succulents/13.Crassula.png";
+import Crassula2 from "../assets/image/succulents/14.Crassula.png";
+import Crassula3 from "../assets/image/succulents/15.Crassula.png";
 
 // 6
-import Kalanchoe1 from "../assets/image/succulents/16.Kalanchoe ";
-import Kalanchoe2 from "../assets/image/succulents/17.Kalanchoe ";
-import Kalanchoe3 from "../assets/image/succulents/18.Kalanchoe ";
+import Kalanchoe1 from "../assets/image/succulents/16.Kalanchoe.png";
+import Kalanchoe2 from "../assets/image/succulents/17.Kalanchoe.png";
+import Kalanchoe3 from "../assets/image/succulents/18.Kalanchoe.png";
 // 7
-import Agave1 from "../assets/image/succulents/19.Agave";
-import Agave2 from "../assets/image/succulents/20.Agave";
-import Agave3 from "../assets/image/succulents/21.Agave";
+import Agave1 from "../assets/image/succulents/19.Agave.png";
+import Agave2 from "../assets/image/succulents/20.Agave.png";
+import Agave3 from "../assets/image/succulents/21.Agave.png";
 // 8
-import Senecio1 from "../assets/image/succulents/22.Senecio";
-import Senecio2 from "../assets/image/succulents/23.Senecio";
-import Senecio3 from "../assets/image/succulents/24.Senecio";
+import Senecio1 from "../assets/image/succulents/22.Senecio.png";
+import Senecio2 from "../assets/image/succulents/23.Senecio.png";
+import Senecio3 from "../assets/image/succulents/24.Senecio.png";
 // 9
-import Euphorbia1 from "../assets/image/succulents/25.Euphorbia";
-import Euphorbia2 from "../assets/image/succulents/26.Euphorbia";
-import Euphorbia3 from "../assets/image/succulents/27.Euphorbia";
+import Euphorbia1 from "../assets/image/succulents/25.Euphorbia.png";
+import Euphorbia2 from "../assets/image/succulents/26.Euphorbia.png";
+import Euphorbia3 from "../assets/image/succulents/27.Euphorbia.png";
 // 10
-import Graptopetalum1 from "../assets/image/succulents/28.Graptopetalum";
-import Graptopetalum2 from "../assets/image/succulents/29.Graptopetalum";
-import Graptopetalum3 from "../assets/image/succulents/30.Graptopetalum";
+import Graptopetalum1 from "../assets/image/succulents/28.Graptopetalum.png";
+import Graptopetalum2 from "../assets/image/succulents/29.Graptopetalum.png";
+import Graptopetalum3 from "../assets/image/succulents/30.Graptopetalum.png";
 
 
 
