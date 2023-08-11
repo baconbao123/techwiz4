@@ -21,15 +21,15 @@ export default function Blog() {
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <Container fluid className="blog p-0 ">
-      <Row className="">
+    <section fluid className='blog p-0 '  >
+      
         {/* <div className='title'>
               BLOG
         </div> */}
-        <Col xs={12} lg={12} className="p-0 m-0">
-          <img src={BlogImg} alt="" className="logo-baner" />
-        </Col>
-      </Row>
+       
+          <img src={BlogImg} alt="" className='logo-baner' />
+       
+     
       <Container>
         <BreadCrumb model={items} home={home} className="mt-3" />
 
@@ -41,16 +41,14 @@ export default function Blog() {
         </InputGroup>
         <Row className=" d-flex justify-content-evenly mt-5 mb-5">
           {currentItems.map((item) => (
-            <>
-              <Col lg={3} md={6} sm={12} className="contain">
-                <Link
-                  to={`/blog/${item.id}`}
-                  className="link-direct d-inline-block"
-                >
-                  <BlogItem key={item.id} item={item} />
-                </Link>
-              </Col>
-            </>
+        <>
+        <Col lg={3} md={6} sm={9} xs={12} className='contain' >
+            <Link to={`/blog/${item.id}`} className='link-direct d-inline-block'>
+              
+            <BlogItem key={item.id} item={item} />
+            </Link>
+            </Col>
+        </>
           ))}
         </Row>
       </Container>
@@ -75,6 +73,6 @@ export default function Blog() {
           disabled={currentPage === Math.ceil(data.length / 12)}
         />
       </Pagination>
-    </Container>
-  );
+    </section>
+  )
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState,useCallback} from "react";
 import { Row, Col, Button, Form, Dropdown } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import bannerallpro from '../../../../assets/Layout_img/banner-allpro.png'
 import './AllProducts.scss'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
+import ProductDetail from "../ProductDetails/ProductDetails";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 
@@ -71,8 +73,7 @@ const AllProducts = () => {
     }, [])
     const [currentDisplayProduct, setCurrentDisplayProduct] = useState(8);
     const handelChange = (e,name) => {
-        console.log('option',option);
-        console.log('value',price);
+  
        if(name==="op") {
         setOption(e.target.value);
         if(price==='0') {
@@ -234,7 +235,7 @@ const AllProducts = () => {
        }
         // value
        else if (name==="va") {
-        console.log("VO ROI NE");
+
         setPrice(e.target.value);
         if(option==='1') {
             let productArr=[];
@@ -422,7 +423,6 @@ const AllProducts = () => {
       
     }
 
-   
 
 
     return (
@@ -465,9 +465,12 @@ const AllProducts = () => {
 
                         <div className="card-of-cate">
                             <Row>
-                                { currentItems.length>0?currentItems.map((item, index) => (
+                                { currentItems.length>0?currentItems.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
-                                        <CardProduct item={item} />
+                                        {/* {console.log(items)} */}
+                                        <Link to={`/shop/all/${items.id}`}>
+                                            <CardProduct items={items}/>
+                                        </Link>
                                     </Col>
                                 )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)}
                             </Row>

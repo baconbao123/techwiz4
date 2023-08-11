@@ -135,6 +135,7 @@
     }
 
     .container-header {
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -167,7 +168,7 @@
             position: absolute;
             width: 200px;
             top: 36px;
-            right: 114px;
+            right: 30px;
         }
 
         .icon-search {
@@ -180,11 +181,13 @@
 
         .function {
             @media (max-width:300px) {
-                position: absolute;
-                right: 0;
+                // position: absolute;
+                // right: 0;
+
 
             }
-
+            float: left;
+            // z-index: -1;
             width: 200px;
             justify-content: space-evenly;
         }

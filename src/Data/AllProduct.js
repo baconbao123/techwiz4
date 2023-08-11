@@ -897,7 +897,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 36, name: 'Euphorbia Plant', category: 'succulents', price: 30, tag: 'best seller',
+      id: 36, name: 'Euphorbia Plant', category: 'succulents', price: 30,
       img: [
          { img1: Euphorbia1 },
          { img2: Euphorbia2 },
@@ -917,7 +917,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ]
    }, {
-      id: 37, name: 'Graptopetalum Plant', category: 'succulents', price: 30, tag: 'best seller',
+      id: 37, name: 'Graptopetalum Plant', category: 'succulents', price: 30, 
       img: [
          { img1: Graptopetalum1 },
          { img2: Graptopetalum2 },

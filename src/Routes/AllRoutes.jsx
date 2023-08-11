@@ -3,7 +3,7 @@ import Blog from "../Components/BlogPage/Blog";
 import BlogItem from "../Components/BlogPage/BlogItem";
 import ProductDetail from "../Components/Layout/Products/ProductDetails/ProductDetails";
 import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
-
+import ServicePage from "../Components/ServicePage/ServicePage";
 
 
 
@@ -11,7 +11,7 @@ import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
 export const AllRoutes=[
 {name:'home',link:'',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
-{name:'shop',link:'/shop/all/category/:id',component: <ProductDetail/>},
+{name:'shop',link:'/shop/all/:id',component: <ProductDetail/>},
 {name:'bonsai',link:'/shop/bonsai',component:''},
 {name:'Flowering Shrubs',link:'/shop/floweringshrubs',component:''},
 {name:'indoor',link:'/shop/indoor',component:''},
@@ -22,13 +22,11 @@ export const AllRoutes=[
 {name:'Services',link:'/service',component:''},
 {name:'FeedBack',link:'/feedback',component:''},
 
+// service
+{name:'ServicePage',link:'/all-service',component:<ServicePage />},
+// end--ser
+
 {name:'BLog',link:'/blog',component:<Blog />},
-// {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
-
-
-
-
-
-
+{name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 
 ];

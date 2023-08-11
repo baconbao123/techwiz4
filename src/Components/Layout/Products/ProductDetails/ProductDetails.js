@@ -4,24 +4,30 @@ import { Rating } from "primereact/rating";
 import { InputTextarea } from "primereact/inputtextarea";
 import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
+import { AllProduct } from '../../../../Data/AllProduct'
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 import { CardProduct } from "./CardProduct/CardProduct";
-import { SlideCardImg } from "./SlideImg/SlideCardImg";
+import  SlideCardImg from "./SlideImg/SlideCardImg"
+
 
 import './ProductDetails.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 
-const ProductDetail = () => {
+
+
+const ProductDetail = ({items}) => {
+    console.log("log items",items);
     const [countProduct, setCountProduct] = useState(0)
     const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
     const [ratingUser, setRatingUser] = useState(null);
     const [commentValue, setCommentValue] = useState('');
     const [nameComment, setNameComment] = useState('')
     const [checked, setChecked] = useState(false);
+
 
     const handleClickAddProduct = () => {
         setCountProduct(countProduct + 1)
@@ -32,6 +38,7 @@ const ProductDetail = () => {
     }
 
     return (
+        
         <div className='products-details-master'>
             <Container>
                 <div className='products-details-div'>
@@ -44,11 +51,11 @@ const ProductDetail = () => {
                     </Row>
                     <Row>
                         <Col lg={5} md={5} sm={12} xs={12}>
-                            <div className="name-plant">Butterfly</div>
+                            <div className="name-plant">{items.name}</div>
                             <div className="img-div">
-                               <AliceCarousel 
+                            <SlideCardImg 
                                 mouseTracking 
-                                items={SlideCardImg} 
+                                // productList={productList} 
                                 responsive={{
                                     0: { items: 1 },
                                     768: { items: 1 },
@@ -160,7 +167,7 @@ const ProductDetail = () => {
                                 <Col lg={6} md={6} sm={12} xs={12}>
                                     <div className="your-name-lable">Your Email</div>
                                     <div>
-                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} style={{ width: '100%', borderRadius: '40px' }} />
+                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} style={{ width: '100%', borderRadius: '40px'}} />
                                     </div>
                                 </Col>
                             </Row>
@@ -182,18 +189,11 @@ const ProductDetail = () => {
                     </Row>
                     <span className="label-similar">Similar Product</span>
                     <Row style={{ marginBottom: '40px' }}>
-                        <Col lg={3} md={3} sm={6} xs={12}>
-                            <CardProduct />
-                        </Col>
-                        <Col lg={3} md={3} sm={6} xs={12}>
-                            <CardProduct />
-                        </Col> 
-                        <Col lg={3} md={3} sm={6} xs={12}>
-                            <CardProduct />
-                        </Col> 
-                        <Col lg={3} md={3} sm={6} xs={12}>
-                            <CardProduct />
-                        </Col>
+                        {items.map(item => (
+                            <Col lg={3} md={3} sm={6} xs={12}>
+                                <CardProduct item={item}/>
+                            </Col>
+                        ))}
                     </Row>
                 </div>
             </Container>

@@ -1,0 +1,7 @@
+@import '../../setting';
+
+.service-main{
+    font-family: $font_primary;
+    min-height: 100vh;
+    margin-top: calc($h-topbar + 20px);
+}

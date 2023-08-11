@@ -1,5 +1,4 @@
 .care-plant {
-    margin-bottom: 90px;
     position: relative;
     .green-title {
         color: #52C452;
@@ -9,6 +8,9 @@
     }
     .care-img {
         width: 331px;
+        @media (max-width:400px) {
+            display: none;
+        }
     }
     .group-button {
        justify-self: flex-end;

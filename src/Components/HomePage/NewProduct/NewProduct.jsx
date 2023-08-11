@@ -14,6 +14,11 @@ function NewProduct() {
       numScroll: 1,
     },
     {
+      breakpoint: "1187px",
+      numVisible: 3,
+      numScroll: 1,
+    },
+    {
       breakpoint: "991px",
       numVisible: 2,
       numScroll: 1,
