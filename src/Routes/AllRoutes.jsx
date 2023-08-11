@@ -32,13 +32,26 @@ export const AllRoutes=[
 {name:'tree',link:'/shop/all/tree/:id',component: <ProductDetail/>},
 {name:'tool',link:'/shop/all/tool/:id',component: <ProductTool/>},
 {name:'fertilizer',link:'/shop/all/fertilizer/:id',component: <ProductFertilizer/>},
-{name:'bonsai',link:'/shop/all/tree/bonsai',component: <Bonsai />},
+{name:'bonsai',link:'/shop/all/tree/bonsai/',component: <Bonsai />},
+{name:'bonsai',link:'/shop/all/tree/bonsai/:id',component: <ProductDetail/>},
+
 {name:'Flowering Shrubs',link:'/shop/all/tree/floweringshrubs',component: <FloweringShrubs />},
+{name:'Flowering Shrubs',link:'/shop/all/tree/floweringshrubs/:id',component: <ProductDetail />},
 {name:'indoor',link:'/shop/all/tree/indoor',component: <Indoor />},
+{name:'indoor',link:'/shop/all/tree/indoor/:id',component: <ProductDetail />},
 {name:'outdoor',link:'/shop/all/tree/outdoor',component:<Outdoor />},
+{name:'outdoor',link:'/shop/all/tree/outdoor/:id',component:<ProductDetail />},
+
 {name:'Succulent',link:'/shop/all/tree/succulent',component: <Succulent />},
+{name:'Succulent',link:'/shop/all/tree/succulent/:id',component: <ProductDetail />},
+
 {name:'Tools',link:'/shop/tool',component: <Tool/>},
+{name:'Tools',link:'/shop/tool/:id',component: <ProductTool/>},
+
 {name:'Fertilize',link:'/shop/fertilizer',component:<Fertilizer />},
+{name:'Fertilize',link:'/shop/fertilizer/:id',component:<ProductFertilizer />},
+
+{name:'Services',link:'/service',component:''},
 {name:'Services',link:'/service',component:<ServicePage/>},
 {name:'FeedBack',link:'/feedback',component:''},
 

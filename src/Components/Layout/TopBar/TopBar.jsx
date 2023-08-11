@@ -14,27 +14,27 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Login from '../../Authenticate/Login';
 import { Toast } from 'primereact/toast';
-import {Value} from '../../../Data/DataSava'
+import { Value } from '../../../Data/DataSava'
 import Cookies from 'js-cookie';
 export default function TopBar() {
-  
+
   const nav = TopNav;
   const [showSearch, setShowSearch] = useState(false);
   const [showSearchMb, setShowSearchMb] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenu1, setShowMenu1] = useState(false);
   const [listShow, setListShow] = useState([])
-  const [showLogin,setShowLogin]=useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const InputRef = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
-  const isLogin=Cookies.get('isLogin');
-  const {setIslogin}=useContext(Value)
-  const {cart}=useContext(Value)
-  
- console.log(isLogin);
+  const isLogin = Cookies.get('isLogin');
+  const { setIslogin } = useContext(Value)
+  const { cart } = useContext(Value)
+
+  console.log(isLogin);
   const showSuccess = () => {
-      toast.current.show({severity:'success', summary: ' Sign in Success', detail:'Enjoy your day', life: 1000});
+    toast.current.show({ severity: 'success', summary: ' Sign in Success', detail: 'Enjoy your day', life: 1000 });
   }
   useEffect(() => {
     AOS.init();
@@ -45,22 +45,22 @@ export default function TopBar() {
         setShowSearch(false)
       }
     }
-   
+
     document.addEventListener('click', handleClickOutSide);
-   
+
     return () => {
       document.removeEventListener('click', handleClickOutSide)
-    
+
     }
 
   }, [])
   useEffect(() => {
-     const handleClickOutSideMb = (e) => {
+    const handleClickOutSideMb = (e) => {
       if (InputRefMb.current && !InputRefMb.current.contains(e.target)) {
         setShowSearchMb(false)
       }
     }
-    
+
     document.addEventListener('click', handleClickOutSideMb);
     return () => {
       document.removeEventListener('click', handleClickOutSideMb)
@@ -68,11 +68,11 @@ export default function TopBar() {
 
   }, [])
   const handleSetShow = (item) => {
-    if(!isLogin) {
+    if (!isLogin) {
       setShowLogin(true)
     }
     else {
-      setShowLogin(false  )
+      setShowLogin(false)
     }
   }
 
@@ -80,15 +80,17 @@ export default function TopBar() {
   return (
     <>
       <Row className='m-0 p-0'>
-      <Toast ref={toast} />
+        <Toast ref={toast} />
         <section className='top-bar  top-bar-md p-0 m-0'>
           <Container>
 
             <Row>
 
               <Col md={3} className='container-logo'>
+                <Link to={'/'}>
+                  <img src={logo} className='logo-header' />
+                </Link>
 
-                <img src={logo} className='logo-header' />
               </Col>
               <Col md={7} className='d-flex justify-content-around align-items-center fw-bold fs-6'>
                 {nav.map((item, index) => (
@@ -142,14 +144,14 @@ export default function TopBar() {
                 <div className='d-flex contain-icon'>
                   <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
                   <div className='number-cart' onClick={()=> handleSetShow(true)}>
-                    {cart && cart.length===0?'':cart.length}
+                    {cart.length===0?'':cart.length}
                   </div>
                 <AiOutlineShoppingCart className='item-icon' />
                   </Link>
                 </div>
-              <Link to={`${isLogin?"/setting":''}`}>
-              <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
-              </Link>
+                <Link to={`${isLogin ? "/setting" : ''}`}>
+                  <AiOutlineUser className='item-icon' onClick={() => handleSetShow(true)} />
+                </Link>
               </Col>
             </Row>
           </Container>
@@ -160,8 +162,11 @@ export default function TopBar() {
           <section className='p-0 m-0 container-wrapper'>
             <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
               <Col className='menu-content p-0 ' xs={7} sm={5} md={5}>
-                <img src={logo} alt="" className='logo-menu' />
-            
+                <Link to={'/'} >
+
+                  <img src={logo} alt="" className='logo-menu' />
+                </Link>
+
                 <section>
                   {nav.map((item) => (
                     <ItemTopBar item={item} />
@@ -181,39 +186,39 @@ export default function TopBar() {
                   <AiOutlineMenuUnfold />
 
                 </section>
-                
-             
-                <InputGroup className={`${showMenu?'d-none':'input-search'}`}>
-                <InputGroup.Text><AiOutlineSearch/></InputGroup.Text>
-                <Form.Control placeholder='Search'></Form.Control>
+
+
+                <InputGroup className={`${showMenu ? 'd-none' : 'input-search'}`}>
+                  <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
+                  <Form.Control placeholder='Search'></Form.Control>
                 </InputGroup>
-               <div className='d-flex fs-2 function'>
-                <div  ref={InputRefMb} className='d-flex'>
-                  
-              <AiOutlineSearch onClick={()=>setShowSearchMb(true)} className='icon-search'/>
-               <Form.Control  placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`}/>
-           
-                </div>
-               <AiOutlineHeart/>
-                    <div className='number-contain d-flex'>
-                      <Link to={`${isLogin?"/cart":''} `} className='d-flex'>
+                <div className='d-flex fs-2 function'>
+                  <div ref={InputRefMb} className='d-flex'>
+
+                    <AiOutlineSearch onClick={() => setShowSearchMb(true)} className='icon-search' />
+                    <Form.Control placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`} />
+
+                  </div>
+                  <AiOutlineHeart />
+                  <div className='number-contain d-flex'>
+                    <Link to={`${isLogin ? "/cart" : ''} `} className='d-flex'>
                       <div className='number-cart'>
-                        {cart.length===0?'':cart.length}
+                        {cart.length === 0 ? '' : cart.length}
                       </div>
-               <AiOutlineShoppingCart onClick={()=> handleSetShow(true)}/>
-                      </Link>
-                    </div>
-             
-               <Link to={`${isLogin?"/setting":''} `} className='d-flex'>
-              <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
-              </Link>
-               </div>
+                      <AiOutlineShoppingCart onClick={() => handleSetShow(true)} />
+                    </Link>
+                  </div>
+
+                  <Link to={`${isLogin ? "/setting" : ''} `} className='d-flex'>
+                    <AiOutlineUser className='item-icon' onClick={() => handleSetShow(true)} />
+                  </Link>
+                </div>
               </Col>
-              
+
             </Row>
           </section>
         </section>
-        <Login  show={showLogin} setShow={setShowLogin} showSuccess={showSuccess} />
+        <Login show={showLogin} setShow={setShowLogin} showSuccess={showSuccess} />
         <BottomBar />
       </Row>
     </>

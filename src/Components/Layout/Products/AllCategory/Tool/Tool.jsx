@@ -13,414 +13,23 @@ import Pagination from 'react-bootstrap/Pagination';
 const productList = AllToolData
 
 const Tool = () => {
-    const [categoryName, setCategoryName] = useState('All Product')
+   
     const [searchValue, setSearchValue] = useState('')
-    const [option, setOption] = useState('0')
-    const [price, setPrice] = useState('0')
-
-    const [product, setProduct] = useState(productList)
-    const [bonsai, setBonsai] = useState([]);
-    const [flower, setFlower] = useState([]);
-    const [indoor, setIndoor] = useState([]);
-    const [outdoor, setOutdoor] = useState([]);
-    const [succulent, setScculent] = useState([]);
+    
+   
+    
     const [currentPage, setCurrentPage] = useState(1);
     const indexOfLastItem = currentPage * 8;
     const indexOfFirstItem = indexOfLastItem - 8;
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
-    const currentItems = product.slice(indexOfFirstItem, indexOfLastItem);
+    const currentItems = productList.slice(indexOfFirstItem, indexOfLastItem);
 
 
 
-    useEffect(() => {
-        let indoorArr = [];
-        let outdoorArr = [];
-        let flowerArr = [];
-        let bonSaiArr = [];
-        let succulentArr = [];
-        productList.filter((item) => {
-            if (item.category === 'indoor') {
-                indoorArr.push(item);
 
-            }
-            else if (item.category === 'outdoor') {
-                outdoorArr.push(item);
-
-            }
-            else if (item.category === 'floweringshrubs') {
-                flowerArr.push(item);
-
-            }
-            else if (item.category === 'bonsai') {
-                bonSaiArr.push(item);
-
-            }
-            else if (item.category === 'succulents') {
-                succulentArr.push(item);
-            }
-        })
-
-        setIndoor(indoorArr)
-        setOutdoor(outdoorArr)
-        setFlower(flowerArr)
-        setBonsai(bonSaiArr)
-        setScculent(succulentArr)
-
-    }, [])
-    const [currentDisplayProduct, setCurrentDisplayProduct] = useState(8);
-    const handelChange = (e, name) => {
-
-        if (name === "op") {
-            setOption(e.target.value);
-            if (price === '0') {
-
-                if (e.target.value === '1') {
-
-                    setProduct(bonsai)
-                }
-                else if (e.target.value === '2') {
-                    setProduct(flower)
-                }
-                else if (e.target.value === '3') {
-                    setProduct(indoor)
-                }
-                else if (e.target.value === '4') {
-                    setProduct(outdoor)
-                }
-                else if (e.target.value === '5') {
-                    setProduct(succulent)
-                }
-                else if (e.target.value === '0') {
-                    setProduct(AllToolData)
-                }
-
-            }
-            else if (price === '1') {
-                if (e.target.value === '1') {
-                    let producArr = []
-                    bonsai.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            producArr.push(item)
-                        }
-
-                    })
-
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '2') {
-                    let producArr = []
-                    flower.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '3') {
-                    let producArr = []
-                    indoor.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '4') {
-                    let producArr = []
-                    outdoor.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '5') {
-                    let producArr = []
-                    succulent.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '0') {
-                    let producArr = []
-                    AllToolData.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            product.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-            }
-
-            else if (price === '2') {
-                if (e.target.value === '1') {
-                    let producArr = []
-                    bonsai.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '2') {
-                    let producArr = []
-                    flower.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '3') {
-                    let producArr = []
-                    indoor.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '4') {
-                    let producArr = []
-                    outdoor.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '5') {
-                    let producArr = []
-                    succulent.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            producArr.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-                else if (e.target.value === '0') {
-                    let producArr = []
-                    AllToolData.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            product.push(item)
-                        }
-
-                    })
-                    setProduct(producArr)
-                }
-            }
-
-
-
-
-
-
-
-        }
-        // value
-        else if (name === "va") {
-
-            setPrice(e.target.value);
-            if (option === '1') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    bonsai.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    bonsai.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = bonsai;
-                }
-
-                setProduct(productArr)
-            }
-            else if (option === '2') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    flower.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    flower.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = flower;
-                }
-
-                setProduct(productArr)
-            }
-            else if (option === '3') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    indoor.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    indoor.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = indoor;
-                }
-
-                setProduct(productArr)
-            }
-            else if (option === '4') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    outdoor.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    outdoor.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = outdoor;
-                }
-
-                setProduct(productArr)
-            }
-
-            else if (option === '5') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    succulent.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    succulent.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = succulent;
-                }
-
-                setProduct(productArr)
-            }
-            else if (option === '0') {
-                let productArr = [];
-                if (e.target.value === '1') {
-
-
-                    AllToolData.map((item) => {
-                        if (item.price > 0 && item.price <= 20) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === '2') {
-                    AllToolData.map((item) => {
-                        if (item.price > 20 && item.price < 40) {
-                            productArr.push(item)
-                        }
-
-                    })
-                }
-                else if (e.target.value === 'Price') {
-                    productArr = succulent;
-                }
-
-                setProduct(productArr)
-
-            }
-
-            if (e.target.value === '0') {
-
-                if (option === '1') {
-
-                    setProduct(bonsai)
-                }
-                else if (option === '2') {
-                    setProduct(flower)
-                }
-                else if (option === '3') {
-                    setProduct(indoor)
-                }
-                else if (option === '4') {
-                    setProduct(outdoor)
-                }
-                else if (option === '5') {
-                    setProduct(succulent)
-                }
-                else if (option === '0') {
-                    setProduct(AllToolData)
-                }
-
-            }
-        }
-
-    }
-
+  
     return (
 
         <div className="bonsai-master">
@@ -428,8 +37,8 @@ const Tool = () => {
                 <div className="container">
                     <div className="label-catelogy">Tools</div>
                     <Row className="filter-div">
-                        <Col lg={2} md={3} className="mt-1">
-                            <Form.Select className="form-select-catalog" aria-label="Category" onChange={e => handelChange(e, "op")} >
+                        <Col lg={2} md={3}>
+                            <Form.Select className="form-select-catalog" aria-label="Category"  >
                                 <option value={0} checked>Category</option>
                                 <option value={1}>Bonsai</option>
                                 <option value={2}>Flowering Shrubs</option>
@@ -438,8 +47,8 @@ const Tool = () => {
                                 <option value={5}>Succulents</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={2} md={3} className="mt-1">
-                            <Form.Select className="form-select-catalog" onChange={e => handelChange(e, "va")}>
+                        <Col lg={2}>
+                            <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
                                 <option value={2}>20-40</option>
@@ -460,14 +69,14 @@ const Tool = () => {
                     <div className="plant-div">
                         <div className="card-of-cate">
                             <Row>
-                                {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
-                                {productList.map((items, index) => (
-                                    <Col lg={3} md={6} key={index} className="mt-4">
+                                {currentItems.length > 0 ? currentItems.map((items, index) => (
+                              
+                                    <Col lg={3} key={index} className="mt-4">
                                         <Link to={`/shop/all/tree/${items.id}`}>
                                             <CardProduct items={items} />
                                         </Link>
                                     </Col>
-                                ))}
+                                )):''}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}
                             </Row>
                         </div>
@@ -485,11 +94,11 @@ const Tool = () => {
 
                             <Pagination.Next
                                 onClick={() => handlePageChange(currentPage + 1)}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
+                                disabled={currentPage === Math.ceil(productList.length / 8)}
                             />
                             <Pagination.Last
-                                onClick={() => handlePageChange(Math.ceil(product.length / 8))}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
+                                onClick={() => handlePageChange(Math.ceil(productList.length / 8))}
+                                disabled={currentPage === Math.ceil(productList.length / 8)}
                             />
                         </Pagination>
                     </div>

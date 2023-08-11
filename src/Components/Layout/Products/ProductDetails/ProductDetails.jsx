@@ -7,7 +7,7 @@ import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-
+import NotFound from "../../NotFound";
 import { CardProduct } from "./CardProduct/CardProduct";
 import SlideCardImg from "./SlideImg/SlideCardImg"
 
@@ -61,10 +61,13 @@ const ProductDetail = () => {
     const handleClickSubProduct = () => {
         setCountProduct(countProduct - 1)
     }
-    console.log(product);
+   
     return (
 
-        <div className='products-details-master'>
+       <>
+       {
+        product?(
+            <div className='products-details-master'>
             <Container>
                 <Toast ref={toast} />
                 <div className='products-details-div'>
@@ -109,15 +112,15 @@ const ProductDetail = () => {
 
                                     <div>
                                         <button className="button-count" onClick={handleClickSubProduct}>-</button>
-                                        <InputText value={countProduct} className="input-count" />
+                                        <button  className="input-count m-0 p-0" > { countProduct}</button>
                                         <button className="button-count" onClick={handleClickAddProduct}>+</button>
                                     </div>
                                     <div>
-                                        <Button className="buynow">Buy Now</Button>{' '}
+                                        <Button className="buynow fui-button-shiny-3 ">Buy Now</Button>{' '}
 
                                     </div>
                                     <div>
-                                        <Button className="icon-buynow" onClick={(product) => handleAddCard(product)}>
+                                        <Button className="icon-buynow fui-button-shiny-3 " onClick={(product) => handleAddCard(product)}>
                                             <BsCartCheck />
                                         </Button>
                                     </div>
@@ -227,6 +230,11 @@ const ProductDetail = () => {
                 </div>
             </Container>
         </div>
+        ):(
+            <NotFound />
+        )
+       }
+       </>
     );
 };
 

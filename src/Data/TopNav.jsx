@@ -21,7 +21,12 @@ export const TopNav=[
         {id:'child4',nameChild1:'Fertilize',linkChild:'/shop/fertilizer',child:[]},
     ]},
     {id:'3',name:'Services',link:'/service',icon:<BiDollarCircle/>,child:[
-       
+        {id:'child1',nameChild1:'All Service',linkChild:'/service',child:[]},
+        {id:'child2',nameChild1:'Workshop',linkChild:'/service/workshop',child:[]},
+
+        {id:'child3',nameChild1:'Gift',linkChild:'/service/gift',child:[]},
+        {id:'child4',nameChild1:'Decord',linkChild:'/service/decord',child:[]},
+
     ]},
     {id:'5',name:"Blog",link:'/blog',icon:<VscFeedback/>},
     {id:'4',name:"FeedBack",link:'/feedback',icon:<VscFeedback/>},

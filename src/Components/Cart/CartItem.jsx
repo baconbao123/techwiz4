@@ -61,15 +61,15 @@ export default function CartItem({ item,show}) {
 
           <div className='mb-3 mt-3'>
             <div>
-            <div className='item-number ' onClick={() => setNumber(number - 1)} >
+            <button className='item-number ' onClick={() => setNumber(number - 1)} >
               <BsDashLg />
-            </div>
+            </button>
 
 
-            <input className='d-inline number-number ' type="number" accept='number' name="" value={number} onChange={(e) => handleChange(e)} />
-            <div className='item-number  ' onClick={() => setNumber(number + 1)}>
+            <button className='d-inline number-number ' type="number" accept='number' name="" value={number} onChange={(e) => handleChange(e)} >  {number}</button>
+            <button className='item-number  ' onClick={() => setNumber(number + 1)}>
               <AiOutlinePlus />
-            </div>
+            </button>
           
             
           </div>
