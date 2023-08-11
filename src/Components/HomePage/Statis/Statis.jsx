@@ -11,7 +11,7 @@ function Statis() {
             <span className="number">
               <CountUp start={0} end={1300} duration={2} /> +
             </span>
-            <span>Deliverys</span>
+            <span>Deliveries</span>
           </div>
           <div className="statis-item">
             <span className="number">

@@ -1,8 +1,24 @@
-import React from "react";
+import React ,{useState} from "react";
 import { Row, Col, Card, Form, Button } from "react-bootstrap";
 import feedback from "./imgFedd/feedback.png";
 import "./FeedBack.scss";
+import Swal from 'sweetalert2';
+import { useLocation } from "react-router-dom";
 export default function FeedBack() {
+  const location = useLocation();
+  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+
+  const handleSubmit = () => {
+
+    setIsSubmitSuccess(true);
+
+ 
+    Swal.fire({
+      icon: 'success',
+      title: 'Send success',
+      text: 'Thank you for feedback!',
+    })
+  };
   return (
     <div className="container">
       <Row className="feed-back-main">
@@ -41,7 +57,7 @@ export default function FeedBack() {
                 <Form.Control as={"textarea"} rows={10} placeholder="" />
               </Form.Group>
               <div className=" text-center mb-3">
-                <Button className="mt-4">Submit</Button>
+                <Button className="mt-4" onClick={handleSubmit}>Submit</Button>
               </div>
             </Card.Body>
           </Card>
