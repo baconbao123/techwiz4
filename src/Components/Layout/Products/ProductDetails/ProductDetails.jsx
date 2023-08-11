@@ -217,7 +217,7 @@ const ProductDetail = () => {
                     <span className="label-similar">Similar Product</span>
                     <Row style={{ marginBottom: '40px' }}>
                         {productList.slice(0, showCardList).map((item) => (
-                            <Col lg={3} md={3} sm={6} xs={12} className="mt-3"> 
+                            <Col lg={3} md={6} sm={6} xs={12} className="mt-3"> 
                                 <Link to={`/shop/all/tree/${item.id}`}> 
                                     <CardProduct items={item} /> 
                                 </Link> 

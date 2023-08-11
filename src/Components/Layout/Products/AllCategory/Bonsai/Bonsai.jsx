@@ -439,7 +439,7 @@ const Bonsai = () => {
                                 <option value={5}>Succulents</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={2}>
+                        <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog" onChange={e => handelChange(e, "va")}>
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
@@ -463,7 +463,7 @@ const Bonsai = () => {
                             <Row>
                                 {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
                                 {productList.map((items, index) => (
-                                    <Col lg={3} key={index} className="mt-4">
+                                    <Col lg={3} md={6} key={index} className="mt-4">
                                         <Link to={`/shop/all/tree/${items.id}`}>
                                             <CardProduct items={items} />
                                         </Link>

@@ -428,7 +428,7 @@ const Succulent = () => {
                 <div className="container">
                     <div className="label-catelogy">Succulent</div>
                     <Row className="filter-div">
-                        <Col lg={2} md={3}>
+                        <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" aria-label="Category" onChange={e => handelChange(e, "op")} >
                                 <option value={0} checked>Category</option>
                                 <option value={1}>Bonsai</option>
@@ -438,7 +438,7 @@ const Succulent = () => {
                                 <option value={5}>Succulents</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={2}>
+                        <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog" onChange={e => handelChange(e, "va")}>
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
@@ -462,7 +462,7 @@ const Succulent = () => {
                             <Row>
                                 {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
                                 {productList.map((items, index) => (
-                                    <Col lg={3} key={index} className="mt-4">
+                                    <Col lg={3} md={6} key={index} className="mt-4">
                                         <Link to={`/shop/all/tree/${items.id}`}>
                                             <CardProduct items={items} />
                                         </Link>

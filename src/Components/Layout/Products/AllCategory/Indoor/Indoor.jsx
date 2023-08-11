@@ -428,7 +428,7 @@ const Indoor = () => {
                 <div className="container">
                     <div className="label-catelogy">Indoor</div>
                     <Row className="filter-div">
-                        <Col lg={2} md={3}>
+                        <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" aria-label="Category" onChange={e => handelChange(e, "op")} >
                                 <option value={0} checked>Category</option>
                                 <option value={1}>Bonsai</option>
@@ -438,7 +438,7 @@ const Indoor = () => {
                                 <option value={5}>Succulents</option>
                             </Form.Select>
                         </Col>
-                        <Col lg={2}>
+                        <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" onChange={e => handelChange(e, "va")}>
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
@@ -446,7 +446,7 @@ const Indoor = () => {
                             </Form.Select>
                         </Col>
                         <Col lg={4} md={2}></Col>
-                        <Col lg={4} md={4} >
+                        <Col lg={4} md={4} className="mt-1">
                             <InputGroup className="">
                                 <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch /></InputGroup.Text>
                                 <Form.Control className="form-control-input"
