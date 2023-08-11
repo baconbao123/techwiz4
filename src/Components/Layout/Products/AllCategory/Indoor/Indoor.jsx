@@ -84,7 +84,7 @@ const Indoor = () => {
                               
                                     <Col lg={3} key={index} className="mt-4">
                                        
-                                            <CardProduct items={items} option={"all/tree/outdoor"}/>
+                                            <CardProduct items={items} option={"tree/outdoor"}/>
                                         
                                     </Col>
                                 )):''}

@@ -33,7 +33,7 @@ export default function Main() {
         </Routes>
         <ContactBar />
         <ScrollToTop />
-        {/* <Footer /> */}
+        <Footer />
       </Container>
 
     </>

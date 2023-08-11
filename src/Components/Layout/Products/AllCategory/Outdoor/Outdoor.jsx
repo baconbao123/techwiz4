@@ -60,7 +60,7 @@ const Outdoor = () => {
                             </Form.Select>
                         </Col>
                         <Col lg={4} md={2}></Col>
-                        <Col lg={4} md={4} >
+                        <Col lg={4} md={4} className="mt-1">
                             <InputGroup className="">
                                 <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch /></InputGroup.Text>
                                 <Form.Control className="form-control-input"

@@ -18,6 +18,11 @@ import Fertilizer from "../Components/Layout/Products/AllCategory/Fertilizer/Fer
 
 import Setting from "../Components/Setting/Setting";
 import Login from "../Components/Authenticate/Login";
+
+// service
+import ServiceDetail from "../Components/WorkService/ServiceDetail";
+import ServiceDetail2 from "../Components/GiftService/ServiceDetail2";
+import ServiceDetail3 from "../Components/DercoService/ServiceDetail3";
 import Cart from "../Components/Cart/Cart";
 
 
@@ -47,10 +52,15 @@ export const AllRoutes=[
 {name:'Fertilize',link:'/shop/fertilizer/:id',component:<ProductFertilizer />},
 
 {name:'Services',link:'/service',component:''},
+{name:'Services',link:'/service',component:<ServicePage/>},
 {name:'FeedBack',link:'/feedback',component:''},
 
 // service
-{name:'ServicePage',link:'/all-service',component:<ServicePage />},
+{name:'Service',link:'/service',component:<ServicePage />},
+{name:'Service1',link:'/service/1',component:<ServiceDetail />},
+{name:'Service2',link:'/service/2',component:<ServiceDetail2 />},
+{name:'Service3',link:'/service/3',component:<ServiceDetail3 />},
+
 // end--ser
 
 {name:'BLog',link:'/blog',component:<Blog />},

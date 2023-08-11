@@ -142,11 +142,11 @@ export default function TopBar() {
                 </section>
                 <AiOutlineHeart className='item-icon' />
                 <div className='d-flex contain-icon'>
-                  <Link to={`${isLogin ? "/cart" : ''}`} className='d-flex'>
-                    <div className='number-cart' onClick={() => handleSetShow(true)}>
-                      {cart.length === 0 ? '' : cart.length}
-                    </div>
-                    <AiOutlineShoppingCart className='item-icon' />
+                  <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
+                  <div className='number-cart' onClick={()=> handleSetShow(true)}>
+                    {cart.length===0?'':cart.length}
+                  </div>
+                <AiOutlineShoppingCart className='item-icon' />
                   </Link>
                 </div>
                 <Link to={`${isLogin ? "/setting" : ''}`}>

@@ -50,10 +50,19 @@ const Succulent = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Succulent</div>
-                    <Row className="filter-div d-flex justify-content-center">
-                        
+                    <Row className="filter-div">
+                        <Col lg={2} md={3}>
+                            <Form.Select className="form-select-catalog" aria-label="Category"  >
+                                <option value={0} checked>Category</option>
+                                <option value={1}>Bonsai</option>
+                                <option value={2}>Flowering Shrubs</option>
+                                <option value={3}>Indoor</option>
+                                <option value={4}>Outdoor</option>
+                                <option value={5}>Succulents</option>
+                            </Form.Select>
+                        </Col>
                         <Col lg={2}>
-                            <Form.Select className="form-select-catalog">
+                            <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
                                 <option value={2}>20-40</option>
@@ -75,11 +84,11 @@ const Succulent = () => {
                         <div className="card-of-cate">
                             <Row>
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
-                              
+                            
                                     <Col lg={3} key={index} className="mt-4">
-                                       
-                                            <CardProduct items={items} option={'all/tree/succulent'} />
-                                        
+                                        <Link to={`/shop/all/tree/${items.id}`}>
+                                            <CardProduct items={items} />
+                                        </Link>
                                     </Col>
                                 )):''}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}

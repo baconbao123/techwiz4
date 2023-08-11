@@ -36,17 +36,26 @@ const Tool = () => {
             <div className="AllToolData-div">
                 <div className="container">
                     <div className="label-catelogy">Tools</div>
-                    <Row className="filter-div d-flex justify-content-around">
-                        
+                    <Row className="filter-div">
+                        <Col lg={2} md={3}>
+                            <Form.Select className="form-select-catalog" aria-label="Category"  >
+                                <option value={0} checked>Category</option>
+                                <option value={1}>Bonsai</option>
+                                <option value={2}>Flowering Shrubs</option>
+                                <option value={3}>Indoor</option>
+                                <option value={4}>Outdoor</option>
+                                <option value={5}>Succulents</option>
+                            </Form.Select>
+                        </Col>
                         <Col lg={2}>
-                            <Form.Select className="form-select-catalog">
+                            <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
                                 <option value={2}>20-40</option>
                             </Form.Select>
                         </Col>
                         <Col lg={4} md={2}></Col>
-                        <Col lg={4} md={4} >
+                        <Col lg={4} md={4} className="mt-1">
                             <InputGroup className="">
                                 <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch /></InputGroup.Text>
                                 <Form.Control className="form-control-input"
@@ -61,11 +70,11 @@ const Tool = () => {
                         <div className="card-of-cate">
                             <Row>
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
-                                
+                              
                                     <Col lg={3} key={index} className="mt-4">
-                                       
-                                            <CardProduct items={items} option={'tool'} />
-                                       
+                                        <Link to={`/shop/all/tree/${items.id}`}>
+                                            <CardProduct items={items} />
+                                        </Link>
                                     </Col>
                                 )):''}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}

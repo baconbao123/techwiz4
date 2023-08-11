@@ -40,7 +40,7 @@ export default function Service() {
                                     for you!</div>
                             </Col>
                         </Row>
-                        <Link to='/all-service'><div className='mt-5 button-service d-inline-block'>Show all services</div></Link>
+                        <Link to='/service'><div className='mt-5 button-service d-inline-block'>Show all services</div></Link>
                     </Col>
                 </Row>
             </Container>
