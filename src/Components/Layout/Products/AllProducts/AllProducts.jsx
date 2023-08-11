@@ -19,6 +19,8 @@ import bg_allproduct from '../../../../assets/Layout_img/bg-allpro.jpeg'
 const productList = AllProduct
 
 const AllProducts = () => {
+    document.title = 'All Product'
+
     const items = [{ label: "Shop All", url: "/shop/all" }];
     const home = { icon: <AiOutlineHome />, url: "/" };
     const [categoryName, setCategoryName] = useState('All Product')

@@ -8,6 +8,8 @@ import { BsPhoneVibrate } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 function ServiceDetail() {
+  document.title = 'Workshop'
+
   useEffect(() => {
     AOS.init();
   }, []);

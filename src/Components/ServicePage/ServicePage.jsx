@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 function ServicePage() {
+  document.title = 'Services'
+
   useEffect(() => {
     AOS.init();
   }, []);

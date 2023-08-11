@@ -6,6 +6,8 @@ import CartItem from './CartItem'
 import { Toast } from 'primereact/toast';
 import { Value } from '../../Data/DataSava';
 export default function Cart() {
+  document.title = 'Cart'
+
   const {cart}=useContext(Value);
   const toast = useRef(null);
   const showSuccess = () => {

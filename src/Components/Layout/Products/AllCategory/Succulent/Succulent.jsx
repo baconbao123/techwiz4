@@ -14,6 +14,7 @@ import Pagination from 'react-bootstrap/Pagination';
 const productList = AllProduct
 
 const Succulent = () => {
+    document.title = 'Succulent'
     
     const [searchValue, setSearchValue] = useState('')
     const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Succulent", url: "/shop/all/tree/succulent" }];

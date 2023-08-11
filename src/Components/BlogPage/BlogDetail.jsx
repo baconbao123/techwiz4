@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './BlogDetail.scss'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import blogDetail from '../../assets/Layout_img/BlogDetail.png'
@@ -9,6 +9,7 @@ import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 export default function BlogDetail({ item }) {
+
   const items = [{ label: 'Blog', url: '/blog' }, { label: item.name, url: `/blog/${item.id}` }];
   const home = { icon: <AiOutlineHome />, url: '/' }
   const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
@@ -17,7 +18,13 @@ export default function BlogDetail({ item }) {
   const [nameComment, setNameComment] = useState('')
   const [emailComment, setEmailComment] = useState('')
   const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    document.title = item.name;
+  }, [item.name]);
+
   return (
+
     <Container fluid className='blog-detail'>
 
 

@@ -230,90 +230,96 @@
             margin-bottom: 20px;
             padding: 20px 60px;
             border: 1px solid #CCC;
-            width: 93%;
-            margin-left: 45px;
-            @media screen and (min-width: 768px) and (max-width: 1024px) {
-                width: 88%;
-                
-            }
+            width: 100%;
+    
+            // @media screen and (min-width: 768px) and (max-width: 1024px) {
+            //     width: 88%;
+    
+            // }
+    
             @media screen and (min-width: 400px) and (max-width: 767px) {
-                width: 78%;
-                
+                width: 93%;
+    
             }
+    
             @media screen and (max-width: 399px) {
-                width: 93.5%;
+                width: 89%;
                 margin-left: 10px;
                 margin-right: 10px;
-                @media screen and (max-width: 399px) {
-                    padding: 10px 10px!important;
-                }
+                padding: 10px 10px !important;
             }
-        
-
-
+    
+    
+    
             .p-rating .p-rating-item .p-rating-icon.p-icon {
                 width: 1.400rem;
-                height:1.6rem;
-                
+                height: 1.6rem;
+    
                 @media screen and (max-width: 399px) {
                     width: 1rem;
-                    height:1.2rem;
+                    height: 1.2rem;
                 }
             }
-
+    
             .your-review-label {
                 color: #666;
                 font-family: Inter;
                 font-size: 21px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: normal;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
                     // white-space: nowrap;
                 }
             }
-
+    
             .your-comment-label {
                 color: #666;
                 font-size: 21px;
-                font-weight: 700;
+                font-weight: 500;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
-                    
+    
                 }
             }
-
+    
             .textarea-comment {
                 width: 100%;
-                border-radius: 40px;
+                border-radius: 13px;
+    
                 @media screen and (max-width: 399px) {
-                    height: 30px!important;
+                    height: 30px !important;
+                    padding-left: 13px !important;
+    
                 }
             }
-
+    
             .your-name-lable {
                 color: #666;
                 font-size: 21px;
-                font-weight: 700;
+                font-weight: 500;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
-                    // white-space: nowrap;
                 }
             }
-
+    
             .input-comment {
                 width: 100%;
-                border-radius: 40px;
+                border-radius: 13px;
+    
                 @media screen and (max-width: 399px) {
                     height: 30px;
                 }
             }
-
+    
             .rule-comment {
-                font-size: 20px;
+                font-size: 17px;
                 margin-left: 10px;
-
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
                 }

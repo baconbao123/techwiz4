@@ -9,6 +9,8 @@ import { BsPhoneVibrate } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 function ServiceDetail3() {
+  document.title = 'Decord'
+
   useEffect(() => {
     AOS.init();
   }, []);

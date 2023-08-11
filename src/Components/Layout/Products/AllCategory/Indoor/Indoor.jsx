@@ -13,6 +13,7 @@ import Pagination from 'react-bootstrap/Pagination';
 const productList = AllProduct
 
 const Indoor = () => {
+    document.title = 'Indoor'
     const [categoryName, setCategoryName] = useState('All Product')
     const [searchValue, setSearchValue] = useState('')
     const [option, setOption] = useState('0')

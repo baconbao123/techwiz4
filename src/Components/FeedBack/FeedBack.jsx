@@ -3,6 +3,7 @@ import { Row, Col, Card, Form, Button } from "react-bootstrap";
 import feedback from "./imgFedd/feedback.png";
 import "./FeedBack.scss";
 export default function FeedBack() {
+  document.title = 'Feedback'
   return (
     <div className="container">
       <Row className="feed-back-main">

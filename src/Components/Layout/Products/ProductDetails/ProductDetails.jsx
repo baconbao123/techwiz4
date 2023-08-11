@@ -40,6 +40,11 @@ const ProductDetail = () => {
     const { setCart } = useContext(Value)
     const { cart } = useContext(Value)
 
+    useEffect(() => {
+        document.title = product.name;
+      }, [product.name]);
+
+
     const showSuccess = () => {
         toast.current.show({ severity: 'success', summary: 'Success Added!', detail: 'ADD TO CARD SUCCESS', life: 1000 });
     }
