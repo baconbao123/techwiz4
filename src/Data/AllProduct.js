@@ -193,15 +193,15 @@ import Tool6_2 from '../assets/image/toolproduct/11.tool6.png'
 // import Tool4_1 from '../assets/image/toolproduct/12.tool7.png'
 // import Tool4_1 from '../assets/image/toolproduct/13.tool7.png'
 
-//fertilize
-import haifamap from '../assets/image/fertilize/mag.png';
-import haifamap_1 from '../assets/image/fertilize/mag_2.png';
-import NPK from "../assets/image/fertilize/NPK.png"
-import NPK_1 from "../assets/image/fertilize/NPK_1.png"
-import louispack from "../assets/image/fertilize/Louis_1.png";
-import louispack_1 from "../assets/image/fertilize/Louis_2.png";
-import OPG from "../assets/image/fertilize/OPG_1.png"
-import OPG_1 from "../assets/image/fertilize/OPG_2.png"
+//fertilizer
+import haifamap from '../assets/image/fertilizer/mag.png';
+import haifamap_1 from '../assets/image/fertilizer/mag_2.png';
+import NPK from "../assets/image/fertilizer/NPK.png"
+import NPK_1 from "../assets/image/fertilizer/NPK_1.png"
+import louispack from "../assets/image/fertilizer/Louis_1.png";
+import louispack_1 from "../assets/image/fertilizer/Louis_2.png";
+import OPG from "../assets/image/fertilizer/OPG_1.png"
+import OPG_1 from "../assets/image/fertilizer/OPG_2.png"
 
 
 
@@ -1269,327 +1269,327 @@ export const AllToolData = [
 
 export const FertilizeData =[
    {
-       id: 50, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+       id: 50, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
        img: [
            {img1: haifamap},
            {img2: haifamap_1}
        ] ,
        advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-       Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+       Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
     },
     {
-       id: 51, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+       id: 51, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
        img: [
            {img1: NPK},
            {img2: NPK_1}
        ] ,
        advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-       Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+       Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
     },
     {
-       id:  52, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+       id:  52, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
        img: [
            {img1: OPG},
            {img2: OPG_1}
        ] ,
        advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-       Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+       Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
     },
     {
-       id: 53, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+       id: 53, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
        img: [
            {img1: louispack},
            {img2: louispack_1}
        ] ,
        advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-       Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+       Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
     },
     {
-      id: 54, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 54, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 55, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 55, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  56, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  56, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 57, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 57, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 58, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 58, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 59, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 59, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  60, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  60, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 61, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 61, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 62, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 62, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 63, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 63, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  64, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  64, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 65, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 65, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 66, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 66, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 67, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 67, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  68, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  68, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 69, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 69, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 70, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 70, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 71, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 71, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  72, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  72, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 73, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 73, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 74, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 74, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 75, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 75, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  76, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  76, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 77, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 77, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 78, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 78, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 79, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 79, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  80, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  80, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 81, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 81, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 82, name:'Haifamap' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 82, name:'Haifamap' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: haifamap},
           {img2: haifamap_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 83, name:'NPK' , category:'fertilize' , price: 20, tag: 'best seller',
+      id: 83, name:'NPK' , category:'fertilizer' , price: 20, tag: 'best seller',
       img: [
           {img1: NPK},
           {img2: NPK_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id:  84, name:'OPG' , category:'fertilize' , price: 50, tag: 'best seller',
+      id:  84, name:'OPG' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: OPG},
           {img2: OPG_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    },
    {
-      id: 85, name:'Louispack' , category:'fertilize' , price: 50, tag: 'best seller',
+      id: 85, name:'Louispack' , category:'fertilizer' , price: 50, tag: 'best seller',
       img: [
           {img1: louispack},
           {img2: louispack_1}
       ] ,
       advantage :'Supplementing natural nutrients to help plants grow thrive and yield',
-      Usermanual:'Mix fertilizer into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizer should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
+      Usermanual:'Mix fertilizerr into the soil or combine with other substrates with a ratio of about 15-20%. Or spread a thin layer of cashew manure around the base. For potted ornamental plants, a layer of fertilizerr should be used at the bottom of the pot to create better ventilation and moisture for the plant.',
    }
 ]

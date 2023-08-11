@@ -8,7 +8,7 @@ import "./CardProductNew.scss"
 function CardProductNew({item}) {
   return (
     <div>
-          <Link to='/all'>
+          <Link to={`shop/all/tree/${item.id}`}>
             <Card className="card-new-product " style={{backgroundColor:'#fff !important'}} id='card-mb'>
                 <Card.Title className="card-title-product">
                 {item.tag ? <span className="span-best-seller">{item.tag}</span> : null}

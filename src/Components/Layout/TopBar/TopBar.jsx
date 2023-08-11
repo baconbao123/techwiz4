@@ -6,7 +6,7 @@ import { TopNav } from '../../../Data/TopNav';
 import { AllProduct, AllToolData, FertilizeData } from '../../../Data/AllProduct';
 import { BsChevronDown } from "react-icons/bs";
 import logoMb from '../../../assets/Layout_img/logo-mb.png'
-import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenu, } from "react-icons/ai";
 import ItemTopBar from './ItemTopBar';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Link } from 'react-router-dom';
@@ -28,14 +28,20 @@ export default function TopBar() {
   const [showLogin, setShowLogin] = useState(false);
   const [searchValue, setSearchValue] = useState('')
   const [clickSearch, setClickSearch] = useState(false);
-  
+  const [valueInput,setValueInput]=useState()
   const InputRef = useRef();
+  const InputRef2 = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
   const isLogin = Cookies.get('isLogin');
   const { setIslogin } = useContext(Value)
   const { cart } = useContext(Value)
-
+  
+  const url = window.location.href;
+  const domain = window.location.origin;
+  
+  const location = url.replace(domain, '');
+ 
   const showSuccess = () => {
     toast.current.show({ severity: 'success', summary: ' Sign in Success', detail: 'Enjoy your day', life: 1000 });
   }
@@ -70,6 +76,19 @@ export default function TopBar() {
     }
 
   }, [])
+  useEffect(() => {
+    const handleClickOutSide = (e) => {
+      if (InputRef2.current && !InputRef2.current.contains(e.target)) {
+        setValueInput('')
+      }
+    }
+
+    document.addEventListener('click', handleClickOutSide);
+    return () => {
+      document.removeEventListener('click', handleClickOutSide)
+    }
+
+  }, [])
   const handleSetShow = (item) => {
     if (!isLogin) {
       setShowLogin(true)
@@ -86,13 +105,27 @@ export default function TopBar() {
   const filteredProducts = [...AllProduct, ...AllToolData, ...FertilizeData].filter((product) => {
     return product.name.toLowerCase().includes(searchValue.toLowerCase());
   });
+  const filteredProducts2 = [...AllProduct, ...AllToolData, ...FertilizeData].filter((product) => {
+    if(valueInput) {
+
+      return product.name.toLowerCase().includes(valueInput.toLowerCase());
+    }
+  });
+  console.log(filteredProducts2);
 
   function onClickSearch() {
     setClickSearch(!clickSearch);
   }
+  const limitWord=(item)=> {
+    if(item.length>20) {
+        const trimmedWord = item.substring(0,20);
+        const lastWhitespaceIndex = trimmedWord.lastIndexOf(' ');
+        return trimmedWord.substring(0, lastWhitespaceIndex) + ' ...';
+    }
+    return item;
+}
 
-  console.log(filteredProducts);
-  console.log(showSearchMb);
+  
 
   return (
     <>
@@ -153,10 +186,27 @@ export default function TopBar() {
                 <section className='item-search' ref={InputRef}>
                   {/*  */}
                   <AiOutlineSearch className='item-icon' onClick={() => setShowSearch(true)} />
-                  <Form.Control placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`} onChange={handleChangeSearch}>
+                  <Form.Control  placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`}onChange={e=>handleChangeSearch(e)}>
                   </Form.Control>
-                </section>
+                  <section className={`${showSearch ? 'd-block' : 'd-none'}  ${searchValue&&filteredProducts.length>0?'':'fit-content'} show-search`}>
+                                    {searchValue&&filteredProducts.length>0?
+                                      filteredProducts.map((item,index)=>(
+                                        <section key={index}>
+                                        <Link to={`${item.category==='tool'||item.category==='fertilizer'?`/shop/${item.category+'/'+item.id}`:`/shop/all/tree/${item.category+'/'+item.id}`}`}>
+                                        <div>
+                                          <img src={item.img[0].img1} className='img-search'/>
+                                         <div className='d-inline fs-6 text-center'>
+                                         {limitWord(item.name)}
+                                         </div>
+                                        </div>
+                                        </Link>
+                                           </section>
+                                      )
 
+                                      )
+                                    :'Not found'}
+                  </section>
+                </section>
                 {/* 
 
 
@@ -164,8 +214,10 @@ export default function TopBar() {
 
 
                 */}
+              <Link to={'wishlist'}>
 
-                <AiOutlineHeart className='item-icon' />
+                <AiOutlineHeart className='item-icon'  />
+              </Link>
                 <div className='d-flex contain-icon'>
                   <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
                   <div className='number-cart' onClick={()=> handleSetShow(true)}>
@@ -186,7 +238,7 @@ export default function TopBar() {
         <section className='top-bar-sm p-0 d-flex justify-content-around align-items-center  d-lg-none' >
           <section className='p-0 m-0 container-wrapper'>
             <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
-              <Col className='menu-content p-0' xs={7} sm={5} md={5}>
+              <Col className='menu-content pb-5 ps-0 pe-0' xs={7} sm={5} md={5}>
                 <Link to={'/'} className=' ' >
 
                   <img src={logo} alt="" className='logo-menu' />
@@ -194,7 +246,7 @@ export default function TopBar() {
 
                 <section>
                   {nav.map((item) => (
-                    <ItemTopBar  setShowMenu={setShowMenu} item={item} />
+                    <ItemTopBar url={location} setShowMenu={setShowMenu} item={item} />
                   ))}
                 </section>
 
@@ -208,23 +260,47 @@ export default function TopBar() {
               <Col className='container-header p-0 m-0'>
                 <section className='d-inline-block fs-1 show-menu ms-3  ' onClick={() => setShowMenu(true)}>
 
-                  <AiOutlineMenuUnfold />
+                  <AiOutlineMenu />
 
                 </section>
 
 
                 <InputGroup className={`${showMenu ? 'd-none' : 'input-search'}`}>
                   <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
-                  <Form.Control placeholder='Search'></Form.Control>
+                  <Form.Control  value={valueInput}  onChange={e=>setValueInput(e.target.value)} placeholder='Search' ></Form.Control>
+                <section ref={InputRef2} className={`${valueInput&&valueInput.length>0 ? 'd-block' : 'd-none'}  ${valueInput&&filteredProducts2.length>0?'':'fit-content'} show-search`}>
+                                    {filteredProducts2.length>0?
+                                      filteredProducts2.map((item,index)=>(
+                                        <section key={index}>
+                                        <Link to={`${item.category==='tool'||item.category==='fertilizer'?`/shop/${item.category+'/'+item.id}`:`/shop/all/tree/${item.category+'/'+item.id}`}`}>
+                                        <div>
+                                          <img src={item.img[0].img1} className='img-search'/>
+                                         <div className='d-inline fs-6 text-center'>
+                                         {limitWord(item.name)}
+                                         </div>
+                                        </div>
+                                        </Link>
+                                           </section>
+                                      )
+
+                                      )
+                                    :'Not found'}
+                  </section>
                 </InputGroup>
                 <div className='d-flex fs-2 function'>
                   <div ref={InputRefMb} className='d-flex'>
 
+                    <section className='search-container'>
                     <AiOutlineSearch onClick={() => setShowSearchMb(true)} className='icon-search' />
+                      
                     <Form.Control placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`} />
-
+                  
+                    </section>
                   </div>
+                  <Link to={'/wishlist'}>
+
                   <AiOutlineHeart />
+                  </Link>
                   <div className='number-contain d-flex'>
                     <Link to={`${isLogin ? "/cart" : ''} `} className='d-flex'>
                       <div className='number-cart '>

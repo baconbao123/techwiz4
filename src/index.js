@@ -12,14 +12,14 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 //core
 import "primereact/resources/primereact.min.css";                          
 
+import ScrollToTop from './Common/ScrollToTop';
          
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
- 
+  
     <App />
  
-  </BrowserRouter>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
