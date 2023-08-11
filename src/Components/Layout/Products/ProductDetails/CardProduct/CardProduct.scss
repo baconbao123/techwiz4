@@ -107,3 +107,10 @@
         }
     }
 }
+@media (min-width:"994px") and (max-width:'1192px') {
+    .card-price-shopping-product{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+}
