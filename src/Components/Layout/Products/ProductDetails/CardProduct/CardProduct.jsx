@@ -8,7 +8,7 @@ import './CardProduct.scss'
 export const CardProduct = ({items}) => {
     return (
        
-            <Card className="card-product">
+            <Card className="card-product" >
                 <Card.Title className="card-title-product">
                 {items.tag ? <span className="span-best-seller">{items.tag}</span> : null}
                     <div className="card-name-catergory-product">
@@ -27,6 +27,5 @@ export const CardProduct = ({items}) => {
                     </div>
                 </Card.Body>
             </Card>
-        
     )
 }

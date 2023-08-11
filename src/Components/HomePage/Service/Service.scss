@@ -1,4 +1,7 @@
+@import '../../../setting';
+
 .service {
+    font-family: $font_primary;
     background-color: #ECF1ED;
     margin-top: 20px;
 
@@ -27,18 +30,19 @@
 
     .title2 {
         color: #4D6A4E;
+        font-weight: 600;
     }
 
     .button-service {
-        
+        text-align: center;
         background-color: #99AF80;
         color: #fff;
-        width: 130px;
+        width: 200px;
         border-radius: 10px;
-        padding: 5px;
-        font-weight: 400;
+        padding: 10px 10px;
+        font-weight: 500;
         &:hover {
-            color: #666;
+            color: #004905;
             background-color: #52C452;
 
         }

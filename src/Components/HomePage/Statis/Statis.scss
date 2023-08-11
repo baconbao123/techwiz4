@@ -1,19 +1,56 @@
-@import '../../../setting';
-.content-statis{
+@import "../../../setting";
+.content-statis {
+  display: flex;
+  font-family: $font_primary;
+  .statis-item {
     display: flex;
-    font-family: $font_primary;
-    .statis-item{
+    flex-direction: column;
+    .number {
+      font-size: 30px;
+      font-weight: 900;
+      color: $color_text;
+      span {
+        font-size: 30px;
+        font-weight: 900;
+      }
+    }
+    span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .content-statis {
+    .statis-items {
+        justify-content: center;
+      .statis-item {
         display: flex;
         flex-direction: column;
-        margin-right:30px ;
-        .number{
-            font-size: 30px;
-            font-weight: bold;
-            color: $color_text;
+
+        .number {
+          font-size: 25px;
+          font-weight: 900;
+          color: $color_text;
+          span {
+            font-size: 25px;
+            font-weight: 900;
+          }
         }
-        span{
-            font-size: 18px;
-            font-weight: 600;
+        span {
+          font-size: 18px;
+          font-weight: 600;
         }
+      }
     }
+  }
+}
+@media (max-width:350px){
+  .statis-items{
+    flex-direction: column;
+    text-align: center;
+  }
+  .statis-item{
+    justify-content: center;
+  }
 }

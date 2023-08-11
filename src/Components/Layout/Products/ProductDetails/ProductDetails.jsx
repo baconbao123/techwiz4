@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { Row, Col, Container, Button, Card } from 'react-bootstrap';
 import { Rating } from "primereact/rating";
@@ -11,15 +11,18 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import { CardProduct } from "./CardProduct/CardProduct";
 import SlideCardImg from "./SlideImg/SlideCardImg"
 
+import { Toast } from 'primereact/toast';
+
 
 import './ProductDetails.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
-
+import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
 const ProductDetail = () => {
+    const toast = useRef(null);
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
 
@@ -31,8 +34,25 @@ const ProductDetail = () => {
     const [commentValue, setCommentValue] = useState('');
     const [nameComment, setNameComment] = useState('')
     const [checked, setChecked] = useState(false);
-    
-    
+    const { setCart } = useContext(Value)
+    const { cart } = useContext(Value)
+
+    console.log(cart);
+    const showSuccess = () => {
+        toast.current.show({ severity: 'success', summary: 'Success Added!', detail: 'ADD TO CARD SUCCESS', life: 1000 });
+    }
+    const handleAddCard = () => {
+        let check = cart.filter((item) => item.id === product.id)
+        console.log(check);
+        if (check.length > 0) {
+
+            
+        }
+        else {
+            setCart([product, ...cart]);
+        }
+        showSuccess();
+    }
 
     const handleClickAddProduct = () => {
         setCountProduct(countProduct + 1)
@@ -41,11 +61,12 @@ const ProductDetail = () => {
     const handleClickSubProduct = () => {
         setCountProduct(countProduct - 1)
     }
-
+    console.log(product);
     return (
 
         <div className='products-details-master'>
             <Container>
+                <Toast ref={toast} />
                 <div className='products-details-div'>
                     <Row>
                         <Col lg={12} md={5} sm={12} xs={12}>
@@ -96,7 +117,7 @@ const ProductDetail = () => {
 
                                     </div>
                                     <div>
-                                        <Button className="icon-buynow">
+                                        <Button className="icon-buynow" onClick={(product) => handleAddCard(product)}>
                                             <BsCartCheck />
                                         </Button>
                                     </div>
@@ -159,7 +180,7 @@ const ProductDetail = () => {
                                     <div className="your-comment-label">Your Comment</div>
                                     <div style={{ marginTop: '10px' }}>
                                         <InputTextarea autoResize value={commentValue} onChange={(e) => setCommentValue(e.target.value)}
-                                        className="textarea-comment" />
+                                            className="textarea-comment" />
                                     </div>
                                 </Col>
                             </Row>
@@ -167,17 +188,17 @@ const ProductDetail = () => {
                                 <Col lg={6} md={6} sm={12} xs={12}>
                                     <div className="your-name-lable">Your name</div>
                                     <div>
-                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment'/>
+                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment' />
                                     </div>
                                 </Col>
                                 <Col lg={6} md={6} sm={12} xs={12}>
                                     <div className="your-name-lable">Your Email</div>
                                     <div>
-                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment'/>
+                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment' />
                                     </div>
                                 </Col>
                             </Row>
-                            <Row style={{marginTop: '10px' }}>
+                            <Row style={{ marginTop: '10px' }}>
                                 <Col>
                                     <div className="d-flex align-items-center">
                                         <Checkbox onChange={e => setChecked(e.checked)} checked={checked} />
@@ -185,7 +206,7 @@ const ProductDetail = () => {
                                     </div>
                                 </Col>
                             </Row>
-                            <Row style={{marginTop: '10px' }}>
+                            <Row style={{ marginTop: '10px' }}>
                                 <Col lg={3} md={6} sm={3} xs={3}>
                                     <Button variant="primary">Send</Button>
                                 </Col>

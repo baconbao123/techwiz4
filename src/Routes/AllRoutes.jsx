@@ -3,13 +3,14 @@ import Blog from "../Components/BlogPage/Blog";
 import BlogItem from "../Components/BlogPage/BlogItem";
 import ProductDetail from "../Components/Layout/Products/ProductDetails/ProductDetails";
 import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
+import ServicePage from "../Components/ServicePage/ServicePage";
 import ProductTool from "../Components/Layout/Products/ProductTool/ProductTool";
 import ProductFertilizer from "../Components/Layout/Products/ProductFertilizer/ProductFertilizer";
 
 
 import Setting from "../Components/Setting/Setting";
 import Login from "../Components/Authenticate/Login";
-
+import Cart from "../Components/Cart/Cart";
 
 
 export const AllRoutes=[
@@ -27,9 +28,14 @@ export const AllRoutes=[
 {name:'Fertilize',link:'/shop/fertilize',component:''},
 {name:'Services',link:'/service',component:''},
 {name:'FeedBack',link:'/feedback',component:''},
+
+// service
+{name:'ServicePage',link:'/all-service',component:<ServicePage />},
+// end--ser
+
 {name:'BLog',link:'/blog',component:<Blog />},
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
-{name:"Setting",link:'/setting',component:<Setting />},
-
+{name:'Card',link:`/cart`,component:<Cart />},
+{name:'Setting',link:`/setting`,component:<Setting />},
 
 ];

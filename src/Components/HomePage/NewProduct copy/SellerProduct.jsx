@@ -1,44 +1,66 @@
-import React from "react";
-import "./SellerProducts.scss";
-import { Col } from "react-bootstrap";
-import AliceCarousel from "react-alice-carousel";
-// import { SlideCardImg } from "../../Layout/Products/ProductDetails/SlideImg/SlideCardImg";
-import {FaAngleDoubleRight} from 'react-icons/fa'
+import React, { useState } from "react";
+import "./SellerProduct.scss";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Carousel } from "primereact/carousel";
+import { AllProduct } from "../../../Data/AllProduct";
+import { CardProduct } from "../../Layout/Products/ProductDetails/CardProduct/CardProduct";
+import CardProductNew from "../NewProduct/CardProductNew/CardProductNew";
 function SellerProduct() {
+  const responsiveOptions = [
+    {
+      breakpoint: "1199px",
+      numVisible: 4,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "1187px",
+      numVisible: 3,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "991px",
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
+      breakpoint: "767px",
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
+
+  const filteredProducts = AllProduct.filter((item) => item.tag === "best seller");
+
+  const productTemplate = (product) => (
+    <div className="card-item">
+      <Row>
+        <Col >
+          <CardProductNew item={product}/>
+        </Col>
+      </Row>
+    </div>
+  );
+
   return (
-    <section className="seller-product">
+    <section className="new-product">
       <div className="container">
-        <div className="title-product">
-          <div className="title-name">Seller Products</div>
-          <div className="btn-category">
-            <button className="btn-choose" style={{backgroundColor:'transparent'}}>Choose:</button>
-            <Link to="/d">
-              <button className="btn btn-c btn-color-1">Plants</button>
-            </Link>
-            <Link>
-              {" "}
-              <button className="btn  btn-c btn-color-2">Tools</button>
-            </Link>
-            <Link>
-              <button className="btn btn-c  btn-color-3">Fertilize</button>
-            </Link>
+        <div className="title-product row">
+          <div className="title-name col-lg-6 col-md-6 col-sm-12">
+            Best Seller Products
           </div>
+         
         </div>
         <div>
-          <div className="img-div">
-            {/* <AliceCarousel
-              mouseTracking
-              items={SlideCardImg}
-              responsive={{
-                0: { items: 4 },
-                768: { items: 3 },
-                1440: { items: 4 },
-              }}
-            /> */}
-          </div>
+          <Carousel
+            value={filteredProducts}
+            numScroll={1}
+            numVisible={4}
+            responsiveOptions={responsiveOptions}
+            itemTemplate={productTemplate}
+          />
         </div>
-        <div className="btn-conteiner">
+        <div className="btn-conteiner mt-4">
           <Link to="/all-product" className="btn-content btn text-light">
             <span className="btn-title">All Products</span>
           </Link>

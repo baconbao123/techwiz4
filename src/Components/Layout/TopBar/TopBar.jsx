@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import './TopBar.scss'
 import logo from '../../../assets/Layout_img/Logo_header.png'
@@ -14,6 +14,8 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Login from '../../Authenticate/Login';
 import { Toast } from 'primereact/toast';
+import {Value} from '../../../Data/DataSava'
+import Cookies from 'js-cookie';
 export default function TopBar() {
   
   const nav = TopNav;
@@ -22,11 +24,15 @@ export default function TopBar() {
   const [showMenu, setShowMenu] = useState(false);
   const [showMenu1, setShowMenu1] = useState(false);
   const [listShow, setListShow] = useState([])
-  const [isLogin,setIslogin]=useState(false)
   const [showLogin,setShowLogin]=useState(false);
   const InputRef = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
+  const isLogin=Cookies.get('isLogin');
+  const {setIslogin}=useContext(Value)
+  const {cart}=useContext(Value)
+  
+ console.log(isLogin);
   const showSuccess = () => {
       toast.current.show({severity:'success', summary: ' Sign in Success', detail:'Enjoy your day', life: 1000});
   }
@@ -62,9 +68,14 @@ export default function TopBar() {
 
   }, [])
   const handleSetShow = (item) => {
-    setListShow([...listShow, item]);
-    setShowMenu1(true)
+    if(!isLogin) {
+      setShowLogin(true)
+    }
+    else {
+      setShowLogin(false  )
+    }
   }
+
 
   return (
     <>
@@ -128,9 +139,16 @@ export default function TopBar() {
                   </Form.Control>
                 </section>
                 <AiOutlineHeart className='item-icon' />
+                <div className='d-flex contain-icon'>
+                  <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
+                  <div className='number-cart' onClick={()=> handleSetShow(true)}>
+                    {cart.length===0?'':cart.length}
+                  </div>
                 <AiOutlineShoppingCart className='item-icon' />
+                  </Link>
+                </div>
               <Link to={`${isLogin?"/setting":''}`}>
-              <AiOutlineUser className='item-icon'  onClick={()=> setShowLogin(true)} />
+              <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
               </Link>
               </Col>
             </Row>
@@ -177,15 +195,25 @@ export default function TopBar() {
            
                 </div>
                <AiOutlineHeart/>
-               <AiOutlineShoppingCart/>
-               <AiOutlineUser />
+                    <div className='number-contain d-flex'>
+                      <Link to={`${isLogin?"/cart":''} `} className='d-flex'>
+                      <div className='number-cart'>
+                        {cart.length===0?'':cart.length}
+                      </div>
+               <AiOutlineShoppingCart onClick={()=> handleSetShow(true)}/>
+                      </Link>
+                    </div>
+             
+               <Link to={`${isLogin?"/setting":''} `} className='d-flex'>
+              <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
+              </Link>
                </div>
               </Col>
               
             </Row>
           </section>
         </section>
-        <Login show={showLogin} setShow={setShowLogin} showSuccess={showSuccess} />
+        <Login  show={showLogin} setShow={setShowLogin} showSuccess={showSuccess} />
         <BottomBar />
       </Row>
     </>

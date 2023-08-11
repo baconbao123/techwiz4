@@ -9,7 +9,7 @@ import { BsFacebook, BsGoogle } from "react-icons/bs";
 import Cookies from 'js-cookie';
 
         
-export default function Login({ show, setShow,showSuccess }) {
+export default function LoginSetting({ show, setShow,showSuccess }) {
     const [userName, setUserName] = useState();
     const [passWord, setPassword] = useState();
     const [showPass, setShowPass] = useState(false);
@@ -34,19 +34,19 @@ export default function Login({ show, setShow,showSuccess }) {
     };
     return (
 
-        <Modal className='login'
+        <Container className='login'
             show={show}
             onHide={() => setShow(false)}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Header closeButton className=''>
-                <Modal.Title className='title-login text-center'>
+            <div closeButton className=''>
+                <section className='title-login text-center'>
                     LOGIN TO CONTINUE
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
+                </section>
+            </div>
+            <section>
 
 
                 <Container>
@@ -99,9 +99,9 @@ export default function Login({ show, setShow,showSuccess }) {
 
 
 
-            </Modal.Body>
+            </section>
 
-        </Modal>
+        </Container>
 
 
     )
