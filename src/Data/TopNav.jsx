@@ -2,21 +2,23 @@
 import { BiHomeAlt,BiShoppingBag ,BiDollarCircle} from "react-icons/bi";
 import { VscFeedback } from 'react-icons/vsc';
 import { FiPhoneCall } from 'react-icons/fi'
+
 export const TopNav=[
     {id:'1',name:'Home',link:'/',icon:< BiHomeAlt />},
     {id:'2',name:'Shop',icon:<BiShoppingBag/>,child:[
         {id:'child1',nameChild1:'All',linkChild:'/shop/all',child:[]},
         { id:'child2',nameChild1: 'Plants',child:[
           
-            { id:'plant1',nameChild2:'Bonsai',link:'/shop/bonsai'},
-            { id:'plant2',nameChild2:'Flowering Shrubs',link:'/shop/floweringshrubs'},
-            { id:'plant3',nameChild2:'Indoor',link:'/shop/indoor'},
-            { id:'plant4',nameChild2:'Outdoor',link:'/shop/outdoor'},
-            { id:'plant5',nameChild2:'Succulent',link:'/shop/succulent'},
+            { id:'plant1',nameChild2:'Bonsai',link:'/shop/all/tree/bonsai'},
+            { id:'plant2',nameChild2:'Flowering Shrubs',link:'/shop/all/tree/floweringshrubs'},
+            { id:'plant3',nameChild2:'Indoor',link:'/shop/all/tree/indoor'},
+            { id:'plant4',nameChild2:'Outdoor',link:'/shop/all/tree/outdoor'},
+            { id:'plant5',nameChild2:'Succulent',link:'/shop/all/tree/succulent'},
+        
 
         ]},
         {id:'child3',nameChild1:'Tools',linkChild:'/shop/tool',child:[]},
-        {id:'child4',nameChild1:'Fertilize',linkChild:'/shop/fertilize',child:[]},
+        {id:'child4',nameChild1:'Fertilize',linkChild:'/shop/fertilizer',child:[]},
     ]},
     {id:'3',name:'Services',link:'/service',icon:<BiDollarCircle/>,child:[
        

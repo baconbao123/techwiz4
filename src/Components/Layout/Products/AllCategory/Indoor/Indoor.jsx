@@ -1,29 +1,23 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Row, Col, Button, Form, Dropdown } from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import bannerallpro from '../../../../assets/Layout_img/banner-allpro.png'
-import './AllProducts.scss'
-import { AllProduct, AllToolData, FertilizeData } from "../../../../Data/AllProduct";
+import { AllProduct } from "../../../../../Data/AllProduct"; 
 import { InputText } from "primereact/inputtext";
-import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
+import { CardProduct } from "../../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 
+
 import Pagination from 'react-bootstrap/Pagination';
 
-
-
 const productList = AllProduct
-const toolList = AllToolData
-const fertilizerList = FertilizeData
 
-const AllProducts = () => {
+const Indoor = () => {
     const [categoryName, setCategoryName] = useState('All Product')
     const [searchValue, setSearchValue] = useState('')
     const [option, setOption] = useState('0')
     const [price, setPrice] = useState('0')
 
-    const AllProduct = productList;
     const [product, setProduct] = useState(productList)
     const [bonsai, setBonsai] = useState([]);
     const [flower, setFlower] = useState([]);
@@ -429,9 +423,10 @@ const AllProducts = () => {
 
     return (
 
-        <div className="allproduct-master">
+        <div className="bonsai-master">
             <div className="allproduct-div">
                 <div className="container">
+                    <div className="label-catelogy">Indoor</div>
                     <Row className="filter-div">
                         <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog" aria-label="Category" onChange={e => handelChange(e, "op")} >
@@ -463,91 +458,16 @@ const AllProducts = () => {
                         </Col>
                     </Row>
                     <div className="plant-div">
-                        <span className="label-catelogy">Tree</span>
                         <div className="card-of-cate">
                             <Row>
-                                {currentItems.length > 0 ? currentItems.map((items, index) => (
+                                {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
+                                {productList.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
                                         <Link to={`/shop/all/tree/${items.id}`}>
                                             <CardProduct items={items} />
                                         </Link>
                                     </Col>
-                                )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)}
-                            </Row>
-                        </div>
-                        <Pagination className='d-flex justify-content-center mt-5 '>
-                            <Pagination.First
-                                onClick={() => handlePageChange(1)}
-                                disabled={currentPage === 1}
-                            />
-                            <Pagination.Prev
-                                onClick={() => handlePageChange(currentPage - 1)}
-                                disabled={currentPage === 1}
-                            />
-
-                            <Pagination.Item active>{currentPage}</Pagination.Item>
-
-                            <Pagination.Next
-                                onClick={() => handlePageChange(currentPage + 1)}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
-                            />
-                            <Pagination.Last
-                                onClick={() => handlePageChange(Math.ceil(product.length / 8))}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
-                            />
-                        </Pagination>
-                    </div>
-
-                    <div className="plant-div">
-                        <span className="label-catelogy">Tools</span>
-                        <div className="card-of-cate">
-                            <Row>
-                                {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
-                                    {toolList.map((items, index) => (
-                                        <Col lg={3} key={index} className="mt-4">
-                                            <Link to={`/shop/all/tool/${items.id}`}>
-                                                <CardProduct items={items} />
-                                            </Link>
-                                        </Col>
-                                    ))}
-                                {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}
-                            </Row>
-                        </div>
-                        <Pagination className='d-flex justify-content-center mt-5 '>
-                            <Pagination.First
-                                onClick={() => handlePageChange(1)}
-                                disabled={currentPage === 1}
-                            />
-                            <Pagination.Prev
-                                onClick={() => handlePageChange(currentPage - 1)}
-                                disabled={currentPage === 1}
-                            />
-
-                            <Pagination.Item active>{currentPage}</Pagination.Item>
-
-                            <Pagination.Next
-                                onClick={() => handlePageChange(currentPage + 1)}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
-                            />
-                            <Pagination.Last
-                                onClick={() => handlePageChange(Math.ceil(product.length / 8))}
-                                disabled={currentPage === Math.ceil(product.length / 8)}
-                            />
-                        </Pagination>
-                    </div>
-
-                    <div className="plant-div">
-                        <span className="label-catelogy">Fertilizer</span>
-                        <div className="card-of-cate">
-                            <Row>
-                                {/* {currentItems.length > 0 ? currentItems.map((items, index) => ( */}
-                                    {fertilizerList.map((items, index) => (
-                                        <Col lg={3} key={index} className="mt-4">
-                                            <Link to={`/shop/all/fertilizer/${items.id}`}>
-                                                <CardProduct items={items} />
-                                            </Link>
-                                        </Col>
-                                    ))}
+                                ))}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}
                             </Row>
                         </div>
@@ -581,5 +501,5 @@ const AllProducts = () => {
     )
 }
 
-export default AllProducts
+export default Indoor
 

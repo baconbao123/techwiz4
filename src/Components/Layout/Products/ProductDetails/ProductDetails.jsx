@@ -21,6 +21,7 @@ import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
+console.log("log:", productList);
 const ProductDetail = () => {
     const toast = useRef(null);
     const { id } = useParams();
@@ -37,7 +38,6 @@ const ProductDetail = () => {
     const { setCart } = useContext(Value)
     const { cart } = useContext(Value)
 
-    console.log(cart);
     const showSuccess = () => {
         toast.current.show({ severity: 'success', summary: 'Success Added!', detail: 'ADD TO CARD SUCCESS', life: 1000 });
     }
