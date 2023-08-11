@@ -18,15 +18,16 @@ import Fertilizer from "../Components/Layout/Products/AllCategory/Fertilizer/Fer
 
 import Setting from "../Components/Setting/Setting";
 import Login from "../Components/Authenticate/Login";
-
+// Feedback
+import FeedBack from "../Components/FeedBack/FeedBack";
 // service
 import ServiceDetail from "../Components/WorkService/ServiceDetail";
 import ServiceDetail2 from "../Components/GiftService/ServiceDetail2";
 import ServiceDetail3 from "../Components/DercoService/ServiceDetail3";
 import Cart from "../Components/Cart/Cart";
 
-
 export const AllRoutes=[
+    
 {name:'home',link:'',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
 {name:'tree',link:'/shop/all/tree/:id',component: <ProductDetail/>},
@@ -40,7 +41,7 @@ export const AllRoutes=[
 {name:'Tools',link:'/shop/tool',component: <Tool/>},
 {name:'Fertilize',link:'/shop/fertilizer',component:<Fertilizer />},
 {name:'Services',link:'/service',component:<ServicePage/>},
-{name:'FeedBack',link:'/feedback',component:''},
+{name:'FeedBack',link:'/feedback',component:<FeedBack/>},
 
 // service
 {name:'Service',link:'/service',component:<ServicePage />},
@@ -49,7 +50,9 @@ export const AllRoutes=[
 {name:'Service3',link:'/service/3',component:<ServiceDetail3 />},
 
 // end--ser
-
+// feedBack
+{name:'Feedback',link:'/feedback',component:<FeedBack/>},
+//end--feedback
 {name:'BLog',link:'/blog',component:<Blog />},
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 {name:'Card',link:`/cart`,component:<Cart />},
