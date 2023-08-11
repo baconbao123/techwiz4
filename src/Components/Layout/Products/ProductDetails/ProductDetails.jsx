@@ -22,7 +22,7 @@ import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
-console.log("log:", productList);
+
 const ProductDetail = () => {
     const home = { icon: <AiOutlineHome />, url: "/" };
     const toast = useRef(null);

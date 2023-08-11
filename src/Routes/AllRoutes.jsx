@@ -28,7 +28,7 @@ import Cart from "../Components/Cart/Cart";
 
 export const AllRoutes=[
     
-{name:'home',link:'',component:<HomePage />},
+{name:'home',link:'/',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
 {name:'tree',link:'/shop/all/tree/:id',component: <ProductDetail/>},
 {name:'tool',link:'/shop/all/tool/:id',component: <ProductTool/>},

@@ -6,7 +6,7 @@ import { TopNav } from '../../../Data/TopNav';
 import { AllProduct, AllToolData, FertilizeData } from '../../../Data/AllProduct';
 import { BsChevronDown } from "react-icons/bs";
 import logoMb from '../../../assets/Layout_img/logo-mb.png'
-import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenu, } from "react-icons/ai";
 import ItemTopBar from './ItemTopBar';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Link } from 'react-router-dom';
@@ -35,7 +35,12 @@ export default function TopBar() {
   const isLogin = Cookies.get('isLogin');
   const { setIslogin } = useContext(Value)
   const { cart } = useContext(Value)
-
+  
+  const url = window.location.href;
+  const domain = window.location.origin;
+  
+  const location = url.replace(domain, '');
+ 
   const showSuccess = () => {
     toast.current.show({ severity: 'success', summary: ' Sign in Success', detail: 'Enjoy your day', life: 1000 });
   }
@@ -91,8 +96,7 @@ export default function TopBar() {
     setClickSearch(!clickSearch);
   }
 
-  console.log(filteredProducts);
-  console.log(showSearchMb);
+  
 
   return (
     <>
@@ -186,7 +190,7 @@ export default function TopBar() {
         <section className='top-bar-sm p-0 d-flex justify-content-around align-items-center  d-lg-none' >
           <section className='p-0 m-0 container-wrapper'>
             <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
-              <Col className='menu-content p-0' xs={7} sm={5} md={5}>
+              <Col className='menu-content pb-5 ps-0 pe-0' xs={7} sm={5} md={5}>
                 <Link to={'/'} className=' ' >
 
                   <img src={logo} alt="" className='logo-menu' />
@@ -194,7 +198,7 @@ export default function TopBar() {
 
                 <section>
                   {nav.map((item) => (
-                    <ItemTopBar  setShowMenu={setShowMenu} item={item} />
+                    <ItemTopBar url={location} setShowMenu={setShowMenu} item={item} />
                   ))}
                 </section>
 
@@ -208,7 +212,7 @@ export default function TopBar() {
               <Col className='container-header p-0 m-0'>
                 <section className='d-inline-block fs-1 show-menu ms-3  ' onClick={() => setShowMenu(true)}>
 
-                  <AiOutlineMenuUnfold />
+                  <AiOutlineMenu />
 
                 </section>
 
