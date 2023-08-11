@@ -47,7 +47,7 @@
             width: 89%;
             margin-left: 10px;
             margin-right: 10px;
-            padding: 10px 10px !important;           
+            padding: 10px 10px !important;
         }
 
 
@@ -67,7 +67,7 @@
             font-family: Inter;
             font-size: 21px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 500;
             line-height: normal;
 
             @media screen and (max-width: 399px) {
@@ -79,7 +79,7 @@
         .your-comment-label {
             color: #666;
             font-size: 21px;
-            font-weight: 700;
+            font-weight: 500;
 
             @media screen and (max-width: 399px) {
                 font-size: 16px;
@@ -89,27 +89,28 @@
 
         .textarea-comment {
             width: 100%;
-            border-radius: 40px;
+            border-radius: 13px;
 
             @media screen and (max-width: 399px) {
                 height: 30px !important;
+                padding-left: 13px !important;
+
             }
         }
 
         .your-name-lable {
             color: #666;
             font-size: 21px;
-            font-weight: 700;
+            font-weight: 500;
 
             @media screen and (max-width: 399px) {
                 font-size: 16px;
-                // white-space: nowrap;
             }
         }
 
         .input-comment {
             width: 100%;
-            border-radius: 40px;
+            border-radius: 13px;
 
             @media screen and (max-width: 399px) {
                 height: 30px;

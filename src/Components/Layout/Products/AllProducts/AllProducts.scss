@@ -1,8 +1,18 @@
+.bg-allproduct {
+    .img-bgall {
+        width: 100%!important;
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
 .allproduct-master {
-        margin-top: 100px;
+        margin-top: 50px;
         .p-breadcrumb {
             border: none;
         }
+
+
     .filter-div {
       
         background-color: #ECF1ED;
