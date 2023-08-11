@@ -41,7 +41,9 @@ export default function BlogDetail({ item }) {
           <div className='item-time text-center'>{item.time}</div>
         </Row>
         <Row className='content'>
-          {item.content}
+          <Col lg={12}>
+            {item.content}
+          </Col>
         </Row>
         <Row>
           <div className="your-review-div">
