@@ -6,9 +6,6 @@ import { FaRegHeart } from 'react-icons/fa'
 import './CardProduct.scss'
 
 export const CardProduct = ({items}) => {
-    // const items=[{id:'1',tag:"hello"}]
-    // console.log('check item from cardproduct',item);
-    console.log(items);
     return (
        
             <Card className="card-product" >

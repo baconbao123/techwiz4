@@ -10,6 +10,7 @@ import {AllRoutes} from '../../Routes/AllRoutes'
 import NotFound from "./NotFound";
 import {blog} from "../../Data/Blog";
 import BlogDetail from "../BlogPage/BlogDetail";
+
 export default function Main() {
   const allRoutes=AllRoutes;
   return (

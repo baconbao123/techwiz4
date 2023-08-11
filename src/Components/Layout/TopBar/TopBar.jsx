@@ -12,16 +12,24 @@ import { Link } from 'react-router-dom';
 import BottomBar from './BottomBar';
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Login from '../../Authenticate/Login';
+import { Toast } from 'primereact/toast';
 export default function TopBar() {
+  
   const nav = TopNav;
   const [showSearch, setShowSearch] = useState(false);
   const [showSearchMb, setShowSearchMb] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenu1, setShowMenu1] = useState(false);
   const [listShow, setListShow] = useState([])
+  const [isLogin,setIslogin]=useState(false)
+  const [showLogin,setShowLogin]=useState(false);
   const InputRef = useRef();
   const InputRefMb = useRef();
-
+  const toast = useRef(null);
+  const showSuccess = () => {
+      toast.current.show({severity:'success', summary: ' Sign in Success', detail:'Enjoy your day', life: 1000});
+  }
   useEffect(() => {
     AOS.init();
   }, []);
@@ -56,11 +64,12 @@ export default function TopBar() {
   const handleSetShow = (item) => {
     setListShow([...listShow, item]);
     setShowMenu1(true)
-    console.log(listShow);
   }
+
   return (
     <>
       <Row className='m-0 p-0'>
+      <Toast ref={toast} />
         <section className='top-bar  top-bar-md p-0 m-0'>
           <Container>
 
@@ -120,7 +129,9 @@ export default function TopBar() {
                 </section>
                 <AiOutlineHeart className='item-icon' />
                 <AiOutlineShoppingCart className='item-icon' />
-                <AiOutlineUser className='item-icon' />
+              <Link to={`${isLogin?"/setting":''}`}>
+              <AiOutlineUser className='item-icon'  onClick={()=> setShowLogin(true)} />
+              </Link>
               </Col>
             </Row>
           </Container>
@@ -174,6 +185,7 @@ export default function TopBar() {
             </Row>
           </section>
         </section>
+        <Login show={showLogin} setShow={setShowLogin} showSuccess={showSuccess} />
         <BottomBar />
       </Row>
     </>

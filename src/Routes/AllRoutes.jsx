@@ -4,14 +4,19 @@ import BlogItem from "../Components/BlogPage/BlogItem";
 import ProductDetail from "../Components/Layout/Products/ProductDetails/ProductDetails";
 import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
 import ServicePage from "../Components/ServicePage/ServicePage";
+import ProductTool from "../Components/Layout/Products/ProductTool/ProductTool";
 
+
+import Setting from "../Components/Setting/Setting";
+import Login from "../Components/Authenticate/Login";
 
 
 
 export const AllRoutes=[
 {name:'home',link:'',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
-{name:'shop',link:'/shop/all/:id',component: <ProductDetail/>},
+{name:'shop',link:'/shop/all/tree/:id',component: <ProductDetail/>},
+{name:'shop',link:'/shop/all/tool/1',component: <ProductTool/>},
 {name:'bonsai',link:'/shop/bonsai',component:''},
 {name:'Flowering Shrubs',link:'/shop/floweringshrubs',component:''},
 {name:'indoor',link:'/shop/indoor',component:''},
@@ -28,5 +33,7 @@ export const AllRoutes=[
 
 {name:'BLog',link:'/blog',component:<Blog />},
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
+{name:"Setting",link:'/setting',component:<Setting />},
+
 
 ];

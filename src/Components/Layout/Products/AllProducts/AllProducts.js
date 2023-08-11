@@ -6,15 +6,15 @@ import './AllProducts.scss'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
-import ProductDetail from "../ProductDetails/ProductDetails";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
+import ProductDetail from '../ProductDetails/ProductDetails'
 
 import Pagination from 'react-bootstrap/Pagination';
 
+
+
 const productList = AllProduct
-
-
 
 const AllProducts = () => {
     const [categoryName, setCategoryName] = useState('All Product')
@@ -36,6 +36,9 @@ const AllProducts = () => {
         setCurrentPage(page);
     };
     const currentItems = product.slice(indexOfFirstItem, indexOfLastItem);
+
+
+
     useEffect(() => {
         let indoorArr = [];
         let outdoorArr = [];
@@ -423,8 +426,6 @@ const AllProducts = () => {
       
     }
 
-
-
     return (
 
         <div className="allproduct-master">
@@ -464,15 +465,15 @@ const AllProducts = () => {
                         <span className="label-catelogy">Plants</span>
 
                         <div className="card-of-cate">
+                            
                             <Row>
                                 { currentItems.length>0?currentItems.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
-                                        {/* {console.log(items)} */}
-                                        <Link to={`/shop/all/${items.id}`}>
-                                            <CardProduct items={items}/>
+                                        <Link to={`/shop/all/tree/${items.id}`}>
+                                            <CardProduct items={items} />
                                         </Link>
                                     </Col>
-                                )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)}
+                                )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} 
                             </Row>
                         </div>
                     </div>
