@@ -11,11 +11,11 @@ import NotFound from "./NotFound";
 import { blog } from "../../Data/Blog";
 import BlogDetail from "../BlogPage/BlogDetail";
 import Setting from "../Setting/Setting";
-
+import Cookies from 'js-cookie';
 import { Value } from "../../Data/DataSava";
 export default function Main() {
   const allRoutes = AllRoutes;
-  const {isLogin}= useContext(Value)
+  const isLogin=Cookies.get('isLogin');
   return (
     <>
       <Container fluid="true">

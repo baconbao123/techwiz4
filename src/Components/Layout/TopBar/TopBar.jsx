@@ -28,12 +28,10 @@ export default function TopBar() {
   const InputRef = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
-  const {isLogin}=useContext(Value)
+  const isLogin=Cookies.get('isLogin');
   const {setIslogin}=useContext(Value)
-  useEffect(()=> {
-    if (Cookies.get('isLogin')) {
-      setIslogin(JSON.parse(Cookies.get('isLogin')))}
-  })
+  const {cart}=useContext(Value)
+  
  console.log(isLogin);
   const showSuccess = () => {
       toast.current.show({severity:'success', summary: ' Sign in Success', detail:'Enjoy your day', life: 1000});
@@ -141,7 +139,14 @@ export default function TopBar() {
                   </Form.Control>
                 </section>
                 <AiOutlineHeart className='item-icon' />
+                <div className='d-flex contain-icon'>
+                  <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
+                  <div className='number-cart' onClick={()=> handleSetShow(true)}>
+                    {cart.length===0?'':cart.length}
+                  </div>
                 <AiOutlineShoppingCart className='item-icon' />
+                  </Link>
+                </div>
               <Link to={`${isLogin?"/setting":''}`}>
               <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
               </Link>
@@ -190,7 +195,15 @@ export default function TopBar() {
            
                 </div>
                <AiOutlineHeart/>
-               <AiOutlineShoppingCart/>
+                    <div className='number-contain d-flex'>
+                      <Link to={`${isLogin?"/cart":''} `} className='d-flex'>
+                      <div className='number-cart'>
+                        {cart.length===0?'':cart.length}
+                      </div>
+               <AiOutlineShoppingCart onClick={()=> handleSetShow(true)}/>
+                      </Link>
+                    </div>
+             
                <Link to={`${isLogin?"/setting":''} `} className='d-flex'>
               <AiOutlineUser className='item-icon'  onClick={()=> handleSetShow(true)} />
               </Link>

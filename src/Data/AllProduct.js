@@ -266,7 +266,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 5, name: 'Rubber Plant', category: 'indoor', price: 20,
+      id: 5, name: 'Rubber Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: Rubber1 },
          { img2: Rubber2 },
@@ -285,7 +285,8 @@ export const AllProduct = [
          { fetilize: 'Use with water-solube fertulizers, follow the mixing instructions' },
          { sick: 'Follow  the intructions' }
       ],
-   }, {
+   }, 
+   {
       id: 6, name: 'ZZ Plant', category: 'indoor', price: 20,
       img: [
          { img1: ZZ1 },
@@ -306,7 +307,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    },
-   , {
+   {
       id: 7, name: 'philodendron Plant', category: 'indoor', price: 20,
       img: [
          { img1: philodendron1 },
@@ -897,7 +898,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 36, name: 'Euphorbia Plant', category: 'succulents', price: 30, tag: 'best seller',
+      id: 36, name: 'Euphorbia Plant', category: 'succulents', price: 30,
       img: [
          { img1: Euphorbia1 },
          { img2: Euphorbia2 },
@@ -917,7 +918,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ]
    }, {
-      id: 37, name: 'Graptopetalum Plant', category: 'succulents', price: 30, tag: 'best seller',
+      id: 37, name: 'Graptopetalum Plant', category: 'succulents', price: 30, 
       img: [
          { img1: Graptopetalum1 },
          { img2: Graptopetalum2 },

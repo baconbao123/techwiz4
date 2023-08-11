@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState,useRef } from 'react'
 import './CartItem.scss'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { BsDashLg } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link } from 'react-router-dom'
-export default function CartItem({ item }) {
+import { Value } from '../../Data/DataSava';
+
+export default function CartItem({ item,show}) {
   console.log(item);
+  const {cart}=useContext(Value);
+  const {setCart}=useContext(Value);
+  
   const [number, setNumber] = useState(1)
+ 
   const handleChange = (e) => {
     const value = e.target.value;
 
@@ -23,11 +29,17 @@ export default function CartItem({ item }) {
 
       setNumber(sanitizedValue);
 
-
+      
     }
   };
+  const handleRemove=()=>{
+    const arr=cart;
+   setCart( arr.filter((items)=>items.id!==item.id));
+   show()
+  }
   return (
     <Row className='cart-item mb-5 mt-5 '>
+    
       <Col lg={4} md={4} sm={3}>
         <img src={item.img[0].img1} alt="" className='cart-img' />
       </Col>
@@ -62,7 +74,7 @@ export default function CartItem({ item }) {
             
           </div>
           </div>
-            <Button variant='success button-remove' className='ms-2'>Remove from your card</Button>
+            <Button variant='success button-remove' className='ms-2' onClick={()=>handleRemove()}>Remove from your card</Button>
             <br/>
           <div className='mt-2  mb-3 fs-4   '>
              <div>

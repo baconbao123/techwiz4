@@ -38,9 +38,10 @@ export default function Setting() {
         }).then((result) => {
             if (result.isConfirmed) {
                 Cookies.remove('isLogin')
-                window.location.reload();
+                // window.location.reload();
                 setIslogin(false)
-        navigate('/home')
+             
+        navigate('/')
                
             }
         })

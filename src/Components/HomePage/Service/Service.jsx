@@ -3,7 +3,7 @@ import leftimg from '../../../assets/Layout_img/service 1.png'
 import pic3 from '../../../assets/Layout_img/image_11-removebg-preview.png'
 import pic2 from '../../../assets/Layout_img/image_10-removebg-preview (1).png'
 import pic1 from '../../../assets/Layout_img/image_9-removebg-preview.png'
-
+import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import './Service.scss'
@@ -24,23 +24,23 @@ export default function Service() {
                         <Row>
                             <Col lg={4} className='text-center'>
                                 <img src={pic1} className='mb-3' />
-                                <div className='title2 fw-medium'>TERRARIUM WORKSHOP</div>
+                                <div className='title2 mb-3'>TERRARIUM WORKSHOP</div>
                                 <div className='text2'>Are you looking for nature-based activities to enhance your experience or to reconnect with yourself after the hustle and bustle of daily life?</div>
                             </Col>
                             <Col lg={4} className='text-center'>
                                 <img src={pic2} className='mb-3' />
-                                <div className='title2 fw-medium'>GREEN GIFTS </div>
+                                <div className='title2 mb-3 '>GREEN GIFTS </div>
                                 <div className='text2'>Creative green gifts are waiting for you to present to your loved ones, dear ones, and valued partners on special occasions.</div>
                             </Col>
                             <Col lg={4} className='text-center'>
                                 <img src={pic3} className='mb-3' />
-                                <div className='title2 fw-medium'> GREEN DERCORATION</div>
+                                <div className='title2 mb-3'> GREEN DERCORATION</div>
                                 <div className='text2'>A small corner in your house
                                     lacks greenery? Lacks vitality? Don't have time?  PlantPalace take care of it
                                     for you!</div>
                             </Col>
                         </Row>
-                        <div className='mt-5 button-service d-inline-block'>Show all services</div>
+                        <Link to='/all-service'><div className='mt-5 button-service d-inline-block'>Show all services</div></Link>
                     </Col>
                 </Row>
             </Container>

@@ -5,7 +5,7 @@ import './Footer.scss'
 function Footer() {
   return (
 
-    <footer className="footer container">
+    <footer className="footer container d-none d-lg-block d-md-block">
         <section className='ft-content row'>
             <div className="col-lg-3 col-md-4 ft-content-child-1" >
                 <img src={require(`../../../assets/Layout_img/Logo_header.png`)} alt="logo" className="d-none d-lg-block d-md-block img-md"/>

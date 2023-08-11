@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { Row, Col, Container, Button, Card } from 'react-bootstrap';
 import { Rating } from "primereact/rating";
@@ -8,21 +8,18 @@ import { Checkbox } from "primereact/checkbox";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
-import { CardProduct } from "./CardProduct/CardProduct";
-import SlideCardImg from "./SlideImg/SlideCardImg"
-
-import { Toast } from 'primereact/toast';
+import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
+import SlideCardImg from "../ProductDetails/SlideImg/SlideCardImg"
 
 
-import './ProductDetails.scss';
+import './ProductTool.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
-import { Value } from '../../../../Data/DataSava'
+
 const productList = AllProduct;
-const ProductDetail = () => {
-    const toast = useRef(null);
+const ProductTool = () => {
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
 
@@ -34,25 +31,8 @@ const ProductDetail = () => {
     const [commentValue, setCommentValue] = useState('');
     const [nameComment, setNameComment] = useState('')
     const [checked, setChecked] = useState(false);
-    const { setCart } = useContext(Value)
-    const { cart } = useContext(Value)
-
-    console.log(cart);
-    const showSuccess = () => {
-        toast.current.show({ severity: 'success', summary: 'Success Added!', detail: 'ADD TO CARD SUCCESS', life: 1000 });
-    }
-    const handleAddCard = () => {
-        let check = cart.filter((item) => item.id === product.id)
-        console.log(check);
-        if (check.length > 0) {
-
-            
-        }
-        else {
-            setCart([product, ...cart]);
-        }
-        showSuccess();
-    }
+    
+    
 
     const handleClickAddProduct = () => {
         setCountProduct(countProduct + 1)
@@ -61,12 +41,11 @@ const ProductDetail = () => {
     const handleClickSubProduct = () => {
         setCountProduct(countProduct - 1)
     }
-    console.log(product);
+
     return (
 
         <div className='products-details-master'>
             <Container>
-                <Toast ref={toast} />
                 <div className='products-details-div'>
                     <Row>
                         <Col lg={12} md={5} sm={12} xs={12}>
@@ -77,20 +56,20 @@ const ProductDetail = () => {
                     </Row>
                     <Row>
                         <Col lg={5} md={5} sm={12} xs={12}>
-                            <div className="name-plant">{product.name}</div>
+                            <div className="name-plant">Tool</div>
                             <div className="img-div">
-                                <SlideCardImg
+                                {/* <SlideCardImg
                                     mouseTracking
                                     items={product.img}
                                     responsive={{
                                         0: { items: 1 },
                                         768: { items: 1 },
                                     }}
-                                />
+                                /> */}
                             </div>
 
                         </Col>
-                        <Col lg={1} md={1} className="d-none d-sm-none d-md-block d-lg-block"></Col>
+                        {/* <Col lg={1} md={1} className="d-none d-sm-none d-md-block d-lg-block"></Col>
                         <Col lg={6} md={6} sm={12} xs={12}>
                             <div className="description-plan">
                                 <strong className="label-smalltext">Size: </strong> <span className="smalltext-des">{product.size}</span> <br /><br />
@@ -117,53 +96,15 @@ const ProductDetail = () => {
 
                                     </div>
                                     <div>
-                                        <Button className="icon-buynow" onClick={(product) => handleAddCard(product)}>
+                                        <Button className="icon-buynow">
                                             <BsCartCheck />
                                         </Button>
                                     </div>
                                 </div>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
-                    <span className='label-howto'>How to plan</span>
-                    <div className="howtoplant-div">
-                        <Row>
-                            <Col lg={5} md={5} sm={12} xs={12}>
-                                <img src={imghowtoplant} alt="how to plant" className="img-howtoplant" style={{ width: '100%', height: '305px', objectFit: 'cover', borderRadius: '68px' }}></img>
-                            </Col>
-                            <Col lg={1} md={1} className="d-none d-sm-none d-md-block d-lg-block"></Col>
-                            <Col lg={5} md={5} sm={12} xs={12}>
-                                <div className="description-howtoplant">
-                                    <strong className="label-smalltext">Eviroment: </strong> <span className="smalltext-des">{product.takeCare[0].enviroment} </span> <br /><br />
-                                    <strong className="label-smalltext">Water: </strong> <span className="smalltext-des">{product.takeCare[1].water}</span> <br /><br />
-                                    <strong className="label-smalltext">Tree pruning: </strong>
-                                    <span className="smalltext-des">{product.takeCare[2].pruning}</span> <br /><br />
-                                    <strong className="label-smalltext">Fertilize: </strong>
-                                    <span className="smalltext-des">{product.takeCare[3].fetilize}
-                                    </span><br /><br />
-                                    <strong className="label-smalltext">Sick tree: </strong >
-                                    <span className="smalltext-des">{product.takeCare[4].sick}</span>
-                                </div>
-                            </Col>
-                        </Row>
-                        <span className="label-review">Review</span>
-                        <Row style={{ padding: '0px 45px' }}>
-                            <div className="review-div">
-                                <Col lg={1} md={1} sm={2} xs={2}>
-                                    <img src={avatar} alt="avatar" className="avatar-review" />
-                                </Col>
-                                <Col lg={11} md={11} sm={10} xs={10}>
-                                    <Rating value={ratingOrtherUser} onChange={(e) => setRatingOrtherUser(e.value)} cancel={false} className="rating-other-user" />
-                                    <div className="rating-other-user-des">
-                                        <div className="content-review">Beautiful tree</div>
-                                        <div className="author-review" >Phuong Anh</div>
-                                        <div className="date-review" >Tue 2023/07/21</div>
-                                    </div>
-                                </Col>
-                            </div>
-                        </Row>
-                    </div>
-                    <Row>
+                    {/* <Row>
                         <div className="your-review-div">
                             <Row >
                                 <Col lg={4} md={4} sm={4} xs={4}>
@@ -180,7 +121,7 @@ const ProductDetail = () => {
                                     <div className="your-comment-label">Your Comment</div>
                                     <div style={{ marginTop: '10px' }}>
                                         <InputTextarea autoResize value={commentValue} onChange={(e) => setCommentValue(e.target.value)}
-                                            className="textarea-comment" />
+                                        className="textarea-comment" />
                                     </div>
                                 </Col>
                             </Row>
@@ -188,17 +129,17 @@ const ProductDetail = () => {
                                 <Col lg={6} md={6} sm={12} xs={12}>
                                     <div className="your-name-lable">Your name</div>
                                     <div>
-                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment' />
+                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment'/>
                                     </div>
                                 </Col>
                                 <Col lg={6} md={6} sm={12} xs={12}>
                                     <div className="your-name-lable">Your Email</div>
                                     <div>
-                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment' />
+                                        <InputText value={nameComment} onChange={(e) => setNameComment(e.target.value)} className='input-comment'/>
                                     </div>
                                 </Col>
                             </Row>
-                            <Row style={{ marginTop: '10px' }}>
+                            <Row style={{marginTop: '10px' }}>
                                 <Col>
                                     <div className="d-flex align-items-center">
                                         <Checkbox onChange={e => setChecked(e.checked)} checked={checked} />
@@ -206,7 +147,7 @@ const ProductDetail = () => {
                                     </div>
                                 </Col>
                             </Row>
-                            <Row style={{ marginTop: '10px' }}>
+                            <Row style={{marginTop: '10px' }}>
                                 <Col lg={3} md={6} sm={3} xs={3}>
                                     <Button variant="primary">Send</Button>
                                 </Col>
@@ -217,13 +158,13 @@ const ProductDetail = () => {
                     <span className="label-similar">Similar Product</span>
                     <Row style={{ marginBottom: '40px' }}>
                         {productList.slice(0, showCardList).map((item) => (
-                            <Col lg={3} md={3} sm={6} xs={12}>
-                                <Link to={`/shop/all/tree/${item.id}`}>
-                                    <CardProduct items={item} />
-                                </Link>
-                            </Col>
-                        ))}
-                    </Row>
+                            <Col lg={3} md={3} sm={6} xs={12}> 
+                                <Link to={`/shop/all/tree/${item.id}`}> 
+                                    <CardProduct items={item} /> 
+                                </Link> 
+                            </Col> 
+                        ))} 
+                    </Row> */}
                 </div>
             </Container>
         </div>
@@ -231,4 +172,4 @@ const ProductDetail = () => {
 };
 
 
-export default ProductDetail;
+export default ProductTool;

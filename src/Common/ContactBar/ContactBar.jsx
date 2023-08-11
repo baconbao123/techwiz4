@@ -10,17 +10,17 @@ function ContactBar() {
 
   const [social, setSocial] = useState();
   const soccial = [
-    { icon: "3.png", content: "Facebook", link: "" },
-    { icon: "1.png", content: "Address", link: "" },
-    { icon: "2.png", content: "  012345678 ", link: "" },
-    { icon: "4.png", content: "Feedback ", link: "" },
+    { icon: "3.png", content: "Facebook", link:'https://www.facebook.com/aptechvietnam.com.vn' ,linkT:'https://www.facebook.com/aptechvietnam.com.vn'},
+    { icon: "1.png", content: "Address", link:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7',linkT:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7' },
+    { icon: "2.png", content: "  012345678 ", link: "tel:012345678" },
+    { icon: "4.png", content: "Feedback ", link: "/feedback" },
   ];
   return (
     <>
       <div className="contact-bar d-none d-lg-flex d-md-flex" data-aos="fade-right">
         <ul>
           {soccial.map((item, index) => (
-            <Link to={item.content} key={index} className="link ">
+            <Link to={item.link} target={item.linkT}  key={index} className="link ">
               {" "}
               <li className="">
                 <img

@@ -8,14 +8,22 @@
 
   const handleDragStart = (e) => e.preventDefault();
 
-  const SlideCardImg = ({ productList }) => {
-    const items = productList.map(item => (
-      <Card className="img-card" key={item.id}>
-        <Card.Img src={item.img[0].img1} onDragStart={handleDragStart} className="img-current" />
+  const SlideCardImg = ({ items }) => {
+    if (!Array.isArray(items)) {
+      return null;
+    }
+  
+    const slideProduct = items.slice(0, 3).map((item, index) => (
+      <Card className="img-card" key={index}>
+        <Card.Img
+          src={Object.values(item)[0]} // Lấy giá trị đầu tiên của mỗi object trong mảng items
+          onDragStart={handleDragStart}
+          className="img-current"
+        />
       </Card>
     ));
   
-    return <AliceCarousel items={items} />;
+    return <AliceCarousel items={slideProduct} />;
   };
   
   export default SlideCardImg;

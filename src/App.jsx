@@ -8,14 +8,20 @@ import AllProducts from './Components/Layout/Products/AllProducts/AllProducts';
 import { Value } from './Data/DataSava';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-function App() {
-  const [isLogin,setIslogin]=useState(false);
-  const [cart,setCard]=useState()
 
+function App() {
+  
+  const [isLogin,setIslogin]=useState(false);
+  const [cart,setCart]=useState([]);
+  const change=Cookies.get('isLogin');
+  useEffect(()=> {
+    if (Cookies.get('isLogin')) {
+      setIslogin(JSON.parse(Cookies.get('isLogin')))}
+  },[change])
   // console.log('render');
   return (
  
-  <Value.Provider value={{isLogin,setIslogin}}>
+  <Value.Provider value={{isLogin,setIslogin,cart,setCart}}>
   
       <Main></Main>
   </Value.Provider>
