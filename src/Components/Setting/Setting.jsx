@@ -2,9 +2,14 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Row, Col, Container, Button, Form } from 'react-bootstrap'
 
 import { AiOutlineBell, AiOutlineUserAdd } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
 import './Setting.scss'
+import Cookies from "js-cookie";
+import Swal from "sweetalert2";
+import { Value } from '../../Data/DataSava';
+import LoginSetting from '../Authenticate/LoginSetting';
 export default function Setting() {
-    
+    const navigate=useNavigate();
     const [option, setOption] = useState('infor');
     const [editFullName, setEditFullName] = useState(false)
     const [editPassword, setEditPassword] = useState(false);
@@ -17,9 +22,36 @@ export default function Setting() {
     const [lessonCheck, setLessonCheck] = useState(true);
     const [feedbackCheck, setFeedBackCheck] = useState(true);
     const [activiesCheck, setActiviesCheck] = useState(true)
+    const {setIslogin}=useContext(Value);
+    const {isLogin}=useContext(Value);
+
+    
+    const logout = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Logout'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Cookies.remove('isLogin')
+                window.location.reload();
+                setIslogin(false)
+        navigate('/home')
+               
+            }
+        })
   
+    }
+    if(!isLogin) {
+        navigate('/home')
+    }
 
     return (
+       
         <Container className='setting'>
             <Row>
                 <Col lg={3} className='mb-5'>
@@ -35,6 +67,9 @@ export default function Setting() {
                     <section onClick={() => setOption('noti')} className={`${option === 'noti' ? 'setting-options-check' : ''} setting-options mt-3`}>
                         <AiOutlineBell className='setting-icon fs-4 me-3 ms-3' />
                         Setting notifications
+                    </section>
+                    <section className='d-flex justify-content-center mt-5'   >
+                       <Button variant='danger ps-5 pe-5' onClick={logout}  >LOG OUT</Button>
                     </section>
                 </Col>
                 <Col lg={9}>
@@ -146,7 +181,7 @@ export default function Setting() {
                                 </div>
                                 <section className='mt-4 pb-5 setting-item'>
                                     <div className='d-inline-block'>
-                                        New lesson
+                                        New product
                                     </div>
                                     <Form className='d-inline-block float-end  switch-setting'>
                                         <Form.Check

@@ -5,7 +5,7 @@ import ProductDetail from "../Components/Layout/Products/ProductDetails/ProductD
 import AllProducts from "../Components/Layout/Products/AllProducts/AllProducts";
 import Setting from "../Components/Setting/Setting";
 import Login from "../Components/Authenticate/Login";
-
+import Cart from "../Components/Cart/Cart";
 
 
 export const AllRoutes=[
@@ -23,7 +23,7 @@ export const AllRoutes=[
 {name:'FeedBack',link:'/feedback',component:''},
 {name:'BLog',link:'/blog',component:<Blog />},
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
-{name:"Setting",link:'/setting',component:<Setting />},
+{name:'Card',link:`/cart`,component:<Cart />},
 
 
 ];

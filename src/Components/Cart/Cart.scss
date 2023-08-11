@@ -1,0 +1,12 @@
+@import '../../setting';
+
+.cart {
+    font-family: $font_primary  ;
+    margin-top: 76px;
+    .checkout {
+        margin-top: 150px;
+        .checkoutbutton {
+            width: 380px;
+        }
+    }
+}
