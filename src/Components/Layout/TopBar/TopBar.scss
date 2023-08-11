@@ -1,10 +1,14 @@
 @import '../../../setting';
-
+* {
+    font-family: $font_primary;
+}
 .top-bar-sm {
     display: none;
 }
 
 .top-bar {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    
     z-index: 999;
     background-color: $bg_topbar;
     font-family: $font_primary;
@@ -17,12 +21,22 @@
     .logo-header {
         width: 229px;
         position: relative;
-        top: 0;
-        right: 0;
+       
     }
 
     .item-icon {
         cursor: pointer;
+    }
+    .contain-icon {
+        position: relative;
+    }
+    .number-cart {
+        position: absolute;
+        top: -12px;
+        right: -7px;
+        font-size: medium;
+        font-weight: bold;
+        color: rgb(242, 98, 98);
     }
 
     .item {
@@ -120,6 +134,8 @@
     }
 
     .top-bar-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
         padding-top: 10px;
         z-index: 99;
         display: flex;
@@ -133,7 +149,8 @@
 
 
     }
-
+   
+   
     .container-header {
         
         display: flex;
@@ -185,6 +202,16 @@
                 // right: 0;
 
 
+            }
+            .number-contain {
+                position: relative;
+                .number-cart {
+                    position: absolute;
+                    top: -13px;
+                    right: -4px;    
+                    font-size: medium;
+                    color: rgb(242, 98, 98);
+                }
             }
             float: left;
             // z-index: -1;
@@ -259,6 +286,5 @@
             }
         }
     }
-
 
 }
