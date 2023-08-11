@@ -52,7 +52,7 @@ const Bonsai = () => {
                     <div className="label-catelogy">Bonsai</div>
                     <Row className="filter-div  d-flex justify-content-around">
                        
-                        <Col lg={2}>
+                        <Col lg={2} className="mt-1">
                             <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
@@ -60,7 +60,7 @@ const Bonsai = () => {
                             </Form.Select>
                         </Col>
                         <Col lg={4} md={2}></Col>
-                        <Col lg={4} md={4} >
+                        <Col lg={4} md={4} className="mt-1 mb-1">
                             <InputGroup className="">
                                 <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch /></InputGroup.Text>
                                 <Form.Control className="form-control-input"
@@ -76,7 +76,7 @@ const Bonsai = () => {
                             <Row>
                                 {/* // {productList.map((items, index) => ( */}
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
-                                    <Col lg={3} key={index} className="mt-4">
+                                    <Col lg={3} md={6} key={index} className="mt-4">
                                      
                                             <CardProduct items={items} option={"all/tree/bonsai"} />
                                      
