@@ -37,14 +37,14 @@
 
     .show-search {
         background-color: rgba(222, 220, 220, 0.3);
-        border: 1px solid;
+       
         border-radius: 5px;
         height: 200px;
         overflow-y: scroll;
         position: absolute;
-        width: 300px;
+        width: 200px;
         top: 82px;
-        right: -135px;
+        right: -91px;
         z-index: 15;
 
         .img-search {
@@ -233,7 +233,7 @@
 
             .show-search {
                 background-color: rgba(222, 220, 220, 0.3);
-                border: 1px solid ;
+              
              
                 height: 200px;
                 overflow-y: scroll;
@@ -291,7 +291,7 @@
             }
 
             .number-contain {
-                z-index: -1;
+                z-index: 0;
                 position: relative;
 
                 .number-cart {

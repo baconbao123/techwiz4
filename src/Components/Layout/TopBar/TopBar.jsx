@@ -214,8 +214,10 @@ export default function TopBar() {
 
 
                 */}
+              <Link to={'wishlist'}>
 
-                <AiOutlineHeart className='item-icon' />
+                <AiOutlineHeart className='item-icon'  />
+              </Link>
                 <div className='d-flex contain-icon'>
                   <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
                   <div className='number-cart' onClick={()=> handleSetShow(true)}>
@@ -295,7 +297,10 @@ export default function TopBar() {
                   
                     </section>
                   </div>
+                  <Link to={'/wishlist'}>
+
                   <AiOutlineHeart />
+                  </Link>
                   <div className='number-contain d-flex'>
                     <Link to={`${isLogin ? "/cart" : ''} `} className='d-flex'>
                       <div className='number-cart '>

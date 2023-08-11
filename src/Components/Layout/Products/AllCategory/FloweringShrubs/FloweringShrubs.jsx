@@ -59,6 +59,7 @@ const FloweringShrubs = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Flowering Shrubs</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div d-flex justify-content-around">
                         <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" >

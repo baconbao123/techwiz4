@@ -25,7 +25,7 @@ import ServiceDetail from "../Components/WorkService/ServiceDetail";
 import ServiceDetail2 from "../Components/GiftService/ServiceDetail2";
 import ServiceDetail3 from "../Components/DercoService/ServiceDetail3";
 import Cart from "../Components/Cart/Cart";
-
+import WishList from "../Components/WishList/WishList";
 export const AllRoutes=[
     
 {name:'home',link:'/',component:<HomePage />},
@@ -69,5 +69,5 @@ export const AllRoutes=[
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 {name:'Card',link:`/cart`,component:<Cart />},
 {name:'Setting',link:`/setting`,component:<Setting />},
-
+{nmae:'WishList',link:'/wishlist',component:<WishList />}
 ];

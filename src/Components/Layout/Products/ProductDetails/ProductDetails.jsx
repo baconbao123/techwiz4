@@ -82,9 +82,10 @@ const ProductDetail = () => {
                 <Toast ref={toast} />
                 <div className='products-details-div'>
                     <Row>
-                        <Col lg={12} md={5} sm={12} xs={12}>
+                        <Col lg={12} md={12} sm={12} xs={12}>
                             <div className="breadcrum-posi">
-                            <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5 d-block"  />
+                           
 
                             </div>
                         </Col>
