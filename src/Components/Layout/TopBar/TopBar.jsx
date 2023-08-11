@@ -99,7 +99,7 @@ export default function TopBar() {
                       <section id={item.id} className='item-nav d-inline-flex'>
 
                         {item.name}
-                        {item.child && item.child.length ? (<BsChevronDown className='fs-5 ms-1 mt-1' />) : ''}
+                        {item.child && item.child.length ? (<BsChevronDown className='ms-1 mt-1 icon-down' />) : ''}
                         {item.child && item.child.length > 0 ? (
                           <section className='child1' id={index} >
 

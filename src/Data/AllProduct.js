@@ -186,12 +186,12 @@ import Tool2_2 from '../assets/image/toolproduct/3.tool2.png';
 import Tool3 from '../assets/image/toolproduct/4.tool3.png'
 import Tool4_1 from '../assets/image/toolproduct/6.tool4.png'
 import Tool4_2 from '../assets/image/toolproduct/7.tool4.png'
-import Tool5_1 from '../assets/image/toolproduct/8.tool5.png'
-import Tool5_2 from '../assets/image/toolproduct/9.tool5.png'
+// import Tool5_1 from '../assets/image/toolproduct/8.tool5.png'
+// import Tool5_2 from '../assets/image/toolproduct/9.tool5.png'
 import Tool6_1 from '../assets/image/toolproduct/10.tool6.png'
 import Tool6_2 from '../assets/image/toolproduct/11.tool6.png'
-import Tool7_2 from '../assets/image/toolproduct/12.tool7.png'
-import Tool7_1 from '../assets/image/toolproduct/13.tool7.png'
+// import Tool4_1 from '../assets/image/toolproduct/12.tool7.png'
+// import Tool4_1 from '../assets/image/toolproduct/13.tool7.png'
 
 //fertilize
 import haifamap from '../assets/image/fertilize/mag.png';
@@ -1127,8 +1127,8 @@ export const AllToolData = [
    {
       id: 49, name: 'EcoLine Hand Trowel', category: 'tool', price: 40,tag:'hot',
       img: [
-         { img1: Tool7_1},
-         { img2: Tool7_2},
+         { img1: Tool4_1},
+         { img2: Tool4_1},
       ]
       ,
       des: 'The GARDENA EcoLine Hand Trowel is sustainably designed for all your garden potting and planting tasks in flower pots, planters and beds. The plastic used for the gardening trowel is made from more than 85 percent recycled material, produced primarily from household waste. Steel made from more than 25 percent recycled metal. In addition to the environmentally-friendly aspects, the trowel impresses with its stylish design. The timeless and appealing design in combination with wood and metal elements makes gardening an elegant task. The GARDENA trowel\'s handle is ergonomically shaped for extra working comfort. Nothing stands in the way of effortless planting and repotting with this garden trowel. The FSC® 100%-certified wood comes exclusively from well-managed forestry. The quality product is Made in Europe and the product quality is supported by a 25-year GARDENA manufacturer\'s warranty. A natural choice for passionate gardeners. ReTh!nk - The new EcoLine range from GARDENA. Sustainably made. Aesthetically designed. Durably built.',
@@ -1191,8 +1191,8 @@ export const AllToolData = [
    {
       id: 90, name: 'EcoLine Hand Trowel', category: 'tool', price: 40,tag:'hot',
       img: [
-         { img1: Tool7_1},
-         { img2: Tool7_2},
+         { img1: Tool4_1},
+         { img2: Tool4_1},
       ]
       ,
       des: 'The GARDENA EcoLine Hand Trowel is sustainably designed for all your garden potting and planting tasks in flower pots, planters and beds. The plastic used for the gardening trowel is made from more than 85 percent recycled material, produced primarily from household waste. Steel made from more than 25 percent recycled metal. In addition to the environmentally-friendly aspects, the trowel impresses with its stylish design. The timeless and appealing design in combination with wood and metal elements makes gardening an elegant task. The GARDENA trowel\'s handle is ergonomically shaped for extra working comfort. Nothing stands in the way of effortless planting and repotting with this garden trowel. The FSC® 100%-certified wood comes exclusively from well-managed forestry. The quality product is Made in Europe and the product quality is supported by a 25-year GARDENA manufacturer\'s warranty. A natural choice for passionate gardeners. ReTh!nk - The new EcoLine range from GARDENA. Sustainably made. Aesthetically designed. Durably built.',
@@ -1255,8 +1255,8 @@ export const AllToolData = [
    {
       id: 95, name: 'EcoLine Hand Trowel', category: 'tool', price: 40,tag:'hot',
       img: [
-         { img1: Tool7_1},
-         { img2: Tool7_2},
+         { img1: Tool4_1},
+         { img2: Tool4_1},
       ]
       ,
       des: 'The GARDENA EcoLine Hand Trowel is sustainably designed for all your garden potting and planting tasks in flower pots, planters and beds. The plastic used for the gardening trowel is made from more than 85 percent recycled material, produced primarily from household waste. Steel made from more than 25 percent recycled metal. In addition to the environmentally-friendly aspects, the trowel impresses with its stylish design. The timeless and appealing design in combination with wood and metal elements makes gardening an elegant task. The GARDENA trowel\'s handle is ergonomically shaped for extra working comfort. Nothing stands in the way of effortless planting and repotting with this garden trowel. The FSC® 100%-certified wood comes exclusively from well-managed forestry. The quality product is Made in Europe and the product quality is supported by a 25-year GARDENA manufacturer\'s warranty. A natural choice for passionate gardeners. ReTh!nk - The new EcoLine range from GARDENA. Sustainably made. Aesthetically designed. Durably built.',

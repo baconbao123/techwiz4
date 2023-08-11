@@ -8,7 +8,7 @@ function Review() {
     {
       rate: "5.0",
       content:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti...",
+        "Your plant selection is outstanding! You offer such a wide variety of healthy and beautiful plants.",
       imgSrc:
         "https://images.unsplash.com/photo-1440589473619-3cde28941638?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80",
       name: "Mathieu Johet",
@@ -16,7 +16,7 @@ function Review() {
     {
       rate: "5.0",
       content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt...",
+        "Your knowledge about plants is impressive. You provide valuable information and guidance to your customers.",
       imgSrc:
         "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80",
       name: "James",
@@ -24,7 +24,22 @@ function Review() {
     {
       rate: "5.0",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam...",
+        "Your shop is a treasure trove for plant lovers...",
+      imgSrc:
+        "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80",
+      name: "Robert",
+    },
+    {
+      rate: "5.0",
+      content: "Attentive, Love shop 😍",
+      imgSrc:
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1171&amp;q=80",
+      name: "Richard",
+    },
+    {
+      rate: "5.0",
+      content:
+        "Your shop is a treasure trove for plant lovers. You consistently stock rare and unique plants that are hard to find elsewhere.",
       imgSrc:
         "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80",
       name: "Robert",
@@ -39,29 +54,14 @@ function Review() {
     {
       rate: "5.0",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam...",
+        "Your shop is a treasure trove for plant lovers. You consistently stock rare and unique plants that are hard to find elsewhere.",
       imgSrc:
         "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80",
       name: "Robert",
     },
     {
       rate: "5.0",
-      content: "Attentive, enthusiastic staff. Beautiful view, the evening...",
-      imgSrc:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1171&amp;q=80",
-      name: "Richard",
-    },
-    {
-      rate: "5.0",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam...",
-      imgSrc:
-        "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80",
-      name: "Robert",
-    },
-    {
-      rate: "5.0",
-      content: "Attentive, enthusiastic staff. Beautiful view, the evening...",
+      content: "Very good product 🥰",
       imgSrc:
         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1171&amp;q=80",
       name: "Richard",
