@@ -37,7 +37,7 @@ function ServicePage() {
               dolor cumque. Sunt consectetur odit veniam!
             </span>
             <div>
-              <Link to="/service/1">
+              <Link to="/service/workshop">
                 <button className="btn btn-more">Explore</button>
               </Link>
             </div>
@@ -91,7 +91,7 @@ function ServicePage() {
                 sunt soluta dolor cumque. Sunt consectetur odit veniam!
               </span>
               <div>
-                <Link to="/service/2">
+                <Link to="/service/gift">
                   <button className="btn btn-more ">Explore</button>
                 </Link>
               </div>
@@ -118,7 +118,7 @@ function ServicePage() {
                 sunt soluta dolor cumque. Sunt consectetur odit veniam!
               </span>
               <div>
-                <Link to="/service/3">
+                <Link to="/service/decord">
                   <button className="btn btn-more btn-more">Explore</button>
                 </Link>
               </div>

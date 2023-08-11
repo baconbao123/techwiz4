@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import "./Blog.scss"
-import { Container, Row, Col, InputGroup,Form } from "react-bootstrap"
+import { Container, Row, Col,Form } from "react-bootstrap"
+import InputGroup from 'react-bootstrap/InputGroup';
 import BlogImg from '../../assets/Layout_img/blogBaner.png';
 import { blog } from '../../Data/Blog';
 import BlogItem from './BlogItem';
@@ -33,12 +34,15 @@ export default function Blog() {
       <Container>
         <BreadCrumb model={items} home={home} className="mt-3" />
 
-        <InputGroup className="search-input mt-3">
-          <InputGroup.Text>
+     
+       <InputGroup className="search-input mt-3">
+          <InputGroup.Text >
+          
             <AiOutlineSearch />
           </InputGroup.Text>
-          <Form.Control className="" placeholder="Search"></Form.Control>
+          <Form.Control className="" placeholder="Search blog"  />
         </InputGroup>
+      
         <Row className=" d-flex justify-content-evenly mt-5 mb-5">
           {currentItems.map((item) => (
         <>
@@ -52,7 +56,7 @@ export default function Blog() {
           ))}
         </Row>
       </Container>
-      <Pagination className="d-flex justify-content-center">
+      <Pagination className="d-flex justify-content-center ">
         <Pagination.First
           onClick={() => handlePageChange(1)}
           disabled={currentPage === 1}

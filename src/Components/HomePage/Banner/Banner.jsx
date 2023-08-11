@@ -5,22 +5,25 @@ import "./Baner.scss";
 function Banner() {
   const items = [
     {
-      title: "Growing Beautiful Plants at Home",
+      title: "Bringing Nature Home",
       subTitle:
         "Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and  tranquility.",
       img: "banner1.png",
+      link:'/shop/all/tree/bonsai'
     },
     {
-      title: "Growing Beautiful Plants at Home",
+      title: "Transform Your Space with Plants",
       subTitle:
         "Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and  tranquility.",
       img: "banner2.png",
+      link:'/shop/tool'
     },
     {
-      title: "Growing Beautiful Plants at Home",
+      title: "Unlock the Power of Plants",
       subTitle:
         "Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and  tranquility.",
       img: "banner3.png",
+      link:'/shop/fertilizer'
     },
   ];
   return (
@@ -36,7 +39,7 @@ function Banner() {
                       <div className="col-lg-10 col-md-12 banner-text">
                         <h2>{item.title}</h2>
                         <p>{item.subTitle}</p>
-                        <Link>
+                        <Link to ={item.link}>
                           <button className="btn btn-primary mt-4">
                             Shop Now
                           </button>

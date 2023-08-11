@@ -8,23 +8,26 @@ import { AiOutlineSearch,AiOutlineHeart,AiOutlineShoppingCart,AiOutlineUser,AiOu
 
 import {Link} from 'react-router-dom';
 
-export default function ItemTopBar2({child1}) {
+export default function ItemTopBar2({child1,setShowMenu}) {
     const [showMenu2,setShowMenu2]=useState(false)
+    const handleShowMenu=()=> {
+      setShowMenu(false)
+    }
   return (
     <section key={child1.id}  >
-    <Link to={child1.linkChild} onClick={()=>setShowMenu2(!showMenu2)} >
+    <Link to={child1.linkChild} onClick={()=>setShowMenu2(!showMenu2)}  >
       <div className='item-menu item-menu-child'>
         {child1.nameChild1}
         {child1.child&&child1.child.length>0?(<BsChevronDown className='ms-1'/>):''}
 
         
       </div>
-    </Link>
+    </Link >
     {child1.child&&child1.child.length>0? (
        <section className={`container-child2 ${showMenu2?'d-block':'d-none'}`}>
                {child1.child.map((child2)=> (
                    <section>
-                       <Link to={child2.link}>
+                       <Link to={child2.link} onClick={()=>handleShowMenu()}>
                            <div className='item-menu-child2 item-menu-child'>
                                {child2.nameChild2}
                            </div>

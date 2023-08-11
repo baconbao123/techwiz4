@@ -8,9 +8,9 @@ import AllProducts from './Components/Layout/Products/AllProducts/AllProducts';
 import { Value } from './Data/DataSava';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-
+import { AllRoutes } from './Routes/AllRoutes';
 function App() {
-  
+  const allRoutes = AllRoutes;
   const [isLogin,setIslogin]=useState(false);
   const [cart,setCart]=useState([]);
   const change=Cookies.get('isLogin');

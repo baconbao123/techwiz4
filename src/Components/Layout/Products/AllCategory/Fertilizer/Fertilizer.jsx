@@ -7,7 +7,8 @@ import { CardProduct } from "../../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 
-
+import { AiOutlineHome } from "react-icons/ai";
+import { BreadCrumb } from 'primereact/breadcrumb';
 import Pagination from 'react-bootstrap/Pagination';
 
 const productList = FertilizeData
@@ -28,7 +29,8 @@ const Fertilizer = () => {
     };
     const currentItems = product.slice(indexOfFirstItem, indexOfLastItem);
 
-
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Fertilizer", url: "/shop/fertilizer" }];
+    const home = { icon: <AiOutlineHome />, url: "/" };
 
  
 
@@ -47,6 +49,7 @@ const Fertilizer = () => {
             <div className="FertilizeData-div">
                 <div className="container">
                     <div className="label-catelogy">Fertilizer</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div d-flex justify-content-around">
                         
                         <Col lg={2}>

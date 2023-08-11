@@ -92,6 +92,7 @@ export default function TopBar() {
   }
 
   console.log(filteredProducts);
+  console.log(showSearchMb);
 
   return (
     <>
@@ -182,18 +183,18 @@ export default function TopBar() {
         </section>
 
 
-        <section className='top-bar-sm p-0' >
+        <section className='top-bar-sm p-0 d-flex justify-content-around align-items-center  d-lg-none' >
           <section className='p-0 m-0 container-wrapper'>
             <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
-              <Col className='menu-content p-0 ' xs={7} sm={5} md={5}>
-                <Link to={'/'} >
+              <Col className='menu-content p-0' xs={7} sm={5} md={5}>
+                <Link to={'/'} className=' ' >
 
                   <img src={logo} alt="" className='logo-menu' />
                 </Link>
 
                 <section>
                   {nav.map((item) => (
-                    <ItemTopBar item={item} />
+                    <ItemTopBar  setShowMenu={setShowMenu} item={item} />
                   ))}
                 </section>
 
@@ -205,7 +206,7 @@ export default function TopBar() {
             </Row>
             <Row className='m-0'>
               <Col className='container-header p-0 m-0'>
-                <section className='d-inline-block fs-1 show-menu' onClick={() => setShowMenu(true)}>
+                <section className='d-inline-block fs-1 show-menu ms-3  ' onClick={() => setShowMenu(true)}>
 
                   <AiOutlineMenuUnfold />
 

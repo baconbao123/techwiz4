@@ -5,8 +5,8 @@ import './Footer.scss'
 function Footer() {
   return (
 
-    <footer className="footer container d-none d-lg-block d-md-block">
-        <section className='ft-content row'>
+    <footer className="footer container ">
+        <section className='ft-content row d-none d-lg-flex d-md-flex'>
             <div className="col-lg-3 col-md-4 ft-content-child-1" >
                 <img src={require(`../../../assets/Layout_img/Logo_header.png`)} alt="logo" className="d-none d-lg-block d-md-block img-md"/>
                 
@@ -15,15 +15,15 @@ function Footer() {
             <div className="col-lg-9 col-md-8 row ft-content-child-2">
                 <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
-                        <li className="tilte-content">Shop</li>
-                        <li><Link>Plants</Link></li>
-                        <li><Link>Tools</Link></li>
+                        <li className="tilte-content">Shop Online</li>
+                        <li><Link to ="/shop/all">Plants</Link></li>
+                        <li><Link to ="">Tools</Link></li>
                         <li><Link>Fertilize</Link></li>         
                     </ul>
                 </div>
                 <div className="col-lg-3 col-md-3 ft-content-child-3">
                     <ul>
-                        <li className="tilte-content">Servive</li>
+                        <li className="tilte-content">Services</li>
                         <li><Link>Terrarium workshop</Link></li>
                         <li><Link>Green Gifts</Link></li>
                         <li><Link>Green dercoration</Link></li>         

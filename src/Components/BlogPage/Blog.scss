@@ -1,3 +1,8 @@
+@import '../../setting';
+* {
+    font-family: $font_primary;
+}
+
 .blog {
     // overflow: hidden;
     margin-top: 76px;
@@ -26,8 +31,13 @@
     .search-input {
         width: 500px!important;
         @media (max-width:500px) {
-            width: 150px !important;
+            width: 100% !important;
         }
     }
-    
+    .p-breadcrumb {
+        border: none;
+    }
+    .input-group-text {
+        border: var(--bs-border-width) solid var(--bs-border-color)!important;
+    }
 }

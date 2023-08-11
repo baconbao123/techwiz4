@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useCallback} from "react";
-import { Row, Col, Button, Form, Dropdown } from 'react-bootstrap'
+import { Row, Col, Button, Form, Dropdown, Container } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import bannerallpro from '../../../../assets/Layout_img/banner-allpro.png'
 import './AllProducts.scss'
@@ -9,14 +9,16 @@ import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 import ProductDetail from '../ProductDetails/ProductDetails'
-
+import { BreadCrumb } from 'primereact/breadcrumb';
 import Pagination from 'react-bootstrap/Pagination';
 import Tool from "../AllCategory/Tool/Tool";
 import Fertilizer from "../AllCategory/Fertilizer/Fertilizer";
-
+import { AiOutlineHome } from "react-icons/ai";
 const productList = AllProduct
 
 const AllProducts = () => {
+    const items = [{ label: "Shop All", url: "/shop/all" }];
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const [categoryName, setCategoryName] = useState('All Product')
     const [searchValue, setSearchValue] = useState('')
     const [option, setOption] = useState('0')
@@ -429,8 +431,9 @@ const AllProducts = () => {
     const style='tree'
 
     return (
-        <>
-        <div className="allproduct-master">
+        <Container className="allproduct-master">
+ <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+        <div className="">
             <div className="allproduct-div">
                 <div className="container">
                     <Row className="filter-div">
@@ -505,7 +508,7 @@ const AllProducts = () => {
         </div>
         <Tool />
         <Fertilizer />
-        </>
+        </Container>
     )
 }
 
