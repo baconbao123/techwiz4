@@ -21,7 +21,7 @@ export const TopNav = [
                 ]
             },
             { id: 'child3', nameChild1: 'Tools', linkChild: '/shop/tool', child: [] },
-            { id: 'child4', nameChild1: 'Fertilize', linkChild: '/shop/fertilizer', child: [] },
+            { id: 'child4', nameChild1: 'Fertilizer', linkChild: '/shop/fertilizer', child: [] },
         ]
     },
     {

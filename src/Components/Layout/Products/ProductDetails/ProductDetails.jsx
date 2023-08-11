@@ -28,7 +28,7 @@ const ProductDetail = () => {
     const toast = useRef(null);
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
-    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/all/tree/${product.category}` },{ label: product.name, url: `/shop/fertilizer/${product.id}` }];
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/all/tree/${product.category}` },{ label: product.name, url: `/shop/all/tree/${product.id}` }];
 
     const [showCardList, setShowCardList] = useState(4)
 

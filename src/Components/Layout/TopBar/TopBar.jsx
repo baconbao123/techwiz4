@@ -28,8 +28,9 @@ export default function TopBar() {
   const [showLogin, setShowLogin] = useState(false);
   const [searchValue, setSearchValue] = useState('')
   const [clickSearch, setClickSearch] = useState(false);
-  
+  const [valueInput,setValueInput]=useState()
   const InputRef = useRef();
+  const InputRef2 = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
   const isLogin = Cookies.get('isLogin');
@@ -75,6 +76,19 @@ export default function TopBar() {
     }
 
   }, [])
+  useEffect(() => {
+    const handleClickOutSide = (e) => {
+      if (InputRef2.current && !InputRef2.current.contains(e.target)) {
+        setValueInput('')
+      }
+    }
+
+    document.addEventListener('click', handleClickOutSide);
+    return () => {
+      document.removeEventListener('click', handleClickOutSide)
+    }
+
+  }, [])
   const handleSetShow = (item) => {
     if (!isLogin) {
       setShowLogin(true)
@@ -91,10 +105,25 @@ export default function TopBar() {
   const filteredProducts = [...AllProduct, ...AllToolData, ...FertilizeData].filter((product) => {
     return product.name.toLowerCase().includes(searchValue.toLowerCase());
   });
+  const filteredProducts2 = [...AllProduct, ...AllToolData, ...FertilizeData].filter((product) => {
+    if(valueInput) {
+
+      return product.name.toLowerCase().includes(valueInput.toLowerCase());
+    }
+  });
+  console.log(filteredProducts2);
 
   function onClickSearch() {
     setClickSearch(!clickSearch);
   }
+  const limitWord=(item)=> {
+    if(item.length>20) {
+        const trimmedWord = item.substring(0,20);
+        const lastWhitespaceIndex = trimmedWord.lastIndexOf(' ');
+        return trimmedWord.substring(0, lastWhitespaceIndex) + ' ...';
+    }
+    return item;
+}
 
   
 
@@ -157,10 +186,27 @@ export default function TopBar() {
                 <section className='item-search' ref={InputRef}>
                   {/*  */}
                   <AiOutlineSearch className='item-icon' onClick={() => setShowSearch(true)} />
-                  <Form.Control placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`} onChange={handleChangeSearch}>
+                  <Form.Control  placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`}onChange={e=>handleChangeSearch(e)}>
                   </Form.Control>
-                </section>
+                  <section className={`${showSearch ? 'd-block' : 'd-none'}  ${searchValue&&filteredProducts.length>0?'':'fit-content'} show-search`}>
+                                    {searchValue&&filteredProducts.length>0?
+                                      filteredProducts.map((item,index)=>(
+                                        <section key={index}>
+                                        <Link to={`${item.category==='tool'||item.category==='fertilizer'?`/shop/${item.category+'/'+item.id}`:`/shop/all/tree/${item.category+'/'+item.id}`}`}>
+                                        <div>
+                                          <img src={item.img[0].img1} className='img-search'/>
+                                         <div className='d-inline fs-6 text-center'>
+                                         {limitWord(item.name)}
+                                         </div>
+                                        </div>
+                                        </Link>
+                                           </section>
+                                      )
 
+                                      )
+                                    :'Not found'}
+                  </section>
+                </section>
                 {/* 
 
 
@@ -219,14 +265,35 @@ export default function TopBar() {
 
                 <InputGroup className={`${showMenu ? 'd-none' : 'input-search'}`}>
                   <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
-                  <Form.Control placeholder='Search'></Form.Control>
+                  <Form.Control  value={valueInput}  onChange={e=>setValueInput(e.target.value)} placeholder='Search' ></Form.Control>
+                <section ref={InputRef2} className={`${valueInput&&valueInput.length>0 ? 'd-block' : 'd-none'}  ${valueInput&&filteredProducts2.length>0?'':'fit-content'} show-search`}>
+                                    {filteredProducts2.length>0?
+                                      filteredProducts2.map((item,index)=>(
+                                        <section key={index}>
+                                        <Link to={`${item.category==='tool'||item.category==='fertilizer'?`/shop/${item.category+'/'+item.id}`:`/shop/all/tree/${item.category+'/'+item.id}`}`}>
+                                        <div>
+                                          <img src={item.img[0].img1} className='img-search'/>
+                                         <div className='d-inline fs-6 text-center'>
+                                         {limitWord(item.name)}
+                                         </div>
+                                        </div>
+                                        </Link>
+                                           </section>
+                                      )
+
+                                      )
+                                    :'Not found'}
+                  </section>
                 </InputGroup>
                 <div className='d-flex fs-2 function'>
                   <div ref={InputRefMb} className='d-flex'>
 
+                    <section className='search-container'>
                     <AiOutlineSearch onClick={() => setShowSearchMb(true)} className='icon-search' />
+                      
                     <Form.Control placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`} />
-
+                  
+                    </section>
                   </div>
                   <AiOutlineHeart />
                   <div className='number-contain d-flex'>

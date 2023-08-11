@@ -10,7 +10,7 @@ import { BreadCrumb } from 'primereact/breadcrumb';
 import { AiOutlineHome } from "react-icons/ai";
 
 import Pagination from 'react-bootstrap/Pagination';
-const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Flowering Shrubs", url: "/shop/all/tree/floweringshrubs" }];
+const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Flowering Shrubs", url: `/shop/all/tree/floweringshrubs/` }];
 const home = { icon: <AiOutlineHome />, url: "/" };
 const productList = AllProduct
 
