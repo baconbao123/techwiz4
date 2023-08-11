@@ -1,12 +1,44 @@
 @import '../../setting';
 
 .cart {
-    font-family: $font_primary  ;
+    font-family: $font_primary ;
     margin-top: 76px;
+
     .checkout {
         margin-top: 150px;
+
         .checkoutbutton {
             width: 380px;
         }
+    }
+}
+
+.nothing {
+    // min-height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+    // text-align: center;
+    // align-items: center;
+    width: fit-content;
+    @media screen {
+        
+    }
+    .img {
+        // object-fit: cover;
+        height: 400px;
+        // width: 100%;
+        @media (max-width:400px) {
+            height: 200px;
+        }
+    }
+    .link {
+        text-decoration: underline;
+
+       &:hover {
+        text-decoration: underline;
+        color: #a2cfff;
+       }
     }
 }

@@ -202,7 +202,7 @@ export default function TopBar() {
                   <AiOutlineHeart />
                   <div className='number-contain d-flex'>
                     <Link to={`${isLogin ? "/cart" : ''} `} className='d-flex'>
-                      <div className='number-cart'>
+                      <div className='number-cart '>
                         {cart.length === 0 ? '' : cart.length}
                       </div>
                       <AiOutlineShoppingCart onClick={() => handleSetShow(true)} />

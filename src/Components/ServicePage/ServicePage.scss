@@ -3,7 +3,9 @@
 .service-main{
     font-family: $font_primary;
     margin-top: calc($h-topbar + 60px);
-   
+   .p-breadcrumb {
+    border: none;
+}
     
 }
 .wsh-content{
