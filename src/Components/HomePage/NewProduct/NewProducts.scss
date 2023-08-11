@@ -177,3 +177,10 @@
     height: 200px !important;
   }
 }
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  background-color: #ced4da;
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 100rem !important;
+}

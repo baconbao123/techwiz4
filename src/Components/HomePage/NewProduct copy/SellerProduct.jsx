@@ -61,7 +61,7 @@ function SellerProduct() {
           />
         </div>
         <div className="btn-conteiner mt-4">
-          <Link to="/all-product" className="btn-content btn text-light">
+          <Link to="/shop/all" className="btn-content btn text-light">
             <span className="btn-title">All Products</span>
           </Link>
         </div>

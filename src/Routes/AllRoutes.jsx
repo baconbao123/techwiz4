@@ -10,7 +10,10 @@ import ProductTool from "../Components/Layout/Products/ProductTool/ProductTool";
 import Setting from "../Components/Setting/Setting";
 import Login from "../Components/Authenticate/Login";
 
-
+// service
+import ServiceDetail from "../Components/WorkService/ServiceDetail";
+import ServiceDetail2 from "../Components/GiftService/ServiceDetail2";
+import ServiceDetail3 from "../Components/DercoService/ServiceDetail3";
 
 export const AllRoutes=[
 {name:'home',link:'',component:<HomePage />},
@@ -24,16 +27,18 @@ export const AllRoutes=[
 {name:'Succulent',link:'/shop/succulent',component:''},
 {name:'Tools',link:'/shop/tool',component:''},
 {name:'Fertilize',link:'/shop/fertilize',component:''},
-{name:'Services',link:'/service',component:''},
 {name:'FeedBack',link:'/feedback',component:''},
 
 // service
-{name:'ServicePage',link:'/all-service',component:<ServicePage />},
+{name:'Service',link:'/service',component:<ServicePage />},
+{name:'Service1',link:'/service/1',component:<ServiceDetail />},
+{name:'Service2',link:'/service/2',component:<ServiceDetail2 />},
+{name:'Service3',link:'/service/3',component:<ServiceDetail3 />},
+
 // end--ser
 
 {name:'BLog',link:'/blog',component:<Blog />},
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 {name:"Setting",link:'/setting',component:<Setting />},
-
 
 ];

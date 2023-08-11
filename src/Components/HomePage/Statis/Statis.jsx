@@ -11,13 +11,13 @@ function Statis() {
             <span className="number">
               <CountUp start={0} end={1300} duration={2} /> +
             </span>
-            <span>Deliverty</span>
+            <span>Deliverys</span>
           </div>
           <div className="statis-item">
             <span className="number">
               <CountUp start={0} end={1000} duration={2} /> +
             </span>
-            <span>Customer</span>
+            <span>Customers</span>
           </div>
           <div className="statis-item">
             <span className="number">
