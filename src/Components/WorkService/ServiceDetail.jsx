@@ -7,26 +7,39 @@ import AOS from "aos";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { AiOutlineHome } from "react-icons/ai";
+import { BreadCrumb } from 'primereact/breadcrumb'
+
 function ServiceDetail() {
   document.title = 'Workshop'
 
+ 
+
+  const items = [{ label: "Shop All", url: "shop/all" },{ label: "Service workshop", url: "/service/workshop" }];
+  const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
     <>
+    
       {services1.map((item, idx) => (
         <div key={idx}>
           <img src={item.banner} alt="" className="w-100 img-banner" />
           <Container className="service-detail-main ">
+          <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+        
             <div className="row ">
+           
+           
               <div className="col-lg-6 col-md-12 col-sm-12 content-main ">
                 <p className="title-name" data-aos="fade-up">
                   {item.name}
                 </p>
                 <p data-aos="fade-right">{item.content1}</p>
               </div>
+             
               <div
                 className="col-lg-6 col-md-12 col-sm-12 img-content-wrap text-center"
                 data-aos="fade"

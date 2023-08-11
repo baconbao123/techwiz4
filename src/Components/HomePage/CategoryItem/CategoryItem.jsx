@@ -2,36 +2,37 @@ import React, { useEffect } from "react";
 import "./CatergoryItem.scss";
 import { Link } from "react-router-dom";
 function CategoryItem() {
-  const itemCategorys =  [
+  const itemCategorys = [
     {
       title: "Plants",
-      subtitle:
-        "The Nobel Prize in Literature is awarded by the Swedish Academy, Stockholm, Sweden.",
+      subtitle: "",
       img: "plant.png",
+      link: "/shop/all/tree/bonsai",
     },
     {
       title: "Tools",
-      subtitle:
-        "The Nobel Prize in Chemistry is awarded by the Royal Swedish Academy of Sciences, Stockholm, Sweden.",
+      subtitle: "",
       img: "tool.png",
+      link: "/shop/tool",
     },
     {
       title: "Fertilize",
 
       img: "phan.png",
+      link: "/shop/fertilizer",
     },
   ];
   return (
-    <div className="row mb-3 container container-category-item m-auto" style={{marginTop:'35px !important'}}>
+    <div
+      className="row mb-3 container container-category-item m-auto"
+      style={{ marginTop: "35px !important" }}
+    >
       {itemCategorys.map((item, index) => (
         <div className="col-md-4 col-lg-4" key={index}>
-          <Link
-            className="overlay-img"
-          >
+          <Link to={item.link} className="overlay-img">
             <img
               src={require(`../../../assets/Layout_img/${item.img}`)}
               alt={item.title}
-              
             />
             <div className="overlay"></div>
             <div className="des text-center text-light">

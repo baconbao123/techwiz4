@@ -41,17 +41,8 @@ const Tool = () => {
                 <div className="container">
                     <div className="label-catelogy">Tools</div>
                     <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
-                    <Row className="filter-div">
-                        <Col lg={2} md={3}>
-                            <Form.Select className="form-select-catalog" aria-label="Category"  >
-                                <option value={0} checked>Category</option>
-                                <option value={1}>Bonsai</option>
-                                <option value={2}>Flowering Shrubs</option>
-                                <option value={3}>Indoor</option>
-                                <option value={4}>Outdoor</option>
-                                <option value={5}>Succulents</option>
-                            </Form.Select>
-                        </Col>
+                    <Row className="filter-div d-flex justify-content-between">
+                      
                         <Col lg={2}>
                             <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
@@ -77,9 +68,9 @@ const Tool = () => {
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
                               
                                     <Col lg={3} key={index} className="mt-4">
-                                        <Link to={`/shop/all/tree/${items.id}`}>
-                                            <CardProduct items={items} />
-                                        </Link>
+                                      
+                                            <CardProduct items={items} option={'tool'} />
+                                       
                                     </Col>
                                 )):''}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}

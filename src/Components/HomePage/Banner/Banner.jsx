@@ -27,7 +27,7 @@ function Banner() {
     },
   ];
   return (
-    <div className="container  d-lg-blog d-md-block">
+    <div className="container  d-lg-blog d-md-block ">
       <div className="row">
         <div className="col-lg-12 col-md-12 col-sm-12">
           <Carousel data-bs-theme="dark"  >
@@ -40,7 +40,7 @@ function Banner() {
                         <h2>{item.title}</h2>
                         <p>{item.subTitle}</p>
                         <Link to ={item.link}>
-                          <button className="btn btn-primary mt-4">
+                          <button className="btn mt-3  btn-shop-now">
                             Shop Now
                           </button>
                         </Link>

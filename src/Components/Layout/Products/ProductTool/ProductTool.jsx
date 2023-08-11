@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { Row, Col, Container, Button, Card } from 'react-bootstrap';
 import { Rating } from "primereact/rating";
@@ -10,13 +10,15 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import NotFound from "../../NotFound";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
 import SlideCardImg from "../ProductDetails/SlideImg/SlideCardImg"
-
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { AiOutlineHome } from "react-icons/ai";
 
 import './ProductTool.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllToolData } from "../../../../Data/AllProduct";
+import { Value } from "../../../../Data/DataSava";
 
 const productList = AllToolData;
 
@@ -24,9 +26,12 @@ const ProductTool = () => {
 
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
-
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/${product.category}` },{ label: product.name, url: `/shop/tool/${product.id}` }];
+ 
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const [showCardList, setShowCardList] = useState(4)
-
+    const { setCart } = useContext(Value)
+    const { cart } = useContext(Value)
     const [countProduct, setCountProduct] = useState(0)
     const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
     const [ratingUser, setRatingUser] = useState(null);
@@ -35,6 +40,22 @@ const ProductTool = () => {
   const [emailComment, setEmailComment] = useState('')
     const [checked, setChecked] = useState(false);
 
+    useEffect(() => {
+      document.title = product.name;
+    }, [product.name]);
+
+    const handleAddCard = () => {
+        let check = cart.filter((item) => item.id === product.id)
+        
+        if (check.length > 0) {
+
+            
+        }
+        else {
+            setCart([product, ...cart]);
+        }
+       
+    }
 
 
     const handleClickAddProduct = () => {
@@ -44,6 +65,8 @@ const ProductTool = () => {
     const handleClickSubProduct = () => {
         setCountProduct(countProduct - 1)
     }
+
+
 
     return (
         <>
@@ -55,7 +78,8 @@ const ProductTool = () => {
                         <Row>
                             <Col lg={12} md={5} sm={12} xs={12}>
                                 <div className="breadcrum-posi">
-                                    Home/
+                                <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+
                                 </div>
                             </Col>
                         </Row>
@@ -95,7 +119,7 @@ const ProductTool = () => {
     
                                         </div>
                                         <div>
-                                            <Button className="icon-buynow fui-button-shiny-3">
+                                            <Button className="icon-buynow fui-button-shiny-3"  onClick={(product) => handleAddCard(product)}>
                                                 <BsCartCheck />
                                             </Button>
                                         </div>

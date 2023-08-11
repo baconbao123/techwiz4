@@ -4,10 +4,13 @@ import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
-
+import { AiOutlineHome } from "react-icons/ai";
+import { BreadCrumb } from 'primereact/breadcrumb'
 function ServicePage() {
   document.title = 'Services'
 
+  const items = [{ label: "Service", url: "/service" }];
+  const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,7 +24,9 @@ function ServicePage() {
   const imgDV2 = [{ img: "qt1.jpg" }, { img: "qt2.jpg" }, { img: "qt3.jpg" }];
   return (
     <>
+
       <div className="service-main container">
+      <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
         <section className="workshop row">
           <div className="wsh-content col-lg-6 col-md-6 col-sm-12" data-aos='fade-up'>
             <p className="mb-4">Team Buding</p>

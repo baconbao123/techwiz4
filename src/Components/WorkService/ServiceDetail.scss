@@ -1,9 +1,15 @@
 @import "../../setting";
+.margin-top {
+  margin-top: 100px;
+}
 
 .service-detail-main {
   font-family: $font_primary;
   min-height: 100vh;
   margin-top: $h_topbar;
+  .p-breadcrumb {
+    border: none;
+  }
 }
 .img-banner {
   height: 450px;

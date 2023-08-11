@@ -4,7 +4,7 @@ import "./Statis.scss";
 
 function Statis() {
   return (
-    <div className="container mb-5 mt-3">
+    <div className="container mb-5 mt-4">
       <div className="content-statis row ">
         <div className="col-12 d-flex  gap-5 statis-items ">
           <div className="statis-item">

@@ -13,7 +13,8 @@ import SlideCardImg from "./SlideImg/SlideCardImg"
 
 import { Toast } from 'primereact/toast';
 
-
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { AiOutlineHome } from "react-icons/ai";
 import './ProductDetails.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
@@ -23,9 +24,11 @@ import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
 console.log("log:", productList);
 const ProductDetail = () => {
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const toast = useRef(null);
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/all/tree/${product.category}` },{ label: product.name, url: `/shop/fertilizer/${product.id}` }];
 
     const [showCardList, setShowCardList] = useState(4)
 
@@ -50,7 +53,7 @@ const ProductDetail = () => {
     }
     const handleAddCard = () => {
         let check = cart.filter((item) => item.id === product.id)
-        console.log(check);
+        
         if (check.length > 0) {
 
 
@@ -58,7 +61,7 @@ const ProductDetail = () => {
         else {
             setCart([product, ...cart]);
         }
-        showSuccess();
+       
     }
 
     const handleClickAddProduct = () => {
@@ -71,33 +74,34 @@ const ProductDetail = () => {
 
     return (
 
-        <>
-            {
-                product ? (
-                    <div className='products-details-master'>
-                        <Container>
-                            <Toast ref={toast} />
-                            <div className='products-details-div'>
-                                <Row>
-                                    <Col lg={12} md={5} sm={12} xs={12}>
-                                        <div className="breadcrum-posi">
-                                            Home/
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col lg={5} md={5} sm={12} xs={12}>
-                                        <div className="name-plant">{product.name}</div>
-                                        <div className="img-div">
-                                            <SlideCardImg
-                                                mouseTracking
-                                                items={product.img}
-                                                responsive={{
-                                                    0: { items: 1 },
-                                                    768: { items: 1 },
-                                                }}
-                                            />
-                                        </div>
+       <>
+       {
+        product?(
+            <div className='products-details-master'>
+            <Container>
+                <Toast ref={toast} />
+                <div className='products-details-div'>
+                    <Row>
+                        <Col lg={12} md={5} sm={12} xs={12}>
+                            <div className="breadcrum-posi">
+                            <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={5} md={5} sm={12} xs={12}>
+                            <div className="name-plant">{product.name}</div>
+                            <div className="img-div">
+                                <SlideCardImg
+                                    mouseTracking
+                                    items={product.img}
+                                    responsive={{
+                                        0: { items: 1 },
+                                        768: { items: 1 },
+                                    }}
+                                />
+                            </div>
 
                                     </Col>
                                     <Col lg={1} md={1} className="d-none d-sm-none d-md-block d-lg-block"></Col>

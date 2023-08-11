@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { Row, Col, Container, Button, Card } from 'react-bootstrap';
 import { Rating } from "primereact/rating";
@@ -17,14 +17,21 @@ import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
 import avatar from '../../../../assets/image/avtar5.jpg'
 import { FertilizeData } from "../../../../Data/AllProduct";
-
+import { Value } from "../../../../Data/DataSava";
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { AiOutlineHome } from "react-icons/ai";
 const productList = FertilizeData;
 
 const ProductFertilizer = () => {
+
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Fertilizer", url: "/shop/fertilizer" },{ label: product.name, url: `/shop/fertilizer/${product.id}` }];
 
     const [showCardList, setShowCardList] = useState(4)
+    const { setCart } = useContext(Value)
+    const { cart } = useContext(Value)
 
     const [countProduct, setCountProduct] = useState(0)
     const [ratingOrtherUser, setRatingOrtherUser] = useState(null);
@@ -33,9 +40,25 @@ const ProductFertilizer = () => {
     const [nameComment, setNameComment] = useState('')
     const [emailComment, setEmailComment] = useState('')
 
+
     const [checked, setChecked] = useState(false);
 
+    useEffect(() => {
+        document.title = product.name;
+      }, [product.name]);
 
+    const handleAddCard = () => {
+        let check = cart.filter((item) => item.id === product.id)
+        
+        if (check.length > 0) {
+
+            
+        }
+        else {
+            setCart([product, ...cart]);
+        }
+       
+    }
 
     const handleClickAddProduct = () => {
         setCountProduct(countProduct + 1)
@@ -56,7 +79,8 @@ const ProductFertilizer = () => {
                     <Row>
                         <Col lg={12} md={5} sm={12} xs={12}>
                             <div className="breadcrum-posi">
-                                Home/
+                            <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+
                             </div>
                         </Col>
                     </Row>
@@ -94,7 +118,7 @@ const ProductFertilizer = () => {
 
                                     </div>
                                     <div>
-                                        <Button className="icon-buynow fui-button-shiny-3">
+                                        <Button className="icon-buynow fui-button-shiny-3"  onClick={(product) => handleAddCard(product)}>
                                             <BsCartCheck />
                                         </Button>
                                     </div>

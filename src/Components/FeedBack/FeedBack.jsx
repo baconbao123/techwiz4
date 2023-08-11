@@ -9,14 +9,16 @@ export default function FeedBack() {
       <Row className="feed-back-main">
         <Col
           sm={12}
-          md={6}
+          md={5}
+          lg={5}
           className="mb-4 col-feedback d-flex align-items-center"
         >
           <img className="img-feedback w-100" src={feedback} />
         </Col>
         <Col
           sm={12}
-          md={6}
+          md={7}
+          lg={7}
           className=" mb-4 d-flex justify-content-center col-feedback "
         >
           <Card className="card-feedback  m-2">
@@ -37,7 +39,7 @@ export default function FeedBack() {
               </Form>
               <Form.Group className="mt-3">
                 <Form.Label className="fw-bold">Message :</Form.Label>
-                <Form.Control as={"textarea"} placeholder="" />
+                <Form.Control as={"textarea"} rows={10} placeholder="" />
               </Form.Group>
               <div className=" text-center mb-3">
                 <Button className="mt-4">Submit</Button>
