@@ -9,4 +9,58 @@ $bg_btn_2:rgb(14, 98, 18);
 
 $bg_second: #52C452;
 $color_text: #204322;
+
+.fui-button-shiny-3 {
+    background: transparent;
+    // color: #1dc071;
+    padding: 16px 32px;
+    display: inline-block;
+    border: 1px solid #1dc071;
+    border-radius: 8px;
+    transition: all .5s ease;
+    overflow: hidden;
+    position: relative;
+    text-transform: capitalize;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      width: 60px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0.5s;
+      filter: blur(30px);
+      transform: translateX(-130px) skewX(-15deg);
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 0);
+      width: 30px;
+      height: 100%;
+      left: 30px;
+      top: 0;
+      opacity: 0;
+      filter: blur(30px);
+      transform: translateX(-100px) skewX(-15deg);
+    }
+    &:hover {
+      background-color: #1dc071;
+      color: white;
+      &::before {
+        transform: translateX(300px) skewX(-15deg);
+        opacity: 0.6;
+         transition: all linear 1s;
+      }
+      &::after {
+        transform: translateX(300px) skewX(-15deg);
+        opacity: 0.6;
+         transition: all linear 1s;
+      }
+    }
+  }
 $h_nav_mb:75px;

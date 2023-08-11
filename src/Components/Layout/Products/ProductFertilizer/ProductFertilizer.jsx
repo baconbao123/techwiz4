@@ -11,7 +11,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
 import SlideCardImg from "../ProductDetails/SlideImg/SlideCardImg"
 
-
+import NotFound from "../../NotFound";
 import './ProductFertilizer.scss';
 import { BsCartCheck } from 'react-icons/bs'
 import imghowtoplant from '../../../../assets/image/techwiz.png'
@@ -45,7 +45,10 @@ const ProductFertilizer = () => {
 
     return (
 
-        <div className='products-details-master'>
+       <>
+       {
+        product?(
+            <div className='products-details-master'>
             <Container>
                 <div className='products-details-div'>
                     <Row>
@@ -81,15 +84,15 @@ const ProductFertilizer = () => {
 
                                     <div>
                                         <button className="button-count" onClick={handleClickSubProduct}>-</button>
-                                        <InputText value={countProduct} className="input-count" />
+                                        <button value={countProduct} className="input-count" > {countProduct}</button>
                                         <button className="button-count" onClick={handleClickAddProduct}>+</button>
                                     </div>
                                     <div>
-                                        <Button className="buynow">Buy Now</Button>{' '}
+                                        <Button className="buynow fui-button-shiny-3">Buy Now</Button>{' '}
 
                                     </div>
                                     <div>
-                                        <Button className="icon-buynow">
+                                        <Button className="icon-buynow fui-button-shiny-3">
                                             <BsCartCheck />
                                         </Button>
                                     </div>
@@ -177,6 +180,11 @@ const ProductFertilizer = () => {
                 </div>
             </Container>
         </div>
+        ):(
+<NotFound />
+        )
+       }
+       </>
     );
 };
 
