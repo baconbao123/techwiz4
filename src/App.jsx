@@ -9,7 +9,10 @@ import { Value } from './Data/DataSava';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { AllRoutes } from './Routes/AllRoutes';
+
+import { useRef } from 'react';
 function App() {
+  const toast = useRef(null);
   const allRoutes = AllRoutes;
   const [isLogin,setIslogin]=useState(false);
   const [cart,setCart]=useState([]);
@@ -18,6 +21,8 @@ function App() {
     if (Cookies.get('isLogin')) {
       setIslogin(JSON.parse(Cookies.get('isLogin')))}
   },[change])
+  
+ 
   // console.log('render');
   return (
  
