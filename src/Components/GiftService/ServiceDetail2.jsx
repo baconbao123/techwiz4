@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { BreadCrumb } from 'primereact/breadcrumb'
 function ServiceDetail2() {
+  document.title = 'Gifts'
   const items = [{ label: "Shop All", url: "shop/all" },{ label: "Service gift", url: "/service/gift" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {

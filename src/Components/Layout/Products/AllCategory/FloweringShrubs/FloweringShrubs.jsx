@@ -15,6 +15,7 @@ const home = { icon: <AiOutlineHome />, url: "/" };
 const productList = AllProduct
 
 const FloweringShrubs = () => {
+    document.title = 'Flowering Shrubs'
 
     const [searchValue, setSearchValue] = useState('')
 

@@ -19,6 +19,7 @@ export default function FeedBack() {
       text: 'Thank you for feedback!',
     })
   };
+  document.title = 'Feedback'
   return (
     <div className="container">
       <Row className="feed-back-main">

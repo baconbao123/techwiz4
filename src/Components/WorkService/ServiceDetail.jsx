@@ -11,6 +11,8 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BreadCrumb } from 'primereact/breadcrumb'
 
 function ServiceDetail() {
+  document.title = 'Workshop'
+
  
 
   const items = [{ label: "Shop All", url: "shop/all" },{ label: "Service workshop", url: "/service/workshop" }];

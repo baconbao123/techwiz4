@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { BreadCrumb } from 'primereact/breadcrumb'
 function ServiceDetail3() {
+  document.title = 'Decord'
+
   const items = [{ label: "Service", url: "/service" },{ label: "Service decord", url: "/service/decord" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {

@@ -59,8 +59,9 @@
                 .buynow {
                     background-color: #3EBD4C;
                     border: #3EBD4C;
-                    
+
                     height: 37.5px;
+
                     &:hover {
                         color: #666;
                     }
@@ -80,8 +81,9 @@
                     border: 1px solid #666;
                     background: #FFF;
                     text-align: centert;
-                    
+
                 }
+
                 .input-count:focus {
                     outline: none;
                 }
@@ -89,18 +91,18 @@
                 .button-count {
                     border: 1px solid #666;
                     background: rgba(234, 223, 223, 0.96);
-                    
+
                     width: 30px;
                     height: 37px;
                 }
 
                 @media screen and (min-width: 541px) and (max-width: 768px) {
                     width: 230px;
-    
+
                     .input-count {
                         width: 35px;
                     }
-    
+
                     .button-count {
                         width: 25px;
                     }
@@ -108,11 +110,11 @@
 
                 @media screen and (min-width: 0px) and (max-width: 300px) {
                     width: 240px;
-    
+
                     .input-count {
                         width: 35px;
                     }
-    
+
                     .button-count {
                         width: 25px;
                     }
@@ -182,9 +184,10 @@
             justify-content: end;
             align-items: center;
             padding-left: 64px;
+
             @media screen and (max-width: 399px) {
                 padding: 0 5px;
-                
+
             }
 
             .avatar-review {
@@ -192,6 +195,7 @@
                 width: 65px;
                 height: 65px;
                 border-radius: 50%;
+
                 @media screen and (max-width: 399px) {
                     width: 55px;
                     height: 55px;
@@ -202,14 +206,16 @@
             .p-rating .p-rating-item .p-rating-icon.p-icon {
                 width: 1.400rem;
                 height: 2.00rem;
+
                 @media screen and (max-width: 399px) {
                     width: 1rem;
-                    height:1.2rem;
+                    height: 1.2rem;
 
                 }
+
                 @media screen and (max-width: 310px) {
                     width: 0.7rem;
-                    height:1rem;
+                    height: 1rem;
 
                 }
             }
@@ -227,7 +233,7 @@
 
             .rating-other-user-des {
                 padding-left: 30px;
-                
+
                 @media screen and (max-width: 400px) {
                     padding-left: 50px;
 
@@ -246,10 +252,11 @@
                 @media screen and (max-width: 399px) {
                     font-size: 18px;
                 }
+
                 @media screen and (max-width: 310px) {
                     font-size: 14px;
                 }
-                
+
             }
 
             .author-review {
@@ -257,9 +264,11 @@
                 color: #666;
                 font-size: 18px;
                 font-weight: 700;
+
                 @media screen and (max-width: 399px) {
                     font-size: 18px;
                 }
+
                 @media screen and (max-width: 310px) {
                     font-size: 14px;
                 }
@@ -269,110 +278,119 @@
                 color: #666;
                 font-size: 15px;
                 font-weight: 500;
+
                 @media screen and (max-width: 399px) {
                     font-size: 18px;
                 }
+
                 @media screen and (max-width: 310px) {
                     font-size: 14px;
                 }
             }
         }
 
+
         .your-review-div {
             margin-top: 20px;
             margin-bottom: 20px;
             padding: 20px 60px;
             border: 1px solid #CCC;
-            width: 93%;
-            margin-left: 45px;
-            @media screen and (min-width: 768px) and (max-width: 1024px) {
-                width: 88%;
-                
-            }
+            width: 100%;
+    
+            // @media screen and (min-width: 768px) and (max-width: 1024px) {
+            //     width: 88%;
+    
+            // }
+    
             @media screen and (min-width: 400px) and (max-width: 767px) {
-                width: 78%;
-                
+                width: 93%;
+    
             }
+    
             @media screen and (max-width: 399px) {
-                width: 93.5%;
+                width: 89%;
                 margin-left: 10px;
                 margin-right: 10px;
-                @media screen and (max-width: 399px) {
-                    padding: 10px 10px!important;
-                }
+                padding: 10px 10px !important;
             }
-        
-
-
+    
+    
+    
             .p-rating .p-rating-item .p-rating-icon.p-icon {
                 width: 1.400rem;
-                height:1.6rem;
-                
+                height: 1.6rem;
+    
                 @media screen and (max-width: 399px) {
                     width: 1rem;
-                    height:1.2rem;
+                    height: 1.2rem;
                 }
             }
-
+    
             .your-review-label {
                 color: #666;
                 font-family: Inter;
                 font-size: 21px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: normal;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
                     // white-space: nowrap;
                 }
             }
-
+    
             .your-comment-label {
                 color: #666;
                 font-size: 21px;
-                font-weight: 700;
+                font-weight: 500;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
-                    
+    
                 }
             }
-
+    
             .textarea-comment {
                 width: 100%;
-                border-radius: 40px;
+                border-radius: 13px;
+    
                 @media screen and (max-width: 399px) {
-                    height: 30px!important;
+                    height: 30px !important;
+                    padding-left: 13px !important;
+    
                 }
             }
-
+    
             .your-name-lable {
                 color: #666;
                 font-size: 21px;
-                font-weight: 700;
+                font-weight: 500;
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
-                    // white-space: nowrap;
                 }
             }
-
+    
             .input-comment {
                 width: 100%;
-                border-radius: 40px;
+                border-radius: 13px;
+    
                 @media screen and (max-width: 399px) {
                     height: 30px;
                 }
             }
-
+    
             .rule-comment {
-                font-size: 20px;
+                font-size: 17px;
                 margin-left: 10px;
-
+    
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
                 }
             }
         }
-
+        
         .label-similar {
             color: #000;
             font-size: 24px;

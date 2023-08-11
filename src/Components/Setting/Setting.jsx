@@ -9,6 +9,8 @@ import Swal from "sweetalert2";
 import { Value } from '../../Data/DataSava';
 import LoginSetting from '../Authenticate/LoginSetting';
 export default function Setting() {
+    document.title = 'Setting'
+
     const navigate=useNavigate();
     const [option, setOption] = useState('infor');
     const [editFullName, setEditFullName] = useState(false)
@@ -27,6 +29,7 @@ export default function Setting() {
 
     
     const logout = () => {
+
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -50,7 +53,6 @@ export default function Setting() {
     if(!isLogin) {
         navigate('/')
     }
-
     return (
        
         <Container className='setting'>

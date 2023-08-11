@@ -17,6 +17,8 @@ const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Bonsai", url: "
     const home = { icon: <AiOutlineHome />, url: "/" };
 
 const Bonsai = () => {
+    document.title = 'Bonsai'
+
 
     const [searchValue, setSearchValue] = useState('')
     

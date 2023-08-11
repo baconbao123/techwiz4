@@ -10,6 +10,7 @@ import imgCard from "../../assets/Layout_img/AddToCard.png";
 export default function Cart() {
   const { cart } = useContext(Value);
   const { setCart } = useContext(Value);
+  document.title = 'Cart'
 
   const toast = useRef(null);
   const showSuccess = () => {
