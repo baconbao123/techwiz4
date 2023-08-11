@@ -58,12 +58,8 @@ const FloweringShrubs = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Flowering Shrubs</div>
-                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
-                    <Row className="filter-div">
-                        <Col lg={2} md={3}>
-
-                        </Col>
-                        <Col lg={2}>
+                    <Row className="filter-div d-flex justify-content-around">
+                        <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
