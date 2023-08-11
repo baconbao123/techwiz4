@@ -6,8 +6,8 @@ import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
-
-
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { AiOutlineHome } from "react-icons/ai";
 import Pagination from 'react-bootstrap/Pagination';
 
 const productList = AllProduct
@@ -27,6 +27,8 @@ const Indoor = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const indexOfLastItem = currentPage * 8;
     const indexOfFirstItem = indexOfLastItem - 8;
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Indoor", url: "/shop/all/tree/indoor" }];
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
@@ -56,6 +58,7 @@ const Indoor = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Indoor</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div d-flex justify-content-between">
                       
                         <Col lg={2}>

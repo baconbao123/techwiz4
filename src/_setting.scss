@@ -10,6 +10,7 @@ $bg_btn_2:rgb(14, 98, 18);
 $bg_second: #52C452;
 $color_text: #204322;
 
+
 .fui-button-shiny-3 {
     background: transparent;
     // color: #1dc071;
@@ -63,4 +64,7 @@ $color_text: #204322;
       }
     }
   }
+  .p-breadcrumb {
+    border: none;
+}
 $h_nav_mb:75px;

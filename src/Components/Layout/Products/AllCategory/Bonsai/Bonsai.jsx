@@ -7,11 +7,14 @@ import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
-
+import { AiOutlineHome } from "react-icons/ai";
+import { BreadCrumb } from 'primereact/breadcrumb';
 
 import Pagination from 'react-bootstrap/Pagination';
 
-const productList = AllProduct
+const productList = AllProduct;
+const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Bonsai", url: "/shop/all/tree/bonsai "}];
+    const home = { icon: <AiOutlineHome />, url: "/" };
 
 const Bonsai = () => {
 
@@ -50,6 +53,7 @@ const Bonsai = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Bonsai</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div  d-flex justify-content-around">
                        
                         <Col lg={2}>

@@ -7,13 +7,15 @@ import { CardProduct } from "../../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 
-
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { AiOutlineHome } from "react-icons/ai";
 import Pagination from 'react-bootstrap/Pagination';
 
 const productList = AllToolData
 
 const Tool = () => {
-   
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Tools", url: "/shop/tool" }];
+    const home = { icon: <AiOutlineHome />, url: "/" };
     const [searchValue, setSearchValue] = useState('')
     
    
@@ -36,6 +38,7 @@ const Tool = () => {
             <div className="AllToolData-div">
                 <div className="container">
                     <div className="label-catelogy">Tools</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div">
                         <Col lg={2} md={3}>
                             <Form.Select className="form-select-catalog" aria-label="Category"  >
