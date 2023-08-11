@@ -61,7 +61,7 @@ const Indoor = () => {
                     <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div d-flex justify-content-between">
                       
-                        <Col lg={2}>
+                        <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" >
                                 <option value={0} checked>Price</option>
                                 <option value={1}>0-20</option>
@@ -69,7 +69,7 @@ const Indoor = () => {
                             </Form.Select>
                         </Col>
                         <Col lg={4} md={2}></Col>
-                        <Col lg={4} md={4} >
+                        <Col lg={4} md={4} className="mt-1">
                             <InputGroup className="">
                                 <InputGroup.Text id="basic-addon1" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}><AiOutlineSearch /></InputGroup.Text>
                                 <Form.Control className="form-control-input"
@@ -85,7 +85,7 @@ const Indoor = () => {
                             <Row>
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
                               
-                                    <Col lg={3} key={index} className="mt-4">
+                                    <Col lg={3} md={6} key={index} className="mt-4">
                                        
                                             <CardProduct items={items} option={"all/tree/indoor"}/>
                                         

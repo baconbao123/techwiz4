@@ -3,6 +3,7 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import './TopBar.scss'
 import logo from '../../../assets/Layout_img/Logo_header.png'
 import { TopNav } from '../../../Data/TopNav';
+import { AllProduct, AllToolData, FertilizeData } from '../../../Data/AllProduct';
 import { BsChevronDown } from "react-icons/bs";
 import logoMb from '../../../assets/Layout_img/logo-mb.png'
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
@@ -25,6 +26,9 @@ export default function TopBar() {
   const [showMenu1, setShowMenu1] = useState(false);
   const [listShow, setListShow] = useState([])
   const [showLogin, setShowLogin] = useState(false);
+  const [searchValue, setSearchValue] = useState('')
+  const [clickSearch, setClickSearch] = useState(false);
+  
   const InputRef = useRef();
   const InputRefMb = useRef();
   const toast = useRef(null);
@@ -32,7 +36,6 @@ export default function TopBar() {
   const { setIslogin } = useContext(Value)
   const { cart } = useContext(Value)
 
-  console.log(isLogin);
   const showSuccess = () => {
     toast.current.show({ severity: 'success', summary: ' Sign in Success', detail: 'Enjoy your day', life: 1000 });
   }
@@ -75,6 +78,20 @@ export default function TopBar() {
       setShowLogin(false)
     }
   }
+
+  const handleChangeSearch = (e) => {
+    setSearchValue(e.target.value)
+  }
+
+  const filteredProducts = [...AllProduct, ...AllToolData, ...FertilizeData].filter((product) => {
+    return product.name.toLowerCase().includes(searchValue.toLowerCase());
+  });
+
+  function onClickSearch() {
+    setClickSearch(!clickSearch);
+  }
+
+  console.log(filteredProducts);
   console.log(showSearchMb);
 
   return (
@@ -134,12 +151,20 @@ export default function TopBar() {
               </Col>
               <Col lg={2} className='d-flex align-items-center  fs-3 justify-content-around'>
                 <section className='item-search' ref={InputRef}>
-
+                  {/*  */}
                   <AiOutlineSearch className='item-icon' onClick={() => setShowSearch(true)} />
-                  <Form.Control placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`}>
-
+                  <Form.Control placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`} onChange={handleChangeSearch}>
                   </Form.Control>
                 </section>
+
+                {/* 
+
+
+
+
+
+                */}
+
                 <AiOutlineHeart className='item-icon' />
                 <div className='d-flex contain-icon'>
                   <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
