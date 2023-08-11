@@ -52,15 +52,14 @@ export const AllRoutes=[
 {name:'Fertilize',link:'/shop/fertilizer',component:<Fertilizer />},
 {name:'Fertilize',link:'/shop/fertilizer/:id',component:<ProductFertilizer />},
 
-{name:'Services',link:'/service',component:''},
 {name:'Services',link:'/service',component:<ServicePage/>},
 {name:'FeedBack',link:'/feedback',component:<FeedBack/>},
 
 // service
 {name:'Service',link:'/service',component:<ServicePage />},
-{name:'Service1',link:'/service/1',component:<ServiceDetail />},
-{name:'Service2',link:'/service/2',component:<ServiceDetail2 />},
-{name:'Service3',link:'/service/3',component:<ServiceDetail3 />},
+{name:'workshop',link:'/service/workshop',component:<ServiceDetail />},
+{name:'gift',link:'/service/gift',component:<ServiceDetail2 />},
+{name:'derco',link:'/service/decord',component:<ServiceDetail3 />},
 
 // end--ser
 // feedBack

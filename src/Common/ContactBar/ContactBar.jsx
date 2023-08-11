@@ -23,7 +23,7 @@ function ContactBar() {
   const soccialmb = [
     { icon: <FaShoppingBag/>, content: "Shop", link:'/shop/all' },
     { icon: <BsFacebook/>, content: "Facebook", link:'https://www.facebook.com/aptechvietnam.com.vn' ,linkT:'https://www.facebook.com/aptechvietnam.com.vn' },
-    { icon: <ImLocation2/>, content: " Address ",  link:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7',linkT:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7' },
+    { icon: <ImLocation2/>, content: " Address  ",  link:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7',linkT:'https://goo.gl/maps/ZpQNC6EVQjhebJzH7' },
     { icon: <BiSolidPhoneCall/>, content: "Call", link: "tel:012345678" },
   ];
   return (
