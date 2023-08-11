@@ -1,5 +1,6 @@
 import React, { useEffect, useState,useCallback} from "react";
 import { Row, Col, Button, Form, Dropdown } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import bannerallpro from '../../../../assets/Layout_img/banner-allpro.png'
 import './AllProducts.scss'
 import { AllProduct } from "../../../../Data/AllProduct";
@@ -7,12 +8,13 @@ import { InputText } from "primereact/inputtext";
 import { CardProduct } from "../ProductDetails/CardProduct/CardProduct";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
+import ProductDetail from '../ProductDetails/ProductDetails'
 
 import Pagination from 'react-bootstrap/Pagination';
 
+
+
 const productList = AllProduct
-
-
 
 const AllProducts = () => {
     const [categoryName, setCategoryName] = useState('All Product')
@@ -34,6 +36,9 @@ const AllProducts = () => {
         setCurrentPage(page);
     };
     const currentItems = product.slice(indexOfFirstItem, indexOfLastItem);
+
+
+
     useEffect(() => {
         let indoorArr = [];
         let outdoorArr = [];
@@ -71,8 +76,7 @@ const AllProducts = () => {
     }, [])
     const [currentDisplayProduct, setCurrentDisplayProduct] = useState(8);
     const handelChange = (e,name) => {
-        console.log('option',option);
-        console.log('value',price);
+  
        if(name==="op") {
         setOption(e.target.value);
         if(price==='0') {
@@ -234,7 +238,7 @@ const AllProducts = () => {
        }
         // value
        else if (name==="va") {
-        console.log("VO ROI NE");
+
         setPrice(e.target.value);
         if(option==='1') {
             let productArr=[];
@@ -422,9 +426,6 @@ const AllProducts = () => {
       
     }
 
-   
-
-
     return (
 
         <div className="allproduct-master">
@@ -464,12 +465,15 @@ const AllProducts = () => {
                         <span className="label-catelogy">Plants</span>
 
                         <div className="card-of-cate">
+                            
                             <Row>
-                                { currentItems.length>0?currentItems.map((item, index) => (
-                                    <Col lg={3} md={4} sm={6} xs={12} key={index} className="mt-4">
-                                        <CardProduct item={item} />
+                                { currentItems.length>0?currentItems.map((items, index) => (
+                                    <Col lg={3} key={index} className="mt-4">
+                                        <Link to={`/shop/all/tree/${items.id}`}>
+                                            <CardProduct items={items} />
+                                        </Link>
                                     </Col>
-                                )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)}
+                                )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} 
                             </Row>
                         </div>
                     </div>

@@ -21,4 +21,37 @@
     .content {
         line-height: 40px;
     }
+
+    .your-review-div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        border: 1px solid #CCC;
+
+        .p-rating .p-rating-item .p-rating-icon.p-icon {
+            width: 1.400rem;
+            height:1.6rem;
+        }
+
+        .your-review-label {
+            color: #666;
+            font-family: Inter;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .your-comment-label {
+            color: #666;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .your-name-lable {
+            color: #666;
+            font-size: 21px;
+            font-weight: 700;
+        }
+    }
 }

@@ -285,7 +285,8 @@ export const AllProduct = [
          { fetilize: 'Use with water-solube fertulizers, follow the mixing instructions' },
          { sick: 'Follow  the intructions' }
       ],
-   }, {
+   }, 
+   {
       id: 6, name: 'ZZ Plant', category: 'indoor', price: 20,
       img: [
          { img1: ZZ1 },
@@ -306,7 +307,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    },
-   , {
+   {
       id: 7, name: 'philodendron Plant', category: 'indoor', price: 20,
       img: [
          { img1: philodendron1 },

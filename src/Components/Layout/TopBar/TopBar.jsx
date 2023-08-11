@@ -56,7 +56,6 @@ export default function TopBar() {
   const handleSetShow = (item) => {
     setListShow([...listShow, item]);
     setShowMenu1(true)
-    console.log(listShow);
   }
   return (
     <>

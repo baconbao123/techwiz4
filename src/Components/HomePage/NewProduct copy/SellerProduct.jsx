@@ -2,7 +2,7 @@ import React from "react";
 import "./SellerProducts.scss";
 import { Col } from "react-bootstrap";
 import AliceCarousel from "react-alice-carousel";
-import { SlideCardImg } from "../../Layout/Products/ProductDetails/SlideImg/SlideCardImg";
+// import { SlideCardImg } from "../../Layout/Products/ProductDetails/SlideImg/SlideCardImg";
 import {FaAngleDoubleRight} from 'react-icons/fa'
 import { Link } from "react-router-dom";
 function SellerProduct() {
@@ -27,7 +27,7 @@ function SellerProduct() {
         </div>
         <div>
           <div className="img-div">
-            <AliceCarousel
+            {/* <AliceCarousel
               mouseTracking
               items={SlideCardImg}
               responsive={{
@@ -35,7 +35,7 @@ function SellerProduct() {
                 768: { items: 3 },
                 1440: { items: 4 },
               }}
-            />
+            /> */}
           </div>
         </div>
         <div className="btn-conteiner">
