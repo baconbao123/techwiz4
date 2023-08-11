@@ -9,7 +9,7 @@ export const CardProduct = ({items,option}) => {
     console.log(option);
     const navigate=useNavigate()
     const handleClick=()=> {
-        navigate(`/shop/all/${option+'/'+items.id}`)
+        navigate(`/shop/${option+'/'+items.id}`)
     }
     return (
        

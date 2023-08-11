@@ -95,7 +95,7 @@
                     .item-child3 {
                         font-weight: 600;
                         padding: 20px;
-
+                        width: 200px;
                         &:hover {
                             background-color: #adf8c28d;
                         }
@@ -275,9 +275,10 @@
             background-color: #e1e5df;
             font-size: small;
             border-top: solid 0.5px #bfc7c0;
+           
             .item-menu-child2 {
                 padding-left: 60px;
-
+              
                 &:hover {
                     // color: #3EBD4C;
                     background-color: #aae3b3;

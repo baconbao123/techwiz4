@@ -11,8 +11,8 @@ import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, 
 import ProductDetail from '../ProductDetails/ProductDetails'
 
 import Pagination from 'react-bootstrap/Pagination';
-
-
+import Tool from "../AllCategory/Tool/Tool";
+import Fertilizer from "../AllCategory/Fertilizer/Fertilizer";
 
 const productList = AllProduct
 
@@ -429,7 +429,7 @@ const AllProducts = () => {
     const style='tree'
 
     return (
-
+        <>
         <div className="allproduct-master">
             <div className="allproduct-div">
                 <div className="container">
@@ -472,7 +472,7 @@ const AllProducts = () => {
                                 { currentItems.length>0?currentItems.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
                                         {/* <Link to={`/shop/all/tree/${items.id}`}> */}
-                                            <CardProduct items={items} option={'tree'} />
+                                            <CardProduct items={items} option={'all/tree'} />
                                         {/* </Link> */}
                                     </Col>
                                 )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} 
@@ -503,6 +503,9 @@ const AllProducts = () => {
         />
       </Pagination>
         </div>
+        <Tool />
+        <Fertilizer />
+        </>
     )
 }
 

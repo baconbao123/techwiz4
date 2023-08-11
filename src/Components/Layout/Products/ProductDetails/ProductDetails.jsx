@@ -7,7 +7,7 @@ import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-
+import NotFound from "../../NotFound";
 import { CardProduct } from "./CardProduct/CardProduct";
 import SlideCardImg from "./SlideImg/SlideCardImg"
 
@@ -21,6 +21,7 @@ import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
+console.log("log:", productList);
 const ProductDetail = () => {
     const toast = useRef(null);
     const { id } = useParams();
@@ -37,7 +38,6 @@ const ProductDetail = () => {
     const { setCart } = useContext(Value)
     const { cart } = useContext(Value)
 
-    console.log(cart);
     const showSuccess = () => {
         toast.current.show({ severity: 'success', summary: 'Success Added!', detail: 'ADD TO CARD SUCCESS', life: 1000 });
     }
@@ -61,10 +61,13 @@ const ProductDetail = () => {
     const handleClickSubProduct = () => {
         setCountProduct(countProduct - 1)
     }
-    console.log(product);
+   
     return (
 
-        <div className='products-details-master'>
+       <>
+       {
+        product?(
+            <div className='products-details-master'>
             <Container>
                 <Toast ref={toast} />
                 <div className='products-details-div'>
@@ -217,16 +220,21 @@ const ProductDetail = () => {
                     <span className="label-similar">Similar Product</span>
                     <Row style={{ marginBottom: '40px' }}>
                         {productList.slice(0, showCardList).map((item) => (
-                            <Col lg={3} md={3} sm={6} xs={12}>
-                                <Link to={`/shop/all/tree/${item.id}`}>
-                                    <CardProduct items={item} />
-                                </Link>
-                            </Col>
-                        ))}
+                            <Col lg={3} md={3} sm={6} xs={12} className="mt-3"> 
+                                <Link to={`/shop/all/tree/${item.id}`}> 
+                                    <CardProduct items={item} /> 
+                                </Link> 
+                            </Col> 
+                        ))} 
                     </Row>
                 </div>
             </Container>
         </div>
+        ):(
+            <NotFound />
+        )
+       }
+       </>
     );
 };
 
