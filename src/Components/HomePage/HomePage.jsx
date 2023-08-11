@@ -12,6 +12,7 @@ import "./CarePlant/CarePlant";
 import CarePlant from "./CarePlant/CarePlant";
 import Service from "./Service/Service";
 function HomePage() {
+  document.title = 'Homepage'
   return (
     <div className="container-fuild home-page-warper">
       <Banner />

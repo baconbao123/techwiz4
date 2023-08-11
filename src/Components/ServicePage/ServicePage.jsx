@@ -7,6 +7,8 @@ import AOS from "aos";
 import { AiOutlineHome } from "react-icons/ai";
 import { BreadCrumb } from 'primereact/breadcrumb'
 function ServicePage() {
+  document.title = 'Services'
+
   const items = [{ label: "Service", url: "/service" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {

@@ -10,6 +10,7 @@ import { BreadCrumb } from 'primereact/breadcrumb';
 import { Link } from 'react-router-dom';
 import Pagination from 'react-bootstrap/Pagination';
 export default function Blog() {
+  document.title = 'Blog'
   const items = [{ label: "Blog", url: "/blog" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
   const data = blog;

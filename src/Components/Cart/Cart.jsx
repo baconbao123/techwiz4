@@ -8,6 +8,8 @@ import { Toast } from 'primereact/toast';
 import { Value } from '../../Data/DataSava';
 import imgCard from '../../assets/Layout_img/AddToCard.png'
 export default function Cart() {
+  document.title = 'Cart'
+
   const {cart}=useContext(Value);
   const {setCart}=useContext(Value);
 

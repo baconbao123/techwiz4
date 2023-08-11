@@ -1,7 +1,7 @@
 @import '../../../../setting';
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
-.products-details-master {
+.products-fer-master {
     margin-top: 50px;
     font-family: $font_primary;
     font-size: 18px;
@@ -270,7 +270,7 @@
                 font-family: Inter;
                 font-size: 21px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: normal;
                 @media screen and (max-width: 399px) {
                     font-size: 16px;
@@ -315,7 +315,7 @@
             }
 
             .rule-comment {
-                font-size: 20px;
+                font-size: 17px;
                 margin-left: 10px;
 
                 @media screen and (max-width: 399px) {
