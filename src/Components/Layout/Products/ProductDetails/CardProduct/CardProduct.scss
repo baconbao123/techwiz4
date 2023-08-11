@@ -1,3 +1,5 @@
+@import "../../../../../setting";
+
 .card-product {
     padding: 10px 10px;
     height: 450px!important;
@@ -9,13 +11,16 @@
     .card-title-product {
         display: flex;
         justify-content: space-between;
-
+        &:hover {
+            cursor: pointer;
+        }
         .span-best-seller {
             background-color: #E67C00;
             color: white;
-            padding: 10px 1px;
+            width: fit-content;
+          padding: 10px;
             font-size: 11px;
-            border-radius: 20px;
+            border-radius: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,6 +48,10 @@
         }
         .icon-wishlist {
             cursor: pointer;
+            &:hover {
+                color: red;
+                
+            }
         }
 
 
@@ -52,6 +61,10 @@
         width: 100%;
         height: 308px;
        object-fit: contain;
+       &:hover {
+        cursor: pointer;
+        padding: 10px;
+       }
     }
 
     .card-price-shopping-product {
@@ -72,14 +85,20 @@
 
 
         .card-shopping-product {
-            background-color: #9FDEA5;
+            // background-color: #9FDEA5;
             border-radius: 20px;
-            padding: 10px;
-            color: #204322;
+            padding: 5px;
+            color: #000000;
+          
             font-weight: 500;
             line-height: 30px;
             cursor: pointer;
-            letter-spacing: -0.408px;
+            // letter-spacing: -0.408px;
+            &:hover {
+              color: #fff;
+                font-weight: 800;
+                padding: 8px;
+            }
         }
     }
 }

@@ -23,6 +23,7 @@ const AllProducts = () => {
     const [price, setPrice] = useState('0')
     
     const AllProduct = productList;
+    
     const [product, setProduct] = useState(productList)
     const [bonsai, setBonsai] = useState([]);
     const [flower, setFlower] = useState([]);
@@ -425,6 +426,7 @@ const AllProducts = () => {
         }
       
     }
+    const style='tree'
 
     return (
 
@@ -469,9 +471,9 @@ const AllProducts = () => {
                             <Row>
                                 { currentItems.length>0?currentItems.map((items, index) => (
                                     <Col lg={3} key={index} className="mt-4">
-                                        <Link to={`/shop/all/tree/${items.id}`}>
-                                            <CardProduct items={items} />
-                                        </Link>
+                                        {/* <Link to={`/shop/all/tree/${items.id}`}> */}
+                                            <CardProduct items={items} option={'tree'} />
+                                        {/* </Link> */}
                                     </Col>
                                 )):(<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} 
                             </Row>

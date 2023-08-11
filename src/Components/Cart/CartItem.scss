@@ -17,7 +17,7 @@
         border-radius: 2px;
     }
     .item-number {
-    width: 15px;
+    width: 30px;
     display: inline;
     border: 1px solid #ccc;
     background-color: #ccc;
@@ -26,10 +26,12 @@
 
     }
     .number-number {
+        width: 30px!important;
+        display: inline;
         border: 1px solid #ccc;
-        // border: none;
-        padding: 6px 10px 5px 10px;
-        width: 70px;
+       
+        padding: 7px;
+        cursor: pointer;
     }
     .button-remove {
      margin-bottom: 5px;

@@ -56,7 +56,11 @@
                 .buynow {
                     background-color: #3EBD4C;
                     border: #3EBD4C;
+                    
                     height: 37.5px;
+                    &:hover {
+                        color: #666;
+                    }
                 }
 
                 .icon-buynow {
@@ -69,16 +73,20 @@
                 .input-count {
                     width: 47px;
                     height: 37px;
-                    border-radius: 15px;
+                    // border-radius: 15px;
                     border: 1px solid #666;
                     background: #FFF;
                     text-align: centert;
+                    
+                }
+                .input-count:focus {
+                    outline: none;
                 }
 
                 .button-count {
                     border: 1px solid #666;
                     background: rgba(234, 223, 223, 0.96);
-                    border-radius: 15px;
+                    
                     width: 30px;
                     height: 37px;
                 }
