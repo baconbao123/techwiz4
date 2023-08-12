@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import "./Blog.scss"
 import { Container, Row, Col,Form } from "react-bootstrap"
 import InputGroup from 'react-bootstrap/InputGroup';
-import BlogImg from '../../assets/Layout_img/blogBaner.png';
+import BlogImg from '../../assets/Layout_img/bg-blog.jpg';
 import { blog } from '../../Data/Blog';
 import BlogItem from './BlogItem';
 import { AiOutlineHome,AiOutlineSearch } from "react-icons/ai";

@@ -24,7 +24,7 @@
     {   
         position: relative;
         width: 100%;
-        height: 400px !important;
+        height: 450px ;
         z-index: -1!important;
         object-fit: cover;
     }
@@ -39,5 +39,15 @@
     }
     .input-group-text {
         border: var(--bs-border-width) solid var(--bs-border-color)!important;
+    }
+}
+@media (max-width:786px){
+    .logo-baner{
+        height: 300px !important;
+    }
+}
+@media (max-width:425px){
+    .logo-baner{
+        height: 200px !important;
     }
 }
