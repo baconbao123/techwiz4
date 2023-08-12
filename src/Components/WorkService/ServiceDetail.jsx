@@ -15,7 +15,7 @@ function ServiceDetail() {
 
  
 
-  const items = [{ label: "Shop All", url: "shop/all" },{ label: "Service workshop", url: "/service/workshop" }];
+  const items = [{ label: "Service", url: "/service" },{ label: "Service workshop", url: "/service/workshop" }];
   const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {
     AOS.init();
