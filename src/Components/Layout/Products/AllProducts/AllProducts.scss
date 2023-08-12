@@ -60,3 +60,20 @@
 .allproduct-master .filter-div .form-select-catalog {
     margin-bottom: 6px;
 }
+@media (max-width:786px){
+
+    .bg-allproduct {
+        .img-bgall {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
+@media (max-width:425px){
+    .bg-allproduct {
+        .img-bgall {
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+}
