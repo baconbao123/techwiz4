@@ -187,7 +187,7 @@ export default function TopBar() {
               <Col lg={2} className='d-flex align-items-center  fs-3 justify-content-around'>
                 <section className='item-search' ref={InputRef}>
                   {/*  */}
-                  <AiOutlineSearch className='item-icon' onClick={() => setShowSearch(true)} />
+                  <AiOutlineSearch className='item-icon icon' onClick={() => setShowSearch(true)} />
                   <Form.Control  placeholder='Search' className={`${showSearch ? '' : 'd-none'} search-input`}onChange={e=>handleChangeSearch(e)}>
                   </Form.Control>
                   <section className={`${showSearch ? 'd-block' : 'd-none'}  ${searchValue&&filteredProducts.length>0?'':'fit-content'} show-search`}>
@@ -216,20 +216,20 @@ export default function TopBar() {
 
 
                 */}
-              <Link to={'wishlist'}>
+              <Link to={'wishlist'} className='d-flex'>
 
-                <AiOutlineHeart className='item-icon'  />
+                <AiOutlineHeart className='item-icon icon'  />
               </Link>
                 <div className='d-flex contain-icon'>
                   <Link to={"/cart"} className='d-flex'>
                   <div className='number-cart'>
                     {cart.length===0?'':cart.length}
                   </div>
-                <AiOutlineShoppingCart className='item-icon' />
+                <AiOutlineShoppingCart className='item-icon icon' />
                   </Link>
                 </div>
                 <Link to={`${isLogin ? "/setting" : ''}`}>
-                  <AiOutlineUser className='item-icon' onClick={() => handleSetShow(true)} />
+                  <AiOutlineUser className='item-icon icon' onClick={() => handleSetShow(true)} />
                 </Link>
               </Col>
             </Row>
@@ -260,7 +260,7 @@ export default function TopBar() {
             </Row>
             <Row className='m-0'>
               <Col className='container-header p-0 m-0'>
-                <section className='d-inline-block fs-1 show-menu ms-3  ' onClick={() => setShowMenu(true)}>
+                <section className='d-inline-block  show-menu ms-3  ' onClick={() => setShowMenu(true)}>
 
                   <AiOutlineMenu />
 
@@ -270,7 +270,7 @@ export default function TopBar() {
                 <InputGroup className={`${showMenu ? 'd-none' : 'input-search'}`}>
                   <InputGroup.Text><AiOutlineSearch /></InputGroup.Text>
                   <Form.Control  value={valueInput}  onChange={e=>setValueInput(e.target.value)} placeholder='Search' ></Form.Control>
-                <section ref={InputRef2} className={`${valueInput&&valueInput.length>0 ? 'd-block' : 'd-none'}  ${valueInput&&filteredProducts2.length>0?'':'fit-content'} show-search`}>
+                <section ref={InputRef2} className={`${valueInput&&valueInput.length>0 ? 'd-block fs-3 ' : 'd-none'}  ${valueInput&&filteredProducts2.length>0?'':'fit-content'} show-search`}>
                                     {filteredProducts2.length>0?
                                       filteredProducts2.map((item,index)=>(
                                         <section key={index}>
@@ -286,34 +286,36 @@ export default function TopBar() {
                                       )
 
                                       )
-                                    :'Not found'}
+                                    :(<div className=''>
+                                      Not found
+                                    </div>)}
                   </section>
                 </InputGroup>
                 <div className='d-flex fs-2 function'>
                   <div ref={InputRefMb} className='d-flex'>
 
                     <section className='search-container'>
-                    <AiOutlineSearch onClick={() => setShowSearchMb(true)} className='icon-search' />
+                    <AiOutlineSearch onClick={() => setShowSearchMb(true)} className='icon-search icon' />
                       
                     <Form.Control placeholder='Search' className={`${showSearchMb ? '' : 'd-none'} search-input`} />
                   
                     </section>
                   </div>
-                  <Link to={'/wishlist'}>
+                  <Link to={'/wishlist'} className='d-flex'>
 
-                  <AiOutlineHeart />
+                  <AiOutlineHeart  className='icon'/>
                   </Link>
                   <div className='number-contain d-flex'>
                     <Link to={ "/cart"} className='d-flex'>
                       <div className='number-cart '>
                         {cart.length === 0 ? '' : cart.length}
                       </div>
-                      <AiOutlineShoppingCart  />
+                      <AiOutlineShoppingCart   className='icon' />
                     </Link>
                   </div>
 
                   <Link to={`${isLogin ? "/setting" : ''} `} className='d-flex'>
-                    <AiOutlineUser className='item-icon' onClick={() => handleSetShow(true)} />
+                    <AiOutlineUser className='item-icon icon' onClick={() => handleSetShow(true)} />
                   </Link>
                 </div>
               </Col>
