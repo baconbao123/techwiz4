@@ -12,14 +12,14 @@ function Banner() {
       link:'/shop/all/tree/bonsai'
     },
     {
-      title: "Transform Your Space with Plants",
+      title: "Help Plants Grow, Lush",
       subTitle:
         "Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and  tranquility.",
       img: "banner2.png",
       link:'/shop/tool'
     },
     {
-      title: "Unlock the Power of Plants",
+      title: "Gardening Made Easy ",
       subTitle:
         "Create a green sanctuary with amazing plants, so that every day you can breathe in fresh air and enjoy inner peace and  tranquility.",
       img: "banner3.png",
