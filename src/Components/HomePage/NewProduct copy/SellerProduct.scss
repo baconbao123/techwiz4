@@ -134,3 +134,12 @@
         margin-bottom: 20px;
     }
   }
+
+  @media (max-width:'281px'){
+    .card-shopping-product{
+     line-height: 0 !important;
+    }
+    .card-new-product .card-title-product .span-best-seller{
+      display: none;
+    }
+  }

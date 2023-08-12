@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import "./Statis.scss";
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 function Statis() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="container mb-5 mt-4">
+    <div className="container mb-5 mt-4" >
       <div className="content-statis row ">
         <div className="col-12 d-flex  gap-5 statis-items ">
           <div className="statis-item">
