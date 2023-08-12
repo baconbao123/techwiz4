@@ -13,8 +13,11 @@ import Pagination from 'react-bootstrap/Pagination';
 
 const productList = FertilizeData
 
-const Fertilizer = () => {
-    document.title = 'Fertilizer'
+const Fertilizer = ({props}) => {
+    if(!props) {
+
+        document.title = 'Fertilizer'
+    }
    
     const [searchValue, setSearchValue] = useState('')
     

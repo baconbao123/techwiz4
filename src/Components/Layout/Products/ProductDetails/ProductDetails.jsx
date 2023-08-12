@@ -22,13 +22,13 @@ import avatar from '../../../../assets/image/avtar5.jpg'
 import { AllProduct } from "../../../../Data/AllProduct";
 import { Value } from '../../../../Data/DataSava'
 const productList = AllProduct;
-console.log("log:", productList);
+
 const ProductDetail = () => {
     const home = { icon: <AiOutlineHome />, url: "/" };
     const toast = useRef(null);
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
-    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/all/tree/${product.category}` },{ label: product.name, url: `/shop/fertilizer/${product.id}` }];
+    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/all/tree/${product.category}` },{ label: product.name, url: `/shop/all/tree/${product.id}` }];
 
     const [showCardList, setShowCardList] = useState(4)
 
@@ -82,9 +82,10 @@ const ProductDetail = () => {
                 <Toast ref={toast} />
                 <div className='products-details-div'>
                     <Row>
-                        <Col lg={12} md={5} sm={12} xs={12}>
+                        <Col lg={12} md={12} sm={12} xs={12}>
                             <div className="breadcrum-posi">
-                            <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5 d-block"  />
+                           
 
                             </div>
                         </Col>

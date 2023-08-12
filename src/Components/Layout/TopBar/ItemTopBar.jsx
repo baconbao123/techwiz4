@@ -8,7 +8,7 @@ import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, 
 import ItemTopBar2 from './ItemTopBar2';
 import { Link } from 'react-router-dom';
 
-export default function ItemTopBar({ item ,setShowMenu}) {
+export default function ItemTopBar({url, item ,setShowMenu}) {
   const [showMenu1, setShowMenu1] = useState(false);
   const handleOnclick = () => {
         if(item.link) {
@@ -16,7 +16,7 @@ export default function ItemTopBar({ item ,setShowMenu}) {
         }
   }
   return (
-    <section key={item.id}>
+    <section className={`${url===item.link?'active' :''}`} key={item.id}>
       <Link to={item.link} onClick={() => handleOnclick()}>
 
         <div className='item-menu' onClick={() => setShowMenu1(!showMenu1)}>
@@ -28,7 +28,7 @@ export default function ItemTopBar({ item ,setShowMenu}) {
       {item.child && item.child.length > 0 ? (
         <section className={`container-child1 ${showMenu1 ? 'd-block' : 'd-none'}`}>
           {item.child.map((child1) => (
-            <ItemTopBar2 key={child1.id} child1={child1} setShowMenu={setShowMenu} />
+            <ItemTopBar2 url={url} key={child1.id} child1={child1} setShowMenu={setShowMenu} />
 
           ))}
         </section>

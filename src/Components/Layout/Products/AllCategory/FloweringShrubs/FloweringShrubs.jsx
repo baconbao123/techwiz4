@@ -10,7 +10,7 @@ import { BreadCrumb } from 'primereact/breadcrumb';
 import { AiOutlineHome } from "react-icons/ai";
 
 import Pagination from 'react-bootstrap/Pagination';
-const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Flowering Shrubs", url: "/shop/all/tree/floweringshrubs" }];
+const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Flowering Shrubs", url: `/shop/all/tree/floweringshrubs/` }];
 const home = { icon: <AiOutlineHome />, url: "/" };
 const productList = AllProduct
 
@@ -59,6 +59,7 @@ const FloweringShrubs = () => {
             <div className="allproduct-div">
                 <div className="container">
                     <div className="label-catelogy">Flowering Shrubs</div>
+                    <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
                     <Row className="filter-div d-flex justify-content-around">
                         <Col lg={2} md={3} className="mt-1">
                             <Form.Select className="form-select-catalog" >

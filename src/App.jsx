@@ -9,8 +9,9 @@ import { Value } from './Data/DataSava';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { AllRoutes } from './Routes/AllRoutes';
-
+import {BrowserRouter} from 'react-router-dom'
 import { useRef } from 'react';
+import Scroll from './Common/Scroll'
 function App() {
   const toast = useRef(null);
   const allRoutes = AllRoutes;
@@ -21,16 +22,25 @@ function App() {
     if (Cookies.get('isLogin')) {
       setIslogin(JSON.parse(Cookies.get('isLogin')))}
   },[change])
-  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+
  
   // console.log('render');
   return (
- 
-  <Value.Provider value={{isLogin,setIslogin,cart,setCart}}>
+    <BrowserRouter>
+      <Scroll />
+  <Value.Provider value={{isLogin,setIslogin,cart,setCart,scrollToTop}}>
   
       <Main></Main>
   </Value.Provider>
  
+    </BrowserRouter>
   );
 }
 

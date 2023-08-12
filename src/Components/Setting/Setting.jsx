@@ -50,9 +50,7 @@ export default function Setting() {
         })
   
     }
-    if(!isLogin) {
-        navigate('/')
-    }
+    
     return (
        
         <Container className='setting'>

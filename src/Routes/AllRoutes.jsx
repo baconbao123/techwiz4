@@ -25,10 +25,10 @@ import ServiceDetail from "../Components/WorkService/ServiceDetail";
 import ServiceDetail2 from "../Components/GiftService/ServiceDetail2";
 import ServiceDetail3 from "../Components/DercoService/ServiceDetail3";
 import Cart from "../Components/Cart/Cart";
-
+import WishList from "../Components/WishList/WishList";
 export const AllRoutes=[
     
-{name:'home',link:'',component:<HomePage />},
+{name:'home',link:'/',component:<HomePage />},
 {name:'shop',link:'/shop/all',component: <AllProducts/>},
 {name:'tree',link:'/shop/all/tree/:id',component: <ProductDetail/>},
 {name:'tool',link:'/shop/all/tool/:id',component: <ProductTool/>},
@@ -69,5 +69,5 @@ export const AllRoutes=[
 {name:'BLogItem',link:`/blog/:id`,component:<BlogItem />},
 {name:'Card',link:`/cart`,component:<Cart />},
 {name:'Setting',link:`/setting`,component:<Setting />},
-
+{nmae:'WishList',link:'/wishlist',component:<WishList />}
 ];
