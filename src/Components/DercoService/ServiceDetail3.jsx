@@ -1,4 +1,3 @@
-
 import "./ServiceDetail.scss";
 import React, { useEffect } from "react";
 import { services3 } from "../../Data/Service";
@@ -9,11 +8,14 @@ import { BsPhoneVibrate } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
-import { BreadCrumb } from 'primereact/breadcrumb'
+import { BreadCrumb } from "primereact/breadcrumb";
 function ServiceDetail3() {
-  document.title = 'Decord'
+  document.title = "Decord";
 
-  const items = [{ label: "Service", url: "/service" },{ label: "Service decord", url: "/service/decord" }];
+  const items = [
+    { label: "Service", url: "/service" },
+    { label: "Service decord", url: "/service/decord" },
+  ];
   const home = { icon: <AiOutlineHome />, url: "/" };
   useEffect(() => {
     AOS.init();
@@ -25,7 +27,7 @@ function ServiceDetail3() {
         <div key={idx}>
           <img src={item.banner} alt="" className="w-100 img-banner" />
           <Container className="service-detail-main ">
-          <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
+            <BreadCrumb model={items} home={home} className="mt-3 mb-5" />
             <div className="row ">
               <div className="col-lg-6 col-md-12 col-sm-12 content-main ">
                 <p className="title-name" data-aos="fade-up">
@@ -76,15 +78,16 @@ function ServiceDetail3() {
                     Contact for consultation, quote
                   </h3>
                   <p>
-                    <span>
+                    <Link to ='tel:012345678'> 
                       <BsPhoneVibrate />
-                    </span>
-                    <span> 012345678</span>
+
+                      <span> 012345678</span>
+                    </Link>
                   </p>
                   <p>
-                    <span>
+                    <Link to='mailTo:aptechhcm@gmail.com'>
                       <CiMail /> <span>aptechhcm@gmail.com</span>
-                    </span>
+                    </Link>
                   </p>
                 </div>
                 <div className="col-lg-6 col-md-12 col-sm-12 input-form mt-5  ">
@@ -128,7 +131,6 @@ function ServiceDetail3() {
       ))}
     </>
   );
-
 }
 
 export default ServiceDetail3;

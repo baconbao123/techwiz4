@@ -13,7 +13,7 @@ export default function CartItem({ item, show }) {
   const { setCart } = useContext(Value);
 
   const [number, setNumber] = useState(1);
-
+  
   const handleChange = (e) => {
     const value = e.target.value;
 
@@ -31,6 +31,17 @@ export default function CartItem({ item, show }) {
     setCart(arr.filter((items) => items.id !== item.id));
     show();
   };
+    const handleNumberChange=(op)=> {
+      if(op==='add') {
+        setNumber(number+1)
+      }
+      else if(op==='sub') {
+        if(number>1) {
+          setNumber(number-1)
+        }
+        
+      }
+    }
   return (
     <Row className="cart-item mb-3 w-100 justify-content-center">
       <Col lg={2} md={2} sm={3}>
@@ -61,7 +72,7 @@ export default function CartItem({ item, show }) {
             <div className="">
               <button
                 className="item-number "
-                onClick={() => setNumber(number - 1)}
+                onClick={() =>handleNumberChange('sub')}
               >
                 <BsDashLg />
               </button>
@@ -78,7 +89,7 @@ export default function CartItem({ item, show }) {
               </button>
               <button
                 className="item-number  "
-                onClick={() => setNumber(number + 1)}
+                onClick={() => handleNumberChange('add')}
               >
                 <AiOutlinePlus />
               </button>

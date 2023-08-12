@@ -228,7 +228,7 @@ export const AllProduct = [
       ]
    },
    {
-      id: 2, name: 'Spider Plant', category: 'indoor', price: 20,tag:'new',
+      id: 2, name: 'Spider Plant', category: 'indoor', price: 20,
       img: [
          { img1: spiderplant1 },
          { img2: spiderplant2 },
@@ -249,7 +249,7 @@ export const AllProduct = [
       ]
    },
    {
-      id: 3, name: 'Pothos Plant', category: 'indoor', price: 20,tag:'new',
+      id: 3, name: 'Pothos Plant', category: 'indoor', price: 20,
       img: [
          { img1: pothos1 },
          { img2: pothos2 },
@@ -311,7 +311,7 @@ export const AllProduct = [
       ],
    }, 
    {
-      id: 6, name: 'ZZ Plant', category: 'indoor', price: 20,
+      id: 6, name: 'ZZ Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: ZZ1 },
          { img2: ZZ2 },
@@ -332,7 +332,7 @@ export const AllProduct = [
       ],
    },
    {
-      id: 7, name: 'philodendron Plant', category: 'indoor', price: 20,
+      id: 7, name: 'philodendron Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: philodendron1 },
          { img2: philodendron2 },
@@ -352,7 +352,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 8, name: 'chineseEvergreen Plant', category: 'indoor', price: 20,
+      id: 8, name: 'chineseEvergreen Plant', category: 'indoor', price: 20,tag:'new',
       img: [
          { img1: chineseEvergreen1 },
          { img2: chineseEvergreen2 },
@@ -741,7 +741,7 @@ export const AllProduct = [
          { sick: 'Follow  the intructions' }
       ],
    }, {
-      id: 27, name: 'Zinnia Plant', category: 'outdoor', price: 30, tag: 'best seller',
+      id: 27, name: 'Zinnia Plant', category: 'outdoor', price: 30, 
       img: [
          { img1: Zinnia1 },
          { img2: Zinnia2 },
