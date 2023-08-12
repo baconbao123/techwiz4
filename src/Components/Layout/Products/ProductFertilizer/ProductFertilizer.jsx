@@ -27,7 +27,8 @@ const ProductFertilizer = () => {
     const home = { icon: <AiOutlineHome />, url: "/" };
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
-    const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Fertilizer", url: "/shop/fertilizer" },{ label: product.name, url: `/shop/fertilizer/${product.id}` }];
+    const [items,setItems]=useState()
+   
 
     const [showCardList, setShowCardList] = useState(4)
     const { setCart } = useContext(Value)
@@ -44,8 +45,11 @@ const ProductFertilizer = () => {
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
+       if(product) {
         document.title = product.name;
-      }, [product.name]);
+        setItems( [{ label: "Shop All", url: "/shop/all" },{ label: "Fertilizer", url: "/shop/fertilizer" },{ label: product.name, url: `/shop/fertilizer/${product.id}` }])
+       }
+      }, []);
 
     const handleAddCard = () => {
         let check = cart.filter((item) => item.id === product.id)

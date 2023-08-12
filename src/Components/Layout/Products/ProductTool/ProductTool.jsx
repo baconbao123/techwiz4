@@ -26,8 +26,8 @@ const ProductTool = () => {
 
     const { id } = useParams();
     const product = productList.find((item) => item.id === Number(id));
-    const items = [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/${product.category}` },{ label: product.name, url: `/shop/tool/${product.id}` }];
- 
+  
+    const [items,setItems]=useState()
     const home = { icon: <AiOutlineHome />, url: "/" };
     const [showCardList, setShowCardList] = useState(4)
     const { setCart } = useContext(Value)
@@ -41,8 +41,12 @@ const ProductTool = () => {
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
-      document.title = product.name;
-    }, [product.name]);
+      if(product) {
+
+        document.title = product.name;
+        setItems( [{ label: "Shop All", url: "/shop/all" },{ label: product.category, url: `/shop/${product.category}` },{ label: product.name, url: `/shop/tool/${product.id}` }])
+      }
+    }, []);
 
     const handleAddCard = () => {
         let check = cart.filter((item) => item.id === product.id)
