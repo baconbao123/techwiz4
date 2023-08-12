@@ -119,10 +119,10 @@ export default function TopBar() {
     setClickSearch(!clickSearch);
   }
   const limitWord=(item)=> {
-    if(item.length>20) {
-        const trimmedWord = item.substring(0,20);
-        const lastWhitespaceIndex = trimmedWord.lastIndexOf(' ');
-        return trimmedWord.substring(0, lastWhitespaceIndex) + ' ...';
+    if(item.length>5) {
+        const trimmedWord = item.substring(0,5);
+        // const lastWhitespaceIndex = trimmedWord.lastIndexOf(' ');
+        return trimmedWord+ ' ...';
     }
     return item;
 }
