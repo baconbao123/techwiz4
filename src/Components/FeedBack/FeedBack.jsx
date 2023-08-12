@@ -1,10 +1,15 @@
-import React ,{useState} from "react";
+import React ,{useState,useEffect} from "react";
 import { Row, Col, Card, Form, Button } from "react-bootstrap";
 import feedback from "./imgFedd/feedback.png";
 import "./FeedBack.scss";
 import Swal from 'sweetalert2';
 import { useLocation } from "react-router-dom";
+import "aos/dist/aos.css";
+import AOS from "aos";
 export default function FeedBack() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const location = useLocation();
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
 
@@ -29,7 +34,7 @@ export default function FeedBack() {
           lg={5}
           className="mb-4 col-feedback d-flex align-items-center"
         >
-          <img className="img-feedback w-100" src={feedback} />
+          <img className="img-feedback w-100" src={feedback}  data-aos="flip-left" data-aos-duration="3000"/>
         </Col>
         <Col
           sm={12}

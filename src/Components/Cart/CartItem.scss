@@ -82,10 +82,10 @@
         display: none;
     }
 }
-@media (max-width:'392px'){
+@media (max-width:'496px') {
     .item-shopping{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        display: flex !important;
+        flex-direction: column !important ;
+        gap: 15px !important;
     }
 }

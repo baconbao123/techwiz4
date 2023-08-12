@@ -83,15 +83,16 @@ function ServiceDetail() {
                     Contact for consultation, quote
                   </h3>
                   <p>
-                    <span>
+                    <Link to ='tel:012345678'> 
                       <BsPhoneVibrate />
-                    </span>
-                    <span> 012345678</span>
+
+                      <span> 012345678</span>
+                    </Link>
                   </p>
                   <p>
-                    <span>
+                    <Link to='mailTo:aptechhcm@gmail.com'>
                       <CiMail /> <span>aptechhcm@gmail.com</span>
-                    </span>
+                    </Link>
                   </p>
                 </div>
                 <div className="col-lg-6 col-md-12 col-sm-12 input-form mt-5  ">
