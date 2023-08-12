@@ -13,8 +13,10 @@ import Pagination from 'react-bootstrap/Pagination';
 
 const productList = AllToolData
 
-const Tool = () => {
-    document.title = 'Tools'
+const Tool = ({props}) => {
+    if(!props) {
+        document.title = 'Tools'
+    }
 
     const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Tools", url: "/shop/tool" }];
     const home = { icon: <AiOutlineHome />, url: "/" };

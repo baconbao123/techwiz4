@@ -19,7 +19,6 @@ import bg_allproduct from '../../../../assets/Layout_img/bg-allpro.jpeg'
 const productList = AllProduct
 
 const AllProducts = () => {
-    document.title = 'All Product'
 
     const items = [{ label: "Shop All", url: "/shop/all" }];
     const home = { icon: <AiOutlineHome />, url: "/" };
@@ -43,6 +42,7 @@ const AllProducts = () => {
         setCurrentPage(page);
     };
     const currentItems = product.slice(indexOfFirstItem, indexOfLastItem);
+
 
 
 
@@ -433,6 +433,9 @@ const AllProducts = () => {
 
     }
     const style = 'tree'
+    useEffect(() => {
+        document.title = 'All Product';
+      }, []);
 
     return (
         <>
@@ -514,8 +517,8 @@ const AllProducts = () => {
                         disabled={currentPage === Math.ceil(product.length / 8)}
                     />
                 </Pagination>
-                <Tool />
-                <Fertilizer />
+                <Tool props={'none'}/>
+                <Fertilizer  props={'none'}/>
             </Container>
         </>
     )
