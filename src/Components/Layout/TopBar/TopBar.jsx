@@ -11,13 +11,15 @@ import ItemTopBar from './ItemTopBar';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { Link } from 'react-router-dom';
 import BottomBar from './BottomBar';
-import "aos/dist/aos.css";
-import AOS from "aos";
+
 import Login from '../../Authenticate/Login';
 import { Toast } from 'primereact/toast';
 import { Value } from '../../../Data/DataSava'
 import Cookies from 'js-cookie';
+import "aos/dist/aos.css";
+import AOS from "aos";
 export default function TopBar() {
+ 
 
   const nav = TopNav;
   const [showSearch, setShowSearch] = useState(false);
@@ -151,12 +153,12 @@ export default function TopBar() {
                         {item.name}
                         {item.child && item.child.length ? (<BsChevronDown className='ms-1 mt-1 icon-down' />) : ''}
                         {item.child && item.child.length > 0 ? (
-                          <section className='child1' id={index} >
+                          <section className='child1'  id={index} >
 
                             {item.child.map((childItem, index) => (
                               <section className='container-child'    >
                                 <Link to={childItem.linkChild}>
-                                  <div id={childItem.id} className='item-child' data-aos='fade'>
+                                  <div id={childItem.id} className='item-child'>
 
                                     {childItem.nameChild1}
                                   </div>
@@ -219,8 +221,8 @@ export default function TopBar() {
                 <AiOutlineHeart className='item-icon'  />
               </Link>
                 <div className='d-flex contain-icon'>
-                  <Link to={`${isLogin?"/cart":''}`} className='d-flex'>
-                  <div className='number-cart' onClick={()=> handleSetShow(true)}>
+                  <Link to={"/cart"} className='d-flex'>
+                  <div className='number-cart'>
                     {cart.length===0?'':cart.length}
                   </div>
                 <AiOutlineShoppingCart className='item-icon' />
@@ -237,7 +239,7 @@ export default function TopBar() {
 
         <section className='top-bar-sm p-0 d-flex justify-content-around align-items-center  d-lg-none' >
           <section className='p-0 m-0 container-wrapper'>
-            <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} menu-top p-0 m-0`}>
+            <Row className={`${showMenu === true ? 'd-flex' : 'd-none'} layout menu-top p-0 m-0`}>
               <Col className='menu-content pb-5 ps-0 pe-0' xs={7} sm={5} md={5}>
                 <Link to={'/'} className=' ' >
 
@@ -302,11 +304,11 @@ export default function TopBar() {
                   <AiOutlineHeart />
                   </Link>
                   <div className='number-contain d-flex'>
-                    <Link to={`${isLogin ? "/cart" : ''} `} className='d-flex'>
+                    <Link to={ "/cart"} className='d-flex'>
                       <div className='number-cart '>
                         {cart.length === 0 ? '' : cart.length}
                       </div>
-                      <AiOutlineShoppingCart onClick={() => handleSetShow(true)} />
+                      <AiOutlineShoppingCart  />
                     </Link>
                   </div>
 

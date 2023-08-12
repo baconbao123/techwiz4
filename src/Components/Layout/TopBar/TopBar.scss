@@ -84,6 +84,7 @@
 
 
             .child1 {
+                animation: slideIn .5s forwards;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
                 font-weight: 600;
                 display: none;
@@ -97,7 +98,7 @@
 
                 .container-child {
                     width: 200px;
-
+                 
                     // border: 0.5px dashed #999;
                     text-align: center;
 
@@ -113,6 +114,7 @@
                     }
 
                     .item-child2 {
+                        animation: slideLeft .5s ease-out;
                         transition: opacity 2s linear;
                         display: none;
                         position: absolute;
@@ -320,8 +322,9 @@
         position: fixed;
 
         width: 100vw;
-
+        background-color: hsla(0, 0%, 71%, .4);
         .menu-content {
+            animation: slideLeftMenu .5s forwards;
             overflow-y: scroll;
             height: 100vh;
             z-index: 99;
@@ -332,7 +335,7 @@
         }
 
         .layout {
-            background-color: hsla(0, 0%, 71%, .4);
+            // background-color: hsla(0, 0%, 71%, .4);
         }
 
         .logo-menu {
@@ -353,6 +356,7 @@
         }
 
         .container-child1 {
+            animation: slideIn .5s linear;
             background-color: #f0fff3;
             // box-shadow: 0 2px 4px rgba(10, 10, 10, 0.3);
             border-top: solid 0.5px #bfc7c0;
@@ -367,6 +371,7 @@
 
         .container-child2 {
             // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            animation: slideIn .5s linear;
             background-color: #e1e5df;
             font-size: small;
             border-top: solid 0.5px #bfc7c0;
@@ -384,3 +389,33 @@
     }
 
 }
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideLeft {
+    0% {
+      opacity: 0.5;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideLeftMenu {
+    0% {
+      opacity: 0.5;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
