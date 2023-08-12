@@ -8,13 +8,13 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineUser, AiOutlineMenuUnfold, } from "react-icons/ai";
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { AiOutlineHome } from "react-icons/ai";
-
+import NotFound from '../../../../../Components/Layout/NotFound';
 import Pagination from 'react-bootstrap/Pagination';
 
 const productList = AllProduct
 
 const Succulent = () => {
-    document.title = 'Succulent'
+    document.title = 'Succulent';
     
     const [searchValue, setSearchValue] = useState('')
     const items = [{ label: "Shop All", url: "/shop/all" },{ label: "Succulent", url: "/shop/all/tree/succulent" }];
@@ -48,6 +48,10 @@ const Succulent = () => {
     
 
     return (
+<>
+            {
+                product?(
+
 
         <div className="bonsai-master">
             <div className="allproduct-div">
@@ -90,9 +94,9 @@ const Succulent = () => {
                                 {currentItems.length > 0 ? currentItems.map((items, index) => (
                             
                                     <Col lg={3} key={index} className="mt-4">
-                                        <Link to={`/shop/all/tree/${items.id}`}>
-                                            <CardProduct items={items} />
-                                        </Link>
+                                      
+                                            <CardProduct items={items} option={'all/tree'} />
+                                       
                                     </Col>
                                 )):''}
                                 {/* )) : (<Col lg={12} className="text-center fs-3 fw-bold mt-5">NOT FOUND</Col>)} */}
@@ -125,6 +129,9 @@ const Succulent = () => {
 
 
         </div>
+                ) :(<NotFound/>)
+            }
+</>
     )
 }
 
