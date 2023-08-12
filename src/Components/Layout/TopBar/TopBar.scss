@@ -7,7 +7,16 @@
 .top-bar-sm {
     display: none;
 }
+.icon {
+    padding: 2px;
+    transition: all linear 0.2s;
+    &:hover {
 
+        padding: 0;
+        color: #138b21;
+        // color: red;
+    }
+}
 .active {
     color: #138b21;
 }
@@ -37,7 +46,8 @@
 
     .show-search {
         background-color: rgba(222, 220, 220, 0.3);
-       
+        font-size: large;
+        padding: 10px;
         border-radius: 5px;
         height: 200px;
         overflow-y: scroll;

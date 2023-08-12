@@ -54,7 +54,7 @@ export const CardProduct = ({items,option}) => {
                 <Card.Body onClick={()=>handleAddCard()}>
                     <div className="card-price-shopping-product" >
                     <span className="card-price-product">${items.price}</span>
-                        <div className="  fui-button-shiny-2 card-shopping-product"> <BsPlusLg/> Add to card </div>
+                        <div className="  fui-button-shiny-3 card-shopping-product"> <BsPlusLg/> Add to card </div>
                     </div>
                 </Card.Body>
             </Card>

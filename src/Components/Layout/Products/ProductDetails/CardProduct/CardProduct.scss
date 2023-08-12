@@ -66,6 +66,7 @@
         height: 308px;
         padding: 10px;
        object-fit: contain;
+       transition: all linear 0.2s;
        &:hover {
         cursor: pointer;
         padding: 0;
