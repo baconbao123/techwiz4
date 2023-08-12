@@ -45,7 +45,7 @@ function ServicePage() {
             </span>
             <div>
               <Link to="/service/workshop">
-                <button className="btn btn-more">Explore</button>
+                <button className="btn btn-more mb-2">Explore</button>
               </Link>
             </div>
           </div>
@@ -99,7 +99,7 @@ function ServicePage() {
               </span>
               <div>
                 <Link to="/service/gift">
-                  <button className="btn btn-more ">Explore</button>
+                  <button className="btn btn-more mb-2 ">Explore</button>
                 </Link>
               </div>
             </div>
@@ -126,7 +126,7 @@ function ServicePage() {
               </span>
               <div>
                 <Link to="/service/decord">
-                  <button className="btn btn-more btn-more">Explore</button>
+                  <button className="btn btn-more btn-more mb-2">Explore</button>
                 </Link>
               </div>
             </div>
