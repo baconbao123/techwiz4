@@ -14,7 +14,7 @@ $color_text: #204322;
 
 
 .fui-button-shiny-3 {
-    background: transparent;
+    background: transparent !important;
     // color: #1dc071;
     padding: 16px 32px;
     display: inline-block;
@@ -49,18 +49,18 @@ $color_text: #204322;
       top: 0;
       opacity: 0;
       filter: blur(30px);
-      transform: translateX(-100px) skewX(-15deg);
+      transform: translateX(-100px) skewX(-15deg) ;
     }
     &:hover {
-      background-color: #1dc071;
-      color: white;
+      background-color: #1dc071 !important;
+      color: white !important;
       &::before {
-        transform: translateX(300px) skewX(-15deg);
+        transform: translateX(300px) skewX(-15deg) ;
         opacity: 0.6;
          transition: all linear 1s;
       }
       &::after {
-        transform: translateX(300px) skewX(-15deg);
+        transform: translateX(300px) skewX(-15deg) ;
         opacity: 0.6;
          transition: all linear 1s;
       }

@@ -49,3 +49,14 @@
         
     }
 }
+@media (max-width:'281px'){
+    .contain-main{
+        text-align: center !important;
+        img{
+            display: none !important;
+        }
+        .title-content{
+            margin-left: 0 !important;
+        }
+    }
+}

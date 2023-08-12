@@ -1,19 +1,23 @@
-import React from "react";
+import React, {useEffect} from "react";
 import leftimg from "../../../assets/Layout_img/service 1.png";
 import pic3 from "../../../assets/Layout_img/image_11-removebg-preview.png";
 import pic2 from "../../../assets/Layout_img/image_10-removebg-preview (1).png";
 import pic1 from "../../../assets/Layout_img/image_9-removebg-preview.png";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 import "./Service.scss";
 export default function Service() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="service mb-5 ">
       <Container className="contain pt-5 pb-5">
         <Row>
           <Col lg={4} className="">
-            <img src={leftimg} alt="" className="img-service" />
+            <img src={leftimg} alt="" className="img-service"  data-aos="fade" data-aos-duration="1000"/>
           </Col>
           <Col lg={8} className="content">
             <div>
@@ -26,7 +30,7 @@ export default function Service() {
             </div>
             <Row>
               <Col lg={4} className="text-center">
-                <Link to='/service/workshop' className="link-hover">
+                <Link to='/service/workshop' className="link-hover" data-aos="fade" data-aos-duration="1000">
                   <img src={pic1} className="mb-3" />
                   <div className="title2 mb-3">TERRARIUM WORKSHOP</div>
                   <div className="text2">
@@ -37,7 +41,7 @@ export default function Service() {
                 </Link>
               </Col>
               <Col lg={4} className="text-center">
-                <Link to='/service/gift' className="link-hover">
+                <Link to='/service/gift' className="link-hover" data-aos="fade" data-aos-duration="2000">
                   <img src={pic2} className="mb-3" />
 
                   <div className="title2 mb-3 ">GREEN GIFTS </div>
@@ -50,7 +54,7 @@ export default function Service() {
               </Col>
 
               <Col lg={4} className="text-center">
-                <Link to='/service/decord' className="link-hover">
+                <Link to='/service/decord' className="link-hover" data-aos="fade" data-aos-duration="300">
                   <img src={pic3} className="mb-3" />
                   <div className="title2 mb-3"> GREEN DECORATION</div>
                   <div className="text2">

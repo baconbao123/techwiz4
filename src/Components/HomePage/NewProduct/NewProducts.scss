@@ -147,6 +147,9 @@
   }
 }
 @media (max-width: 281px) {
+  .title-name{
+    font-size: 20px !important;
+  }
   .card-item {
     margin: 0;
     border-radius: 10px !important;
@@ -176,6 +179,11 @@
   .card-body-mb{
     height: 200px !important;
   }
+  .card-price-shopping-product{
+    display: flex !important;
+    flex-direction: column;
+    
+  }
 }
 .p-carousel .p-carousel-indicators .p-carousel-indicator button {
   background-color: #ced4da;
@@ -184,3 +192,4 @@
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
   border-radius: 100rem !important;
 }
+

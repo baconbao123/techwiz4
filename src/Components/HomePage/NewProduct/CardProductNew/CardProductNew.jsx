@@ -24,7 +24,7 @@ function CardProductNew({item}) {
                 <Card.Body className='card-body-mb'>
                     <div className="card-price-shopping-product">
                         <span className="card-price-product">${item.price}</span>
-                        <span className=" card-shopping-product "> <BsPlusLg/> Add to card</span>
+                        <span className=" card-shopping-product fui-button-shiny-3  "> <BsPlusLg/> Add to card</span>
                     </div>
                 </Card.Body>
             </Card>

@@ -17,7 +17,11 @@
     height: 550px!important;
 }
     .item-img {
-        &hover {
+        padding: 10px;
+        transition: all linear 0.2s;
+       
+         &:hover {
+            padding: 0px;
             background-color: rgba(0, 0, 0, 0.1);
         }
     }

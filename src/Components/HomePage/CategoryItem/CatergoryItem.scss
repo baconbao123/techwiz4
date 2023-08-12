@@ -5,6 +5,7 @@
   overflow: hidden;
   margin-bottom: 25px;
   border-radius: 20px;
+
 }
 
 .overlay-img img {
@@ -79,7 +80,7 @@
 
 .overlay-img:hover .overlay,
 .overlay-img:focus .overlay {
-  background: rgba(33, 37, 41, 0.8);
+  background: rgba(52, 55, 57, 0.563);
 }
 
 .overlay-img:hover .des,
@@ -99,3 +100,4 @@
   margin-top: 25px !important;
 //   max-width: 100% !important;
 }
+
